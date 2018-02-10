@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>images/chooseLesson/Close_default.png</file>
+        <file>images/chooseLesson/Close_Down.png</file>
+        <file>images/chooseLesson/Close_Enter.png</file>
+        <file>images/chooseLesson/emptystate.png</file>
+        <file>images/chooseLesson/man_Close_default.png</file>
+        <file>images/chooseLesson/man_Close_down.png</file>
+        <file>images/chooseLesson/man_Close_enter.png</file>
+        <file>images/chooseLesson/man_max_default.png</file>
+        <file>images/chooseLesson/man_max_down.png</file>
+        <file>images/chooseLesson/man_max_enter.png</file>
+        <file>images/chooseLesson/man_min_default.png</file>
+        <file>images/chooseLesson/man_min_down.png</file>
+        <file>images/chooseLesson/man_min_enter.png</file>
+        <file>images/chooseLesson/man_restore_default.png</file>
+        <file>images/chooseLesson/man_restore_down.png</file>
+        <file>images/chooseLesson/man_restore_enter.png</file>
+        <file>images/chooseLesson/success.png</file>
+    </qresource>
+</RCC>
