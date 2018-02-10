@@ -1,0 +1,14 @@
+# CMake generation dependency list for this directory.
+D:/obs-studio/deps/obs-scripting/CMakeLists.txt
+D:/obs-studio/cmake/Modules/FindLuajit.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageMessage.cmake
+D:/obs-studio/cmake/Modules/FindPythonDeps.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageMessage.cmake
+D:/obs-studio/cmake/Modules/FindSwigDeps.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindSWIG.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageMessage.cmake
+D:/obs-studio/deps/obs-scripting/obs-scripting-config.h.in
+C:/Program Files/CMake/share/cmake-3.10/Modules/UseSWIG.cmake

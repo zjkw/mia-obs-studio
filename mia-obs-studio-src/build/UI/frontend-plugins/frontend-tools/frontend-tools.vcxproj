@@ -1,0 +1,758 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{04F25B80-54E9-3CC4-B1A7-05BA3BA5C2D1}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>frontend-tools</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">frontend-tools.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">frontend-tools</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">frontend-tools.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">frontend-tools</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">frontend-tools.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">frontend-tools</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">frontend-tools.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">frontend-tools</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\obs-studio\build\UI\frontend-plugins\frontend-tools;D:\obs-studio\UI\frontend-plugins\frontend-tools;D:\obs-studio\build\UI\frontend-plugins\frontend-tools\frontend-tools_autogen\include_Debug;D:\obs-studio\dependencies2015\win32\include;D:\obs-studio\UI\obs-frontend-api;D:\obs-studio\libobs;D:\obs-studio\deps\libff;D:\obs-studio\deps\blake2\src;D:\obs-studio\deps\obs-scripting;D:\obs-studio\build\config;D:\obs-studio\deps\w32-pthreads;C:\Qt\Qt5.8.0\5.8\msvc2015\include;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtWidgets;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtGui;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtANGLE;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtCore;C:\Qt\Qt5.8.0\5.8\msvc2015\.\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4201</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;DEBUG=1;_DEBUG=1;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR="Debug";frontend_tools_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;DEBUG=1;_DEBUG=1;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"Debug\";frontend_tools_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\obs-studio\build\UI\frontend-plugins\frontend-tools;D:\obs-studio\UI\frontend-plugins\frontend-tools;D:\obs-studio\build\UI\frontend-plugins\frontend-tools\frontend-tools_autogen\include_Debug;D:\obs-studio\dependencies2015\win32\include;D:\obs-studio\UI\obs-frontend-api;D:\obs-studio\libobs;D:\obs-studio\deps\libff;D:\obs-studio\deps\blake2\src;D:\obs-studio\deps\obs-scripting;D:\obs-studio\build\config;D:\obs-studio\deps\w32-pthreads;C:\Qt\Qt5.8.0\5.8\msvc2015\include;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtWidgets;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtGui;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtANGLE;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtCore;C:\Qt\Qt5.8.0\5.8\msvc2015\.\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\obs-studio\build\UI\frontend-plugins\frontend-tools;D:\obs-studio\UI\frontend-plugins\frontend-tools;D:\obs-studio\build\UI\frontend-plugins\frontend-tools\frontend-tools_autogen\include_Debug;D:\obs-studio\dependencies2015\win32\include;D:\obs-studio\UI\obs-frontend-api;D:\obs-studio\libobs;D:\obs-studio\deps\libff;D:\obs-studio\deps\blake2\src;D:\obs-studio\deps\obs-scripting;D:\obs-studio\build\config;D:\obs-studio\deps\w32-pthreads;C:\Qt\Qt5.8.0\5.8\msvc2015\include;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtWidgets;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtGui;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtANGLE;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtCore;C:\Qt\Qt5.8.0\5.8\msvc2015\.\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>Automatic MOC for target frontend-tools</Message>
+      <Command>setlocal
+cd D:\obs-studio\build\UI\frontend-plugins\frontend-tools
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen D:/obs-studio/build/UI/frontend-plugins/frontend-tools/CMakeFiles/frontend-tools_autogen.dir Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message>			</Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy D:/obs-studio/build/UI/frontend-plugins/frontend-tools/Debug/frontend-tools.dll D:/obs-studio/build/rundir/Debug/obs-plugins/32bit/frontend-tools.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Debug -DFNAME=frontend-tools.dll -DINPUT=D:/obs-studio/build/UI/frontend-plugins/frontend-tools/Debug -DOUTPUT=D:/obs-studio/build/UI/frontend-plugins/frontend-tools/pdbs -P D:/obs-studio/cmake/copy_on_debug_helper.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Debug -DFNAME=frontend-tools.dll -DINPUT=D:/obs-studio/build/UI/frontend-plugins/frontend-tools/Debug -DOUTPUT=D:/obs-studio/build/rundir/Debug/obs-plugins/32bit -P D:/obs-studio/cmake/copy_on_debug_helper.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory D:/obs-studio/UI/frontend-plugins/frontend-tools/data D:/obs-studio/build/rundir/Debug/data/obs-plugins/frontend-tools
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>..\..\..\deps\obs-scripting\Debug\obs-scripting.lib;..\..\obs-frontend-api\Debug\obs-frontend-api.lib;C:\Qt\Qt5.8.0\5.8\msvc2015\lib\Qt5Widgetsd.lib;..\..\..\libobs\Debug\obs.lib;..\..\..\..\dependencies2015\win32\bin\luajit.lib;..\..\..\deps\w32-pthreads\Debug\w32-pthreads.lib;C:\Qt\Qt5.8.0\5.8\msvc2015\lib\Qt5Guid.lib;C:\Qt\Qt5.8.0\5.8\msvc2015\lib\Qt5Cored.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/obs-studio/build/UI/frontend-plugins/frontend-tools/Debug/frontend-tools.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/obs-studio/build/UI/frontend-plugins/frontend-tools/Debug/frontend-tools.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\obs-studio\build\UI\frontend-plugins\frontend-tools;D:\obs-studio\UI\frontend-plugins\frontend-tools;D:\obs-studio\build\UI\frontend-plugins\frontend-tools\frontend-tools_autogen\include_Release;D:\obs-studio\dependencies2015\win32\include;D:\obs-studio\UI\obs-frontend-api;D:\obs-studio\libobs;D:\obs-studio\deps\libff;D:\obs-studio\deps\blake2\src;D:\obs-studio\deps\obs-scripting;D:\obs-studio\build\config;D:\obs-studio\deps\w32-pthreads;C:\Qt\Qt5.8.0\5.8\msvc2015\include;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtWidgets;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtGui;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtANGLE;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtCore;C:\Qt\Qt5.8.0\5.8\msvc2015\.\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4127;4201</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="Release";frontend_tools_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"Release\";frontend_tools_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\obs-studio\build\UI\frontend-plugins\frontend-tools;D:\obs-studio\UI\frontend-plugins\frontend-tools;D:\obs-studio\build\UI\frontend-plugins\frontend-tools\frontend-tools_autogen\include_Release;D:\obs-studio\dependencies2015\win32\include;D:\obs-studio\UI\obs-frontend-api;D:\obs-studio\libobs;D:\obs-studio\deps\libff;D:\obs-studio\deps\blake2\src;D:\obs-studio\deps\obs-scripting;D:\obs-studio\build\config;D:\obs-studio\deps\w32-pthreads;C:\Qt\Qt5.8.0\5.8\msvc2015\include;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtWidgets;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtGui;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtANGLE;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtCore;C:\Qt\Qt5.8.0\5.8\msvc2015\.\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\obs-studio\build\UI\frontend-plugins\frontend-tools;D:\obs-studio\UI\frontend-plugins\frontend-tools;D:\obs-studio\build\UI\frontend-plugins\frontend-tools\frontend-tools_autogen\include_Release;D:\obs-studio\dependencies2015\win32\include;D:\obs-studio\UI\obs-frontend-api;D:\obs-studio\libobs;D:\obs-studio\deps\libff;D:\obs-studio\deps\blake2\src;D:\obs-studio\deps\obs-scripting;D:\obs-studio\build\config;D:\obs-studio\deps\w32-pthreads;C:\Qt\Qt5.8.0\5.8\msvc2015\include;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtWidgets;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtGui;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtANGLE;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtCore;C:\Qt\Qt5.8.0\5.8\msvc2015\.\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>Automatic MOC for target frontend-tools</Message>
+      <Command>setlocal
+cd D:\obs-studio\build\UI\frontend-plugins\frontend-tools
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen D:/obs-studio/build/UI/frontend-plugins/frontend-tools/CMakeFiles/frontend-tools_autogen.dir Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message>			</Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy D:/obs-studio/build/UI/frontend-plugins/frontend-tools/Release/frontend-tools.dll D:/obs-studio/build/rundir/Release/obs-plugins/32bit/frontend-tools.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Release -DFNAME=frontend-tools.dll -DINPUT=D:/obs-studio/build/UI/frontend-plugins/frontend-tools/Release -DOUTPUT=D:/obs-studio/build/UI/frontend-plugins/frontend-tools/pdbs -P D:/obs-studio/cmake/copy_on_debug_helper.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Release -DFNAME=frontend-tools.dll -DINPUT=D:/obs-studio/build/UI/frontend-plugins/frontend-tools/Release -DOUTPUT=D:/obs-studio/build/rundir/Release/obs-plugins/32bit -P D:/obs-studio/cmake/copy_on_debug_helper.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory D:/obs-studio/UI/frontend-plugins/frontend-tools/data D:/obs-studio/build/rundir/Release/data/obs-plugins/frontend-tools
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>..\..\..\deps\obs-scripting\Release\obs-scripting.lib;..\..\obs-frontend-api\Release\obs-frontend-api.lib;C:\Qt\Qt5.8.0\5.8\msvc2015\lib\Qt5Widgets.lib;..\..\..\libobs\Release\obs.lib;..\..\..\..\dependencies2015\win32\bin\luajit.lib;..\..\..\deps\w32-pthreads\Release\w32-pthreads.lib;C:\Qt\Qt5.8.0\5.8\msvc2015\lib\Qt5Gui.lib;C:\Qt\Qt5.8.0\5.8\msvc2015\lib\Qt5Core.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/obs-studio/build/UI/frontend-plugins/frontend-tools/Release/frontend-tools.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/obs-studio/build/UI/frontend-plugins/frontend-tools/Release/frontend-tools.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\obs-studio\build\UI\frontend-plugins\frontend-tools;D:\obs-studio\UI\frontend-plugins\frontend-tools;D:\obs-studio\build\UI\frontend-plugins\frontend-tools\frontend-tools_autogen\include_MinSizeRel;D:\obs-studio\dependencies2015\win32\include;D:\obs-studio\UI\obs-frontend-api;D:\obs-studio\libobs;D:\obs-studio\deps\libff;D:\obs-studio\deps\blake2\src;D:\obs-studio\deps\obs-scripting;D:\obs-studio\build\config;D:\obs-studio\deps\w32-pthreads;C:\Qt\Qt5.8.0\5.8\msvc2015\include;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtWidgets;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtGui;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtANGLE;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtCore;C:\Qt\Qt5.8.0\5.8\msvc2015\.\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4127;4201</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="MinSizeRel";frontend_tools_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"MinSizeRel\";frontend_tools_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\obs-studio\build\UI\frontend-plugins\frontend-tools;D:\obs-studio\UI\frontend-plugins\frontend-tools;D:\obs-studio\build\UI\frontend-plugins\frontend-tools\frontend-tools_autogen\include_MinSizeRel;D:\obs-studio\dependencies2015\win32\include;D:\obs-studio\UI\obs-frontend-api;D:\obs-studio\libobs;D:\obs-studio\deps\libff;D:\obs-studio\deps\blake2\src;D:\obs-studio\deps\obs-scripting;D:\obs-studio\build\config;D:\obs-studio\deps\w32-pthreads;C:\Qt\Qt5.8.0\5.8\msvc2015\include;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtWidgets;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtGui;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtANGLE;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtCore;C:\Qt\Qt5.8.0\5.8\msvc2015\.\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\obs-studio\build\UI\frontend-plugins\frontend-tools;D:\obs-studio\UI\frontend-plugins\frontend-tools;D:\obs-studio\build\UI\frontend-plugins\frontend-tools\frontend-tools_autogen\include_MinSizeRel;D:\obs-studio\dependencies2015\win32\include;D:\obs-studio\UI\obs-frontend-api;D:\obs-studio\libobs;D:\obs-studio\deps\libff;D:\obs-studio\deps\blake2\src;D:\obs-studio\deps\obs-scripting;D:\obs-studio\build\config;D:\obs-studio\deps\w32-pthreads;C:\Qt\Qt5.8.0\5.8\msvc2015\include;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtWidgets;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtGui;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtANGLE;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtCore;C:\Qt\Qt5.8.0\5.8\msvc2015\.\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>Automatic MOC for target frontend-tools</Message>
+      <Command>setlocal
+cd D:\obs-studio\build\UI\frontend-plugins\frontend-tools
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen D:/obs-studio/build/UI/frontend-plugins/frontend-tools/CMakeFiles/frontend-tools_autogen.dir MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message>			</Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy D:/obs-studio/build/UI/frontend-plugins/frontend-tools/MinSizeRel/frontend-tools.dll D:/obs-studio/build/rundir/MinSizeRel/obs-plugins/32bit/frontend-tools.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=MinSizeRel -DFNAME=frontend-tools.dll -DINPUT=D:/obs-studio/build/UI/frontend-plugins/frontend-tools/MinSizeRel -DOUTPUT=D:/obs-studio/build/UI/frontend-plugins/frontend-tools/pdbs -P D:/obs-studio/cmake/copy_on_debug_helper.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=MinSizeRel -DFNAME=frontend-tools.dll -DINPUT=D:/obs-studio/build/UI/frontend-plugins/frontend-tools/MinSizeRel -DOUTPUT=D:/obs-studio/build/rundir/MinSizeRel/obs-plugins/32bit -P D:/obs-studio/cmake/copy_on_debug_helper.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory D:/obs-studio/UI/frontend-plugins/frontend-tools/data D:/obs-studio/build/rundir/MinSizeRel/data/obs-plugins/frontend-tools
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>..\..\..\deps\obs-scripting\MinSizeRel\obs-scripting.lib;..\..\obs-frontend-api\MinSizeRel\obs-frontend-api.lib;C:\Qt\Qt5.8.0\5.8\msvc2015\lib\Qt5Widgets.lib;..\..\..\libobs\MinSizeRel\obs.lib;..\..\..\..\dependencies2015\win32\bin\luajit.lib;..\..\..\deps\w32-pthreads\MinSizeRel\w32-pthreads.lib;C:\Qt\Qt5.8.0\5.8\msvc2015\lib\Qt5Gui.lib;C:\Qt\Qt5.8.0\5.8\msvc2015\lib\Qt5Core.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/obs-studio/build/UI/frontend-plugins/frontend-tools/MinSizeRel/frontend-tools.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/obs-studio/build/UI/frontend-plugins/frontend-tools/MinSizeRel/frontend-tools.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\obs-studio\build\UI\frontend-plugins\frontend-tools;D:\obs-studio\UI\frontend-plugins\frontend-tools;D:\obs-studio\build\UI\frontend-plugins\frontend-tools\frontend-tools_autogen\include_RelWithDebInfo;D:\obs-studio\dependencies2015\win32\include;D:\obs-studio\UI\obs-frontend-api;D:\obs-studio\libobs;D:\obs-studio\deps\libff;D:\obs-studio\deps\blake2\src;D:\obs-studio\deps\obs-scripting;D:\obs-studio\build\config;D:\obs-studio\deps\w32-pthreads;C:\Qt\Qt5.8.0\5.8\msvc2015\include;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtWidgets;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtGui;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtANGLE;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtCore;C:\Qt\Qt5.8.0\5.8\msvc2015\.\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4201</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="RelWithDebInfo";frontend_tools_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";frontend_tools_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\obs-studio\build\UI\frontend-plugins\frontend-tools;D:\obs-studio\UI\frontend-plugins\frontend-tools;D:\obs-studio\build\UI\frontend-plugins\frontend-tools\frontend-tools_autogen\include_RelWithDebInfo;D:\obs-studio\dependencies2015\win32\include;D:\obs-studio\UI\obs-frontend-api;D:\obs-studio\libobs;D:\obs-studio\deps\libff;D:\obs-studio\deps\blake2\src;D:\obs-studio\deps\obs-scripting;D:\obs-studio\build\config;D:\obs-studio\deps\w32-pthreads;C:\Qt\Qt5.8.0\5.8\msvc2015\include;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtWidgets;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtGui;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtANGLE;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtCore;C:\Qt\Qt5.8.0\5.8\msvc2015\.\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\obs-studio\build\UI\frontend-plugins\frontend-tools;D:\obs-studio\UI\frontend-plugins\frontend-tools;D:\obs-studio\build\UI\frontend-plugins\frontend-tools\frontend-tools_autogen\include_RelWithDebInfo;D:\obs-studio\dependencies2015\win32\include;D:\obs-studio\UI\obs-frontend-api;D:\obs-studio\libobs;D:\obs-studio\deps\libff;D:\obs-studio\deps\blake2\src;D:\obs-studio\deps\obs-scripting;D:\obs-studio\build\config;D:\obs-studio\deps\w32-pthreads;C:\Qt\Qt5.8.0\5.8\msvc2015\include;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtWidgets;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtGui;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtANGLE;C:\Qt\Qt5.8.0\5.8\msvc2015\include\QtCore;C:\Qt\Qt5.8.0\5.8\msvc2015\.\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>Automatic MOC for target frontend-tools</Message>
+      <Command>setlocal
+cd D:\obs-studio\build\UI\frontend-plugins\frontend-tools
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen D:/obs-studio/build/UI/frontend-plugins/frontend-tools/CMakeFiles/frontend-tools_autogen.dir RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message>			</Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy D:/obs-studio/build/UI/frontend-plugins/frontend-tools/RelWithDebInfo/frontend-tools.dll D:/obs-studio/build/rundir/RelWithDebInfo/obs-plugins/32bit/frontend-tools.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=RelWithDebInfo -DFNAME=frontend-tools.dll -DINPUT=D:/obs-studio/build/UI/frontend-plugins/frontend-tools/RelWithDebInfo -DOUTPUT=D:/obs-studio/build/UI/frontend-plugins/frontend-tools/pdbs -P D:/obs-studio/cmake/copy_on_debug_helper.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=RelWithDebInfo -DFNAME=frontend-tools.dll -DINPUT=D:/obs-studio/build/UI/frontend-plugins/frontend-tools/RelWithDebInfo -DOUTPUT=D:/obs-studio/build/rundir/RelWithDebInfo/obs-plugins/32bit -P D:/obs-studio/cmake/copy_on_debug_helper.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory D:/obs-studio/UI/frontend-plugins/frontend-tools/data D:/obs-studio/build/rundir/RelWithDebInfo/data/obs-plugins/frontend-tools
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>..\..\..\deps\obs-scripting\RelWithDebInfo\obs-scripting.lib;..\..\obs-frontend-api\RelWithDebInfo\obs-frontend-api.lib;C:\Qt\Qt5.8.0\5.8\msvc2015\lib\Qt5Widgets.lib;..\..\..\libobs\RelWithDebInfo\obs.lib;..\..\..\..\dependencies2015\win32\bin\luajit.lib;..\..\..\deps\w32-pthreads\RelWithDebInfo\w32-pthreads.lib;C:\Qt\Qt5.8.0\5.8\msvc2015\lib\Qt5Gui.lib;C:\Qt\Qt5.8.0\5.8\msvc2015\lib\Qt5Core.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/obs-studio/build/UI/frontend-plugins/frontend-tools/RelWithDebInfo/frontend-tools.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/obs-studio/build/UI/frontend-plugins/frontend-tools/RelWithDebInfo/frontend-tools.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\obs-studio\UI\frontend-plugins\frontend-tools\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/obs-studio/UI/frontend-plugins/frontend-tools/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/obs-studio -BD:/obs-studio/build --check-stamp-file D:/obs-studio/build/UI/frontend-plugins/frontend-tools/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/CMakeLists.txt;D:\obs-studio\UI\frontend-plugins\frontend-tools\CMakeLists.txt;D:\obs-studio\UI\frontend-plugins\frontend-tools\frontend-tools-config.h.in;C:\Program Files\CMake\share\cmake-3.10\Modules\AutogenInfo.cmake.in;D:\obs-studio\UI\frontend-plugins\frontend-tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/obs-studio/UI/frontend-plugins/frontend-tools/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/obs-studio -BD:/obs-studio/build --check-stamp-file D:/obs-studio/build/UI/frontend-plugins/frontend-tools/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/CMakeLists.txt;D:\obs-studio\UI\frontend-plugins\frontend-tools\CMakeLists.txt;D:\obs-studio\UI\frontend-plugins\frontend-tools\frontend-tools-config.h.in;C:\Program Files\CMake\share\cmake-3.10\Modules\AutogenInfo.cmake.in;D:\obs-studio\UI\frontend-plugins\frontend-tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/obs-studio/UI/frontend-plugins/frontend-tools/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/obs-studio -BD:/obs-studio/build --check-stamp-file D:/obs-studio/build/UI/frontend-plugins/frontend-tools/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/CMakeLists.txt;D:\obs-studio\UI\frontend-plugins\frontend-tools\CMakeLists.txt;D:\obs-studio\UI\frontend-plugins\frontend-tools\frontend-tools-config.h.in;C:\Program Files\CMake\share\cmake-3.10\Modules\AutogenInfo.cmake.in;D:\obs-studio\UI\frontend-plugins\frontend-tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/obs-studio/UI/frontend-plugins/frontend-tools/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/obs-studio -BD:/obs-studio/build --check-stamp-file D:/obs-studio/build/UI/frontend-plugins/frontend-tools/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/CMakeLists.txt;D:\obs-studio\UI\frontend-plugins\frontend-tools\CMakeLists.txt;D:\obs-studio\UI\frontend-plugins\frontend-tools\frontend-tools-config.h.in;C:\Program Files\CMake\share\cmake-3.10\Modules\AutogenInfo.cmake.in;D:\obs-studio\UI\frontend-plugins\frontend-tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\obs-studio\UI\frontend-plugins\frontend-tools\forms\auto-scene-switcher.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_auto-scene-switcher.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Qt\Qt5.8.0\5.8\msvc2015\bin\uic.exe -o D:/obs-studio/build/UI/frontend-plugins/frontend-tools/ui_auto-scene-switcher.h D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/auto-scene-switcher.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/auto-scene-switcher.ui;D:\obs-studio\UI\frontend-plugins\frontend-tools\forms\auto-scene-switcher.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\ui_auto-scene-switcher.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_auto-scene-switcher.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Qt\Qt5.8.0\5.8\msvc2015\bin\uic.exe -o D:/obs-studio/build/UI/frontend-plugins/frontend-tools/ui_auto-scene-switcher.h D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/auto-scene-switcher.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/auto-scene-switcher.ui;D:\obs-studio\UI\frontend-plugins\frontend-tools\forms\auto-scene-switcher.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\ui_auto-scene-switcher.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_auto-scene-switcher.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Qt\Qt5.8.0\5.8\msvc2015\bin\uic.exe -o D:/obs-studio/build/UI/frontend-plugins/frontend-tools/ui_auto-scene-switcher.h D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/auto-scene-switcher.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/auto-scene-switcher.ui;D:\obs-studio\UI\frontend-plugins\frontend-tools\forms\auto-scene-switcher.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\ui_auto-scene-switcher.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_auto-scene-switcher.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Qt\Qt5.8.0\5.8\msvc2015\bin\uic.exe -o D:/obs-studio/build/UI/frontend-plugins/frontend-tools/ui_auto-scene-switcher.h D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/auto-scene-switcher.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/auto-scene-switcher.ui;D:\obs-studio\UI\frontend-plugins\frontend-tools\forms\auto-scene-switcher.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\ui_auto-scene-switcher.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\obs-studio\UI\frontend-plugins\frontend-tools\forms\output-timer.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_output-timer.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Qt\Qt5.8.0\5.8\msvc2015\bin\uic.exe -o D:/obs-studio/build/UI/frontend-plugins/frontend-tools/ui_output-timer.h D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/output-timer.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/output-timer.ui;D:\obs-studio\UI\frontend-plugins\frontend-tools\forms\output-timer.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\ui_output-timer.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_output-timer.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Qt\Qt5.8.0\5.8\msvc2015\bin\uic.exe -o D:/obs-studio/build/UI/frontend-plugins/frontend-tools/ui_output-timer.h D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/output-timer.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/output-timer.ui;D:\obs-studio\UI\frontend-plugins\frontend-tools\forms\output-timer.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\ui_output-timer.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_output-timer.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Qt\Qt5.8.0\5.8\msvc2015\bin\uic.exe -o D:/obs-studio/build/UI/frontend-plugins/frontend-tools/ui_output-timer.h D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/output-timer.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/output-timer.ui;D:\obs-studio\UI\frontend-plugins\frontend-tools\forms\output-timer.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\ui_output-timer.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_output-timer.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Qt\Qt5.8.0\5.8\msvc2015\bin\uic.exe -o D:/obs-studio/build/UI/frontend-plugins/frontend-tools/ui_output-timer.h D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/output-timer.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/output-timer.ui;D:\obs-studio\UI\frontend-plugins\frontend-tools\forms\output-timer.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\ui_output-timer.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\obs-studio\UI\frontend-plugins\frontend-tools\forms\scripts.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_scripts.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Qt\Qt5.8.0\5.8\msvc2015\bin\uic.exe -o D:/obs-studio/build/UI/frontend-plugins/frontend-tools/ui_scripts.h D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/scripts.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/scripts.ui;D:\obs-studio\UI\frontend-plugins\frontend-tools\forms\scripts.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\ui_scripts.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_scripts.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Qt\Qt5.8.0\5.8\msvc2015\bin\uic.exe -o D:/obs-studio/build/UI/frontend-plugins/frontend-tools/ui_scripts.h D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/scripts.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/scripts.ui;D:\obs-studio\UI\frontend-plugins\frontend-tools\forms\scripts.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\ui_scripts.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_scripts.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Qt\Qt5.8.0\5.8\msvc2015\bin\uic.exe -o D:/obs-studio/build/UI/frontend-plugins/frontend-tools/ui_scripts.h D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/scripts.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/scripts.ui;D:\obs-studio\UI\frontend-plugins\frontend-tools\forms\scripts.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\ui_scripts.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_scripts.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Qt\Qt5.8.0\5.8\msvc2015\bin\uic.exe -o D:/obs-studio/build/UI/frontend-plugins/frontend-tools/ui_scripts.h D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/scripts.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/obs-studio/UI/frontend-plugins/frontend-tools/forms/scripts.ui;D:\obs-studio\UI\frontend-plugins\frontend-tools\forms\scripts.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\obs-studio\build\UI\frontend-plugins\frontend-tools\ui_scripts.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\obs-studio\build\config\frontend-tools-config.h" />
+    <ClInclude Include="D:\obs-studio\UI\frontend-plugins\frontend-tools\auto-scene-switcher.hpp" />
+    <ClInclude Include="D:\obs-studio\UI\frontend-plugins\frontend-tools\output-timer.hpp" />
+    <ClInclude Include="D:\obs-studio\UI\frontend-plugins\frontend-tools\tool-helpers.hpp" />
+    <ClInclude Include="D:\obs-studio\UI\properties-view.hpp" />
+    <ClInclude Include="D:\obs-studio\UI\properties-view.moc.hpp" />
+    <ClInclude Include="D:\obs-studio\UI\vertical-scroll-area.hpp" />
+    <ClInclude Include="D:\obs-studio\UI\double-slider.hpp" />
+    <ClInclude Include="D:\obs-studio\UI\frontend-plugins\frontend-tools\scripts.hpp" />
+    <ClCompile Include="D:\obs-studio\UI\frontend-plugins\frontend-tools\auto-scene-switcher.cpp"  />
+    <ClCompile Include="D:\obs-studio\UI\frontend-plugins\frontend-tools\frontend-tools.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="D:\obs-studio\UI\frontend-plugins\frontend-tools\output-timer.cpp"  />
+    <ClCompile Include="D:\obs-studio\UI\properties-view.cpp"  />
+    <ClCompile Include="D:\obs-studio\UI\vertical-scroll-area.cpp"  />
+    <ClCompile Include="D:\obs-studio\UI\double-slider.cpp"  />
+    <ClCompile Include="D:\obs-studio\UI\frontend-plugins\frontend-tools\scripts.cpp"  />
+    <ClInclude Include="D:\obs-studio\build\UI\frontend-plugins\frontend-tools\ui_auto-scene-switcher.h" />
+    <ClInclude Include="D:\obs-studio\build\UI\frontend-plugins\frontend-tools\ui_output-timer.h" />
+    <ClInclude Include="D:\obs-studio\build\UI\frontend-plugins\frontend-tools\ui_scripts.h" />
+    <ClCompile Include="D:\obs-studio\UI\frontend-plugins\frontend-tools\auto-scene-switcher-win.cpp"  />
+    <ClCompile Include="D:\obs-studio\build\UI\frontend-plugins\frontend-tools\frontend-tools_autogen\mocs_compilation.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\obs-studio\build\ZERO_CHECK.vcxproj">
+      <Project>{AB3F854C-16E4-31BE-951A-F6C1A350D417}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\obs-studio\build\libobs\libobs.vcxproj">
+      <Project>{477C7ECF-DE91-30DB-8501-495DC2AA4B47}</Project>
+      <Name>libobs</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\obs-studio\build\UI\obs-frontend-api\obs-frontend-api.vcxproj">
+      <Project>{C9CE7EDD-4BA2-36B4-926D-ED79D93D0A83}</Project>
+      <Name>obs-frontend-api</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\obs-studio\build\deps\obs-scripting\obs-scripting.vcxproj">
+      <Project>{7FECF90A-30CE-3AE8-AA92-A4E75E690A77}</Project>
+      <Name>obs-scripting</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\obs-studio\build\deps\w32-pthreads\w32-pthreads.vcxproj">
+      <Project>{6D91267D-6E3E-303E-9A65-5C908A7A38A8}</Project>
+      <Name>w32-pthreads</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

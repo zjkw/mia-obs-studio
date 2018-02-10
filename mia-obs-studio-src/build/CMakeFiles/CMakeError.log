@@ -1,0 +1,1050 @@
+Determining if files endian.h exist failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_d9a12.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:04。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_d9a12.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_d9a12.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_d9a12.dir\Debug\cmTC_d9a12.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_d9a12.dir\Debug\cmTC_d9a12.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d9a12.dir\Debug\\" /Fd"cmTC_d9a12.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d9a12.dir\Debug\\" /Fd"cmTC_d9a12.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: 无法打开包括文件: “endian.h”: No such file or directory [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_d9a12.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_d9a12.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_d9a12.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: 无法打开包括文件: “endian.h”: No such file or directory [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_d9a12.vcxproj]
+
+    0 个警告
+    1 个错误
+
+已用时间 00:00:00.90
+
+Source:
+/* */
+#include <endian.h>
+
+
+int main(void){return 0;}
+
+Determining if files sched.h exist failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_5c70a.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:06。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5c70a.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_5c70a.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_5c70a.dir\Debug\cmTC_5c70a.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_5c70a.dir\Debug\cmTC_5c70a.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5c70a.dir\Debug\\" /Fd"cmTC_5c70a.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5c70a.dir\Debug\\" /Fd"cmTC_5c70a.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: 无法打开包括文件: “sched.h”: No such file or directory [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5c70a.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5c70a.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5c70a.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: 无法打开包括文件: “sched.h”: No such file or directory [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5c70a.vcxproj]
+
+    0 个警告
+    1 个错误
+
+已用时间 00:00:00.65
+
+Source:
+/* */
+#include <sched.h>
+
+
+int main(void){return 0;}
+
+Determining if files unistd.h exist failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_c3fa6.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:07。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_c3fa6.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_c3fa6.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_c3fa6.dir\Debug\cmTC_c3fa6.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_c3fa6.dir\Debug\cmTC_c3fa6.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c3fa6.dir\Debug\\" /Fd"cmTC_c3fa6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c3fa6.dir\Debug\\" /Fd"cmTC_c3fa6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: 无法打开包括文件: “unistd.h”: No such file or directory [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_c3fa6.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_c3fa6.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_c3fa6.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: 无法打开包括文件: “unistd.h”: No such file or directory [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_c3fa6.vcxproj]
+
+    0 个警告
+    1 个错误
+
+已用时间 00:00:00.61
+
+Source:
+/* */
+#include <unistd.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/param.h exist failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_2c01e.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:08。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_2c01e.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_2c01e.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_2c01e.dir\Debug\cmTC_2c01e.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_2c01e.dir\Debug\cmTC_2c01e.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2c01e.dir\Debug\\" /Fd"cmTC_2c01e.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2c01e.dir\Debug\\" /Fd"cmTC_2c01e.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: 无法打开包括文件: “sys/param.h”: No such file or directory [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_2c01e.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_2c01e.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_2c01e.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: 无法打开包括文件: “sys/param.h”: No such file or directory [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_2c01e.vcxproj]
+
+    0 个警告
+    1 个错误
+
+已用时间 00:00:00.59
+
+Source:
+/* */
+#include <sys/param.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/time.h exist failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_51bd9.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:10。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_51bd9.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_51bd9.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_51bd9.dir\Debug\cmTC_51bd9.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_51bd9.dir\Debug\cmTC_51bd9.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_51bd9.dir\Debug\\" /Fd"cmTC_51bd9.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_51bd9.dir\Debug\\" /Fd"cmTC_51bd9.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: 无法打开包括文件: “sys/time.h”: No such file or directory [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_51bd9.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_51bd9.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_51bd9.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: 无法打开包括文件: “sys/time.h”: No such file or directory [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_51bd9.vcxproj]
+
+    0 个警告
+    1 个错误
+
+已用时间 00:00:00.58
+
+Source:
+/* */
+#include <sys/time.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/time.h exist failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_58b50.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:11。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_58b50.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_58b50.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_58b50.dir\Debug\cmTC_58b50.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_58b50.dir\Debug\cmTC_58b50.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_58b50.dir\Debug\\" /Fd"cmTC_58b50.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_58b50.dir\Debug\\" /Fd"cmTC_58b50.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: 无法打开包括文件: “sys/time.h”: No such file or directory [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_58b50.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_58b50.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_58b50.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: 无法打开包括文件: “sys/time.h”: No such file or directory [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_58b50.vcxproj]
+
+    0 个警告
+    1 个错误
+
+已用时间 00:00:00.58
+
+Source:
+/* */
+#include <sys/time.h>
+
+
+int main(void){return 0;}
+
+Determining if the function gettimeofday exists failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_3df5f.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:15。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_3df5f.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_3df5f.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_3df5f.dir\Debug\cmTC_3df5f.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_3df5f.dir\Debug\cmTC_3df5f.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=gettimeofday /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3df5f.dir\Debug\\" /Fd"cmTC_3df5f.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=gettimeofday /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3df5f.dir\Debug\\" /Fd"cmTC_3df5f.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_3df5f.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_3df5f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_3df5f.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_3df5f.dir\Debug\CheckFunctionExists.obj
+CheckFunctionExists.obj : error LNK2019: 无法解析的外部符号 _gettimeofday，该符号在函数 _main 中被引用 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_3df5f.vcxproj]
+D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_3df5f.exe : fatal error LNK1120: 1 个无法解析的外部命令 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_3df5f.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_3df5f.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_3df5f.vcxproj”(默认目标) (1) ->
+(Link 目标) -> 
+  CheckFunctionExists.obj : error LNK2019: 无法解析的外部符号 _gettimeofday，该符号在函数 _main 中被引用 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_3df5f.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_3df5f.exe : fatal error LNK1120: 1 个无法解析的外部命令 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_3df5f.vcxproj]
+
+    0 个警告
+    2 个错误
+
+已用时间 00:00:00.91
+
+
+Determining if the function sched_yield exists failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_80456.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:19。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_80456.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_80456.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_80456.dir\Debug\cmTC_80456.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_80456.dir\Debug\cmTC_80456.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=sched_yield /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_80456.dir\Debug\\" /Fd"cmTC_80456.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=sched_yield /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_80456.dir\Debug\\" /Fd"cmTC_80456.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_80456.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_80456.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_80456.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_80456.dir\Debug\CheckFunctionExists.obj
+CheckFunctionExists.obj : error LNK2019: 无法解析的外部符号 _sched_yield，该符号在函数 _main 中被引用 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_80456.vcxproj]
+D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_80456.exe : fatal error LNK1120: 1 个无法解析的外部命令 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_80456.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_80456.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_80456.vcxproj”(默认目标) (1) ->
+(Link 目标) -> 
+  CheckFunctionExists.obj : error LNK2019: 无法解析的外部符号 _sched_yield，该符号在函数 _main 中被引用 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_80456.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_80456.exe : fatal error LNK1120: 1 个无法解析的外部命令 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_80456.vcxproj]
+
+    0 个警告
+    2 个错误
+
+已用时间 00:00:00.88
+
+
+Determining size of __uint32 failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_96320.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:37。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_96320.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_96320.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_96320.dir\Debug\cmTC_96320.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_96320.dir\Debug\cmTC_96320.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_96320.dir\Debug\\" /Fd"cmTC_96320.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT32.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_96320.dir\Debug\\" /Fd"cmTC_96320.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT32.c"
+  __UINT32.c
+  
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT32.c(24): error C2065: “__uint32”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_96320.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT32.c(25): error C2065: “__uint32”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_96320.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT32.c(26): error C2065: “__uint32”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_96320.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT32.c(27): error C2065: “__uint32”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_96320.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT32.c(28): error C2065: “__uint32”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_96320.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_96320.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_96320.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT32.c(24): error C2065: “__uint32”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_96320.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT32.c(25): error C2065: “__uint32”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_96320.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT32.c(26): error C2065: “__uint32”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_96320.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT32.c(27): error C2065: “__uint32”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_96320.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT32.c(28): error C2065: “__uint32”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_96320.vcxproj]
+
+    0 个警告
+    5 个错误
+
+已用时间 00:00:00.59
+
+D:/obs-studio/build/CMakeFiles/CheckTypeSize/__UINT32.c:
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(__uint32))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __uint16 failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_1255c.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:39。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1255c.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_1255c.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_1255c.dir\Debug\cmTC_1255c.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_1255c.dir\Debug\cmTC_1255c.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1255c.dir\Debug\\" /Fd"cmTC_1255c.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT16.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1255c.dir\Debug\\" /Fd"cmTC_1255c.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT16.c"
+  __UINT16.c
+  
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT16.c(24): error C2065: “__uint16”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1255c.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT16.c(25): error C2065: “__uint16”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1255c.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT16.c(26): error C2065: “__uint16”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1255c.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT16.c(27): error C2065: “__uint16”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1255c.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT16.c(28): error C2065: “__uint16”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1255c.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1255c.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1255c.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT16.c(24): error C2065: “__uint16”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1255c.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT16.c(25): error C2065: “__uint16”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1255c.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT16.c(26): error C2065: “__uint16”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1255c.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT16.c(27): error C2065: “__uint16”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1255c.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT16.c(28): error C2065: “__uint16”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1255c.vcxproj]
+
+    0 个警告
+    5 个错误
+
+已用时间 00:00:00.61
+
+D:/obs-studio/build/CMakeFiles/CheckTypeSize/__UINT16.c:
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(__uint16))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __uint8 failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_934dc.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:42。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_934dc.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_934dc.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_934dc.dir\Debug\cmTC_934dc.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_934dc.dir\Debug\cmTC_934dc.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_934dc.dir\Debug\\" /Fd"cmTC_934dc.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT8.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_934dc.dir\Debug\\" /Fd"cmTC_934dc.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT8.c"
+  __UINT8.c
+  
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT8.c(24): error C2065: “__uint8”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_934dc.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT8.c(25): error C2065: “__uint8”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_934dc.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT8.c(26): error C2065: “__uint8”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_934dc.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT8.c(27): error C2065: “__uint8”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_934dc.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT8.c(28): error C2065: “__uint8”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_934dc.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_934dc.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_934dc.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT8.c(24): error C2065: “__uint8”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_934dc.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT8.c(25): error C2065: “__uint8”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_934dc.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT8.c(26): error C2065: “__uint8”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_934dc.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT8.c(27): error C2065: “__uint8”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_934dc.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\__UINT8.c(28): error C2065: “__uint8”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_934dc.vcxproj]
+
+    0 个警告
+    5 个错误
+
+已用时间 00:00:00.59
+
+D:/obs-studio/build/CMakeFiles/CheckTypeSize/__UINT8.c:
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(__uint8))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of ssize_t failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_5d7f0.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:42。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5d7f0.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_5d7f0.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_5d7f0.dir\Debug\cmTC_5d7f0.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_5d7f0.dir\Debug\cmTC_5d7f0.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5d7f0.dir\Debug\\" /Fd"cmTC_5d7f0.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\SSIZE_T.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5d7f0.dir\Debug\\" /Fd"cmTC_5d7f0.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\SSIZE_T.c"
+  SSIZE_T.c
+  
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\SSIZE_T.c(24): error C2065: “ssize_t”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5d7f0.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\SSIZE_T.c(25): error C2065: “ssize_t”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5d7f0.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\SSIZE_T.c(26): error C2065: “ssize_t”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5d7f0.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\SSIZE_T.c(27): error C2065: “ssize_t”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5d7f0.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\SSIZE_T.c(28): error C2065: “ssize_t”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5d7f0.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5d7f0.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5d7f0.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\SSIZE_T.c(24): error C2065: “ssize_t”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5d7f0.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\SSIZE_T.c(25): error C2065: “ssize_t”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5d7f0.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\SSIZE_T.c(26): error C2065: “ssize_t”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5d7f0.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\SSIZE_T.c(27): error C2065: “ssize_t”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5d7f0.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\SSIZE_T.c(28): error C2065: “ssize_t”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5d7f0.vcxproj]
+
+    0 个警告
+    5 个错误
+
+已用时间 00:00:00.60
+
+D:/obs-studio/build/CMakeFiles/CheckTypeSize/SSIZE_T.c:
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(ssize_t))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of SSIZE_T failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_604c1.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:43。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_604c1.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_604c1.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_604c1.dir\Debug\cmTC_604c1.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_604c1.dir\Debug\cmTC_604c1.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_604c1.dir\Debug\\" /Fd"cmTC_604c1.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\UPPERCASE_SSIZE_T.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_604c1.dir\Debug\\" /Fd"cmTC_604c1.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\UPPERCASE_SSIZE_T.c"
+  UPPERCASE_SSIZE_T.c
+  
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\UPPERCASE_SSIZE_T.c(24): error C2065: “SSIZE_T”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_604c1.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\UPPERCASE_SSIZE_T.c(25): error C2065: “SSIZE_T”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_604c1.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\UPPERCASE_SSIZE_T.c(26): error C2065: “SSIZE_T”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_604c1.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\UPPERCASE_SSIZE_T.c(27): error C2065: “SSIZE_T”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_604c1.vcxproj]
+D:\obs-studio\build\CMakeFiles\CheckTypeSize\UPPERCASE_SSIZE_T.c(28): error C2065: “SSIZE_T”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_604c1.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_604c1.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_604c1.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\UPPERCASE_SSIZE_T.c(24): error C2065: “SSIZE_T”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_604c1.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\UPPERCASE_SSIZE_T.c(25): error C2065: “SSIZE_T”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_604c1.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\UPPERCASE_SSIZE_T.c(26): error C2065: “SSIZE_T”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_604c1.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\UPPERCASE_SSIZE_T.c(27): error C2065: “SSIZE_T”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_604c1.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CheckTypeSize\UPPERCASE_SSIZE_T.c(28): error C2065: “SSIZE_T”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_604c1.vcxproj]
+
+    0 个警告
+    5 个错误
+
+已用时间 00:00:00.59
+
+D:/obs-studio/build/CMakeFiles/CheckTypeSize/UPPERCASE_SSIZE_T.c:
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(SSIZE_T))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function strtoq exists failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_47e2e.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:46。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_47e2e.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_47e2e.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_47e2e.dir\Debug\cmTC_47e2e.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_47e2e.dir\Debug\cmTC_47e2e.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=strtoq /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_47e2e.dir\Debug\\" /Fd"cmTC_47e2e.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=strtoq /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_47e2e.dir\Debug\\" /Fd"cmTC_47e2e.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_47e2e.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_47e2e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_47e2e.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_47e2e.dir\Debug\CheckFunctionExists.obj
+CheckFunctionExists.obj : error LNK2019: 无法解析的外部符号 _strtoq，该符号在函数 _main 中被引用 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_47e2e.vcxproj]
+D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_47e2e.exe : fatal error LNK1120: 1 个无法解析的外部命令 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_47e2e.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_47e2e.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_47e2e.vcxproj”(默认目标) (1) ->
+(Link 目标) -> 
+  CheckFunctionExists.obj : error LNK2019: 无法解析的外部符号 _strtoq，该符号在函数 _main 中被引用 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_47e2e.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_47e2e.exe : fatal error LNK1120: 1 个无法解析的外部命令 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_47e2e.vcxproj]
+
+    0 个警告
+    2 个错误
+
+已用时间 00:00:00.88
+
+
+Performing C SOURCE FILE Test HAVE___INLINE__ failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_015bc.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:55。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_015bc.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_015bc.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_015bc.dir\Debug\cmTC_015bc.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_015bc.dir\Debug\cmTC_015bc.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE___INLINE__ /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_015bc.dir\Debug\\" /Fd"cmTC_015bc.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE___INLINE__ /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_015bc.dir\Debug\\" /Fd"cmTC_015bc.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c"
+  src.c
+  
+D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): error C2054: 在“__inline__”之后应输入“(” [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_015bc.vcxproj]
+D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): error C2085: “func”: 不在形参表中 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_015bc.vcxproj]
+D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): error C2143: 语法错误: 缺少“;”(在“{”的前面) [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_015bc.vcxproj]
+D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): warning C4013: “func”未定义；假设外部返回 int [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_015bc.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_015bc.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_015bc.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): warning C4013: “func”未定义；假设外部返回 int [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_015bc.vcxproj]
+
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_015bc.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): error C2054: 在“__inline__”之后应输入“(” [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_015bc.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): error C2085: “func”: 不在形参表中 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_015bc.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): error C2143: 语法错误: 缺少“;”(在“{”的前面) [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_015bc.vcxproj]
+
+    1 个警告
+    3 个错误
+
+已用时间 00:00:00.60
+
+Source file was:
+__inline__ void func(); void func() { } int main() { func(); return 0; }
+Performing C SOURCE FILE Test HAVE_SYNC_BUILTINS failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_2b595.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:56。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_2b595.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_2b595.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_2b595.dir\Debug\cmTC_2b595.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_2b595.dir\Debug\cmTC_2b595.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_SYNC_BUILTINS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2b595.dir\Debug\\" /Fd"cmTC_2b595.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_SYNC_BUILTINS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2b595.dir\Debug\\" /Fd"cmTC_2b595.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c"
+  src.c
+  
+D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): warning C4013: “__sync_bool_compare_and_swap”未定义；假设外部返回 int [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_2b595.vcxproj]
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_2b595.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_2b595.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_2b595.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_2b595.dir\Debug\src.obj
+src.obj : error LNK2019: 无法解析的外部符号 ___sync_bool_compare_and_swap，该符号在函数 _main 中被引用 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_2b595.vcxproj]
+D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_2b595.exe : fatal error LNK1120: 1 个无法解析的外部命令 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_2b595.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_2b595.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_2b595.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): warning C4013: “__sync_bool_compare_and_swap”未定义；假设外部返回 int [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_2b595.vcxproj]
+
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_2b595.vcxproj”(默认目标) (1) ->
+(Link 目标) -> 
+  src.obj : error LNK2019: 无法解析的外部符号 ___sync_bool_compare_and_swap，该符号在函数 _main 中被引用 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_2b595.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_2b595.exe : fatal error LNK1120: 1 个无法解析的外部命令 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_2b595.vcxproj]
+
+    1 个警告
+    2 个错误
+
+已用时间 00:00:00.87
+
+Source file was:
+int main() { unsigned long val; __sync_bool_compare_and_swap(&val, 0, 1); return 0; } 
+Performing C SOURCE FILE Test HAVE_ATOMIC_BUILTINS failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_036f8.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:57。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_036f8.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_036f8.dir\Debug\cmTC_036f8.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_036f8.dir\Debug\cmTC_036f8.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_ATOMIC_BUILTINS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_036f8.dir\Debug\\" /Fd"cmTC_036f8.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_ATOMIC_BUILTINS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_036f8.dir\Debug\\" /Fd"cmTC_036f8.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c"
+  src.c
+  
+D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): warning C4013: “__atomic_test_and_set”未定义；假设外部返回 int [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj]
+D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): error C2065: “__ATOMIC_RELAXED”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj]
+D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): warning C4013: “__atomic_store_n”未定义；假设外部返回 int [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj]
+D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): error C2065: “__ATOMIC_RELEASE”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj]
+D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): warning C4013: “__atomic_load_n”未定义；假设外部返回 int [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj]
+D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): error C2065: “__ATOMIC_ACQUIRE”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): warning C4013: “__atomic_test_and_set”未定义；假设外部返回 int [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): warning C4013: “__atomic_store_n”未定义；假设外部返回 int [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): warning C4013: “__atomic_load_n”未定义；假设外部返回 int [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj]
+
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): error C2065: “__ATOMIC_RELAXED”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): error C2065: “__ATOMIC_RELEASE”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj]
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c(1): error C2065: “__ATOMIC_ACQUIRE”: 未声明的标识符 [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_036f8.vcxproj]
+
+    3 个警告
+    3 个错误
+
+已用时间 00:00:00.61
+
+Source file was:
+int main() { char l; unsigned long v; __atomic_test_and_set(&l, __ATOMIC_RELAXED); __atomic_store_n(&v, 1, __ATOMIC_RELEASE); __atomic_load_n(&v, __ATOMIC_ACQUIRE); return 0; }
+Determining if files pthread.h exist failed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_5e34f.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:58。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5e34f.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_5e34f.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_5e34f.dir\Debug\cmTC_5e34f.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_5e34f.dir\Debug\cmTC_5e34f.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5e34f.dir\Debug\\" /Fd"cmTC_5e34f.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5e34f.dir\Debug\\" /Fd"cmTC_5e34f.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5e34f.vcxproj]
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5e34f.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5e34f.vcxproj”(默认目标) (1) ->
+(ClCompile 目标) -> 
+  D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5e34f.vcxproj]
+
+    0 个警告
+    1 个错误
+
+已用时间 00:00:00.60
+
+Source:
+/* */
+#include <pthread.h>
+
+
+int main(void){return 0;}
+

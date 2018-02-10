@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\obs-studio\plugins\decklink\plugin-main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\obs-studio\plugins\decklink\decklink.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\obs-studio\plugins\decklink\decklink-device-instance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\obs-studio\plugins\decklink\decklink-device-discovery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\obs-studio\plugins\decklink\decklink-device.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\obs-studio\plugins\decklink\decklink-device-mode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\obs-studio\plugins\decklink\audio-repack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\obs-studio\plugins\decklink\win\platform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\obs-studio\build\plugins\decklink\win\DeckLinkAPI_i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\obs-studio\plugins\decklink\platform.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\obs-studio\plugins\decklink\decklink.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\obs-studio\plugins\decklink\decklink-device-instance.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\obs-studio\plugins\decklink\decklink-device-discovery.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\obs-studio\plugins\decklink\decklink-device.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\obs-studio\plugins\decklink\decklink-device-mode.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\obs-studio\plugins\decklink\audio-repack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\obs-studio\plugins\decklink\audio-repack.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\obs-studio\plugins\decklink\win\decklink-sdk\DeckLinkAPIVersion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\obs-studio\build\plugins\decklink\win\DeckLinkAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\obs-studio\plugins\decklink\win\CMakeLists.txt" />
+    <CustomBuild Include="D:\obs-studio\build\CMakeFiles\39737ac7eb144526004a90df0a01078b\DeckLinkAPI.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F1C2F8E0-4702-30CD-A346-BB658DA1EB2C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{E6A29EC5-D786-3355-816A-85FBFDA7A4A6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E3926134-EE7B-3CFF-B6C9-A3B849B45EEF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,5 @@
+﻿  Building Custom Rule D:/obs-studio/plugins/obs-ffmpeg/ffmpeg-mux/CMakeLists.txt
+  CMake does not need to re-run because D:/obs-studio/build/plugins/obs-ffmpeg/ffmpeg-mux/CMakeFiles/generate.stamp is up-to-date.
+  ffmpeg-mux.c
+d:\obs-studio\dependencies2015\win32\include\libavutil\rational.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  ffmpeg-mux.vcxproj -> D:\obs-studio\build\plugins\obs-ffmpeg\ffmpeg-mux\Release\ffmpeg-mux32.exe

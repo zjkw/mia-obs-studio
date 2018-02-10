@@ -1,0 +1,30 @@
+# CMake generation dependency list for this directory.
+D:/obs-studio/libobs/CMakeLists.txt
+D:/obs-studio/cmake/Modules/FindThreads.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/CheckIncludeFiles.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/CheckSymbolExists.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageMessage.cmake
+D:/obs-studio/cmake/Modules/FindFFmpeg.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPkgConfig.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindImageMagick.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPkgConfig.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageMessage.cmake
+D:/obs-studio/cmake/Modules/FindZLIB.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPkgConfig.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.10/Modules/FindPackageMessage.cmake
+D:/obs-studio/libobs/obsconfig.h.in
+D:/obs-studio/libobs/LibObsConfig.cmake.in
+D:/obs-studio/libobs/LibObsConfig.cmake.in
+D:/obs-studio/libobs/LibObsConfigVersion.cmake.in

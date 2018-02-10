@@ -1,0 +1,1454 @@
+The system is: Windows - 10.0.16299 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+0
+���� .NET Framework �� Microsoft (R) ��������汾 15.5.180.51428
+��Ȩ����(C) Microsoft Corporation����������Ȩ����
+
+��������ʱ��Ϊ 2018/1/29 13:09:45��
+�ڵ� 1 �ϵ���Ŀ��D:\obs-studio\build\CMakeFiles\3.10.2\CompilerIdC\CompilerIdC.vcxproj��(Ĭ��Ŀ��)��
+PrepareForBuild:
+  ���ڴ���Ŀ¼��Debug\����
+  ���ڴ���Ŀ¼��Debug\CompilerIdC.tlog\����
+InitializeBuildStatus:
+  ���ڴ�����Debug\CompilerIdC.tlog\unsuccessfulbuild������Ϊ��ָ����AlwaysCreate����
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /nologo /W0 /WX- /diagnostics:classic /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> D:\obs-studio\build\CMakeFiles\3.10.2\CompilerIdC\.\CompilerIdC.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_C_COMPILER=D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\Hostx86\x86\cl.exe
+FinalizeBuildStatus:
+  ����ɾ���ļ���Debug\CompilerIdC.tlog\unsuccessfulbuild����
+  ���ڶԡ�Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate��ִ�� Touch ����
+�����������Ŀ��D:\obs-studio\build\CMakeFiles\3.10.2\CompilerIdC\CompilerIdC.vcxproj��(Ĭ��Ŀ��)�Ĳ�����
+
+�ѳɹ����ɡ�
+    0 ������
+    0 ������
+
+����ʱ�� 00:00:01.79
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+The C compiler identification is MSVC, found in "D:/obs-studio/build/CMakeFiles/3.10.2/CompilerIdC/CompilerIdC.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+0
+���� .NET Framework �� Microsoft (R) ��������汾 15.5.180.51428
+��Ȩ����(C) Microsoft Corporation����������Ȩ����
+
+��������ʱ��Ϊ 2018/1/29 13:09:47��
+�ڵ� 1 �ϵ���Ŀ��D:\obs-studio\build\CMakeFiles\3.10.2\CompilerIdCXX\CompilerIdCXX.vcxproj��(Ĭ��Ŀ��)��
+PrepareForBuild:
+  ���ڴ���Ŀ¼��Debug\����
+  ���ڴ���Ŀ¼��Debug\CompilerIdCXX.tlog\����
+InitializeBuildStatus:
+  ���ڴ�����Debug\CompilerIdCXX.tlog\unsuccessfulbuild������Ϊ��ָ����AlwaysCreate����
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /nologo /W0 /WX- /diagnostics:classic /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue CMakeCXXCompilerId.cpp
+  CMakeCXXCompilerId.cpp
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCXXCompilerId.obj
+  CompilerIdCXX.vcxproj -> D:\obs-studio\build\CMakeFiles\3.10.2\CompilerIdCXX\.\CompilerIdCXX.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_CXX_COMPILER=D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\Hostx86\x86\cl.exe
+FinalizeBuildStatus:
+  ����ɾ���ļ���Debug\CompilerIdCXX.tlog\unsuccessfulbuild����
+  ���ڶԡ�Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate��ִ�� Touch ����
+�����������Ŀ��D:\obs-studio\build\CMakeFiles\3.10.2\CompilerIdCXX\CompilerIdCXX.vcxproj��(Ĭ��Ŀ��)�Ĳ�����
+
+�ѳɹ����ɡ�
+    0 ������
+    0 ������
+
+����ʱ�� 00:00:01.12
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+
+The CXX compiler identification is MSVC, found in "D:/obs-studio/build/CMakeFiles/3.10.2/CompilerIdCXX/CompilerIdCXX.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_234a8.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:09:49。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_234a8.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_234a8.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_234a8.dir\Debug\cmTC_234a8.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_234a8.dir\Debug\cmTC_234a8.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_234a8.dir\Debug\\" /Fd"cmTC_234a8.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\testCCompiler.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_234a8.dir\Debug\\" /Fd"cmTC_234a8.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\testCCompiler.c"
+  testCCompiler.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_234a8.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_234a8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_234a8.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_234a8.dir\Debug\testCCompiler.obj
+  cmTC_234a8.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_234a8.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_234a8.dir\Debug\cmTC_234a8.tlog\unsuccessfulbuild”。
+  正在对“cmTC_234a8.dir\Debug\cmTC_234a8.tlog\cmTC_234a8.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_234a8.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.36
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_eade6.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:09:51。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_eade6.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_eade6.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_eade6.dir\Debug\cmTC_eade6.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_eade6.dir\Debug\cmTC_eade6.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_eade6.dir\Debug\\" /Fd"cmTC_eade6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCCompilerABI.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_eade6.dir\Debug\\" /Fd"cmTC_eade6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCCompilerABI.c"
+  CMakeCCompilerABI.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_eade6.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_eade6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_eade6.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_eade6.dir\Debug\CMakeCCompilerABI.obj
+  cmTC_eade6.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_eade6.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_eade6.dir\Debug\cmTC_eade6.tlog\unsuccessfulbuild”。
+  正在对“cmTC_eade6.dir\Debug\cmTC_eade6.tlog\cmTC_eade6.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_eade6.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.99
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_35016.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:09:52。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_35016.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_35016.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_35016.dir\Debug\cmTC_35016.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_35016.dir\Debug\cmTC_35016.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_35016.dir\Debug\\" /Fd"cmTC_35016.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_35016.dir\Debug\\" /Fd"cmTC_35016.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  testCXXCompiler.cxx
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_35016.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_35016.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_35016.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_35016.dir\Debug\testCXXCompiler.obj
+  cmTC_35016.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_35016.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_35016.dir\Debug\cmTC_35016.tlog\unsuccessfulbuild”。
+  正在对“cmTC_35016.dir\Debug\cmTC_35016.tlog\cmTC_35016.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_35016.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.02
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_ec70f.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:09:53。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_ec70f.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_ec70f.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_ec70f.dir\Debug\cmTC_ec70f.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_ec70f.dir\Debug\cmTC_ec70f.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ec70f.dir\Debug\\" /Fd"cmTC_ec70f.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ec70f.dir\Debug\\" /Fd"cmTC_ec70f.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp"
+  CMakeCXXCompilerABI.cpp
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_ec70f.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_ec70f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_ec70f.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_ec70f.dir\Debug\CMakeCXXCompilerABI.obj
+  cmTC_ec70f.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_ec70f.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_ec70f.dir\Debug\cmTC_ec70f.tlog\unsuccessfulbuild”。
+  正在对“cmTC_ec70f.dir\Debug\cmTC_ec70f.tlog\cmTC_ec70f.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_ec70f.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.04
+
+
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_655cd.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:09:55。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_655cd.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_655cd.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_655cd.dir\Debug\cmTC_655cd.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_655cd.dir\Debug\cmTC_655cd.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_655cd.dir\Debug\\" /Fd"cmTC_655cd.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\feature_tests.cxx"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_655cd.dir\Debug\\" /Fd"cmTC_655cd.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\feature_tests.cxx"
+  feature_tests.cxx
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_655cd.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_655cd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_655cd.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_655cd.dir\Debug\feature_tests.obj
+  cmTC_655cd.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_655cd.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_655cd.dir\Debug\cmTC_655cd.tlog\unsuccessfulbuild”。
+  正在对“cmTC_655cd.dir\Debug\cmTC_655cd.tlog\cmTC_655cd.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_655cd.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.05
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+Performing C++ SOURCE FILE Test CXX11_FLAG_DETECTED succeeded with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_1b625.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:09:57。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1b625.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_1b625.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_1b625.dir\Debug\cmTC_1b625.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_1b625.dir\Debug\cmTC_1b625.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CXX11_FLAG_DETECTED /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_1b625.dir\Debug\\" /Fd"cmTC_1b625.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\src.cxx"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CXX11_FLAG_DETECTED /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_1b625.dir\Debug\\" /Fd"cmTC_1b625.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\src.cxx"
+  src.cxx
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_1b625.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_1b625.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_1b625.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_1b625.dir\Debug\src.obj
+  cmTC_1b625.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_1b625.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_1b625.dir\Debug\cmTC_1b625.tlog\unsuccessfulbuild”。
+  正在对“cmTC_1b625.dir\Debug\cmTC_1b625.tlog\cmTC_1b625.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1b625.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.00
+
+Source file was:
+
+int main()
+{
+    int n[] = {4,7,6,1,2};
+	int r;
+	auto f = [&](int j) { r = j; };
+	
+    for (auto i : n)
+        f(i);
+    return 0;
+}
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_39be5.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:05。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_39be5.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_39be5.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_39be5.dir\Debug\cmTC_39be5.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_39be5.dir\Debug\cmTC_39be5.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_39be5.dir\Debug\\" /Fd"cmTC_39be5.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_39be5.dir\Debug\\" /Fd"cmTC_39be5.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_39be5.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_39be5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_39be5.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_39be5.dir\Debug\CheckIncludeFiles.obj
+  cmTC_39be5.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_39be5.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_39be5.dir\Debug\cmTC_39be5.tlog\unsuccessfulbuild”。
+  正在对“cmTC_39be5.dir\Debug\cmTC_39be5.tlog\cmTC_39be5.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_39be5.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.04
+
+
+Determining if files sys/stat.h exist passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_c70f4.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:09。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_c70f4.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_c70f4.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_c70f4.dir\Debug\cmTC_c70f4.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_c70f4.dir\Debug\cmTC_c70f4.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c70f4.dir\Debug\\" /Fd"cmTC_c70f4.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c70f4.dir\Debug\\" /Fd"cmTC_c70f4.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_c70f4.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_c70f4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_c70f4.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_c70f4.dir\Debug\CheckIncludeFiles.obj
+  cmTC_c70f4.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_c70f4.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_c70f4.dir\Debug\cmTC_c70f4.tlog\unsuccessfulbuild”。
+  正在对“cmTC_c70f4.dir\Debug\cmTC_c70f4.tlog\cmTC_c70f4.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_c70f4.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.13
+
+
+Determining if the function close exists passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_e0388.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:12。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_e0388.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_e0388.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_e0388.dir\Debug\cmTC_e0388.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_e0388.dir\Debug\cmTC_e0388.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=close /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e0388.dir\Debug\\" /Fd"cmTC_e0388.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=close /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e0388.dir\Debug\\" /Fd"cmTC_e0388.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_e0388.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_e0388.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_e0388.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_e0388.dir\Debug\CheckFunctionExists.obj
+  cmTC_e0388.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_e0388.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_e0388.dir\Debug\cmTC_e0388.tlog\unsuccessfulbuild”。
+  正在对“cmTC_e0388.dir\Debug\cmTC_e0388.tlog\cmTC_e0388.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_e0388.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.10
+
+
+Determining if the function getpid exists passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_965e1.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:14。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_965e1.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_965e1.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_965e1.dir\Debug\cmTC_965e1.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_965e1.dir\Debug\cmTC_965e1.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=getpid /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_965e1.dir\Debug\\" /Fd"cmTC_965e1.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=getpid /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_965e1.dir\Debug\\" /Fd"cmTC_965e1.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_965e1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_965e1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_965e1.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_965e1.dir\Debug\CheckFunctionExists.obj
+  cmTC_965e1.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_965e1.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_965e1.dir\Debug\cmTC_965e1.tlog\unsuccessfulbuild”。
+  正在对“cmTC_965e1.dir\Debug\cmTC_965e1.tlog\cmTC_965e1.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_965e1.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.00
+
+
+Determining if the function open exists passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_e101e.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:16。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_e101e.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_e101e.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_e101e.dir\Debug\cmTC_e101e.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_e101e.dir\Debug\cmTC_e101e.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=open /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e101e.dir\Debug\\" /Fd"cmTC_e101e.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=open /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e101e.dir\Debug\\" /Fd"cmTC_e101e.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_e101e.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_e101e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_e101e.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_e101e.dir\Debug\CheckFunctionExists.obj
+  cmTC_e101e.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_e101e.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_e101e.dir\Debug\cmTC_e101e.tlog\unsuccessfulbuild”。
+  正在对“cmTC_e101e.dir\Debug\cmTC_e101e.tlog\cmTC_e101e.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_e101e.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.98
+
+
+Determining if the function read exists passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_fbf3d.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:17。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_fbf3d.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_fbf3d.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_fbf3d.dir\Debug\cmTC_fbf3d.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_fbf3d.dir\Debug\cmTC_fbf3d.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=read /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fbf3d.dir\Debug\\" /Fd"cmTC_fbf3d.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=read /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fbf3d.dir\Debug\\" /Fd"cmTC_fbf3d.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_fbf3d.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_fbf3d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_fbf3d.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_fbf3d.dir\Debug\CheckFunctionExists.obj
+  cmTC_fbf3d.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_fbf3d.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_fbf3d.dir\Debug\cmTC_fbf3d.tlog\unsuccessfulbuild”。
+  正在对“cmTC_fbf3d.dir\Debug\cmTC_fbf3d.tlog\cmTC_fbf3d.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_fbf3d.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.98
+
+
+Determining if files stdint.h exist passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_30752.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:20。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_30752.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_30752.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_30752.dir\Debug\cmTC_30752.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_30752.dir\Debug\cmTC_30752.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_30752.dir\Debug\\" /Fd"cmTC_30752.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_30752.dir\Debug\\" /Fd"cmTC_30752.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_30752.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_30752.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_30752.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_30752.dir\Debug\CheckIncludeFiles.obj
+  cmTC_30752.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_30752.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_30752.dir\Debug\cmTC_30752.tlog\unsuccessfulbuild”。
+  正在对“cmTC_30752.dir\Debug\cmTC_30752.tlog\cmTC_30752.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_30752.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.02
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_50d62.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:21。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_50d62.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_50d62.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_50d62.dir\Debug\cmTC_50d62.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_50d62.dir\Debug\cmTC_50d62.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_50d62.dir\Debug\\" /Fd"cmTC_50d62.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_50d62.dir\Debug\\" /Fd"cmTC_50d62.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  CheckIncludeFile.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_50d62.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_50d62.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_50d62.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_50d62.dir\Debug\CheckIncludeFile.obj
+  cmTC_50d62.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_50d62.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_50d62.dir\Debug\cmTC_50d62.tlog\unsuccessfulbuild”。
+  正在对“cmTC_50d62.dir\Debug\cmTC_50d62.tlog\cmTC_50d62.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_50d62.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.01
+
+
+Determining size of __int64 passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_961d6.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:22。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_961d6.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_961d6.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_961d6.dir\Debug\cmTC_961d6.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_961d6.dir\Debug\cmTC_961d6.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_961d6.dir\Debug\\" /Fd"cmTC_961d6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\__INT64.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_961d6.dir\Debug\\" /Fd"cmTC_961d6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\__INT64.c"
+  __INT64.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_961d6.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_961d6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_961d6.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_961d6.dir\Debug\__INT64.obj
+  cmTC_961d6.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_961d6.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_961d6.dir\Debug\cmTC_961d6.tlog\unsuccessfulbuild”。
+  正在对“cmTC_961d6.dir\Debug\cmTC_961d6.tlog\cmTC_961d6.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_961d6.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.00
+
+
+Determining size of int64_t passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_24a07.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:24。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_24a07.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_24a07.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_24a07.dir\Debug\cmTC_24a07.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_24a07.dir\Debug\cmTC_24a07.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_24a07.dir\Debug\\" /Fd"cmTC_24a07.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\INT64_T.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_24a07.dir\Debug\\" /Fd"cmTC_24a07.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\INT64_T.c"
+  INT64_T.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_24a07.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_24a07.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_24a07.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_24a07.dir\Debug\INT64_T.obj
+  cmTC_24a07.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_24a07.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_24a07.dir\Debug\cmTC_24a07.tlog\unsuccessfulbuild”。
+  正在对“cmTC_24a07.dir\Debug\cmTC_24a07.tlog\cmTC_24a07.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_24a07.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.01
+
+
+Determining size of long long passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_5ac29.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:25。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5ac29.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_5ac29.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_5ac29.dir\Debug\cmTC_5ac29.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_5ac29.dir\Debug\cmTC_5ac29.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5ac29.dir\Debug\\" /Fd"cmTC_5ac29.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\LONG_LONG_INT.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5ac29.dir\Debug\\" /Fd"cmTC_5ac29.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\LONG_LONG_INT.c"
+  LONG_LONG_INT.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_5ac29.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_5ac29.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_5ac29.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_5ac29.dir\Debug\LONG_LONG_INT.obj
+  cmTC_5ac29.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_5ac29.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_5ac29.dir\Debug\cmTC_5ac29.tlog\unsuccessfulbuild”。
+  正在对“cmTC_5ac29.dir\Debug\cmTC_5ac29.tlog\cmTC_5ac29.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_5ac29.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.97
+
+
+Determining size of int32_t passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_76cf6.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:26。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_76cf6.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_76cf6.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_76cf6.dir\Debug\cmTC_76cf6.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_76cf6.dir\Debug\cmTC_76cf6.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_76cf6.dir\Debug\\" /Fd"cmTC_76cf6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\INT32_T.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_76cf6.dir\Debug\\" /Fd"cmTC_76cf6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\INT32_T.c"
+  INT32_T.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_76cf6.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_76cf6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_76cf6.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_76cf6.dir\Debug\INT32_T.obj
+  cmTC_76cf6.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_76cf6.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_76cf6.dir\Debug\cmTC_76cf6.tlog\unsuccessfulbuild”。
+  正在对“cmTC_76cf6.dir\Debug\cmTC_76cf6.tlog\cmTC_76cf6.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_76cf6.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.02
+
+
+Determining size of __int32 passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_a6343.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:28。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_a6343.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_a6343.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_a6343.dir\Debug\cmTC_a6343.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_a6343.dir\Debug\cmTC_a6343.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a6343.dir\Debug\\" /Fd"cmTC_a6343.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\__INT32.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a6343.dir\Debug\\" /Fd"cmTC_a6343.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\__INT32.c"
+  __INT32.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_a6343.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_a6343.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_a6343.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_a6343.dir\Debug\__INT32.obj
+  cmTC_a6343.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_a6343.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_a6343.dir\Debug\cmTC_a6343.tlog\unsuccessfulbuild”。
+  正在对“cmTC_a6343.dir\Debug\cmTC_a6343.tlog\cmTC_a6343.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_a6343.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.98
+
+
+Determining size of long passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_92ebb.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:29。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_92ebb.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_92ebb.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_92ebb.dir\Debug\cmTC_92ebb.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_92ebb.dir\Debug\cmTC_92ebb.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_92ebb.dir\Debug\\" /Fd"cmTC_92ebb.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\LONG_INT.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_92ebb.dir\Debug\\" /Fd"cmTC_92ebb.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\LONG_INT.c"
+  LONG_INT.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_92ebb.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_92ebb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_92ebb.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_92ebb.dir\Debug\LONG_INT.obj
+  cmTC_92ebb.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_92ebb.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_92ebb.dir\Debug\cmTC_92ebb.tlog\unsuccessfulbuild”。
+  正在对“cmTC_92ebb.dir\Debug\cmTC_92ebb.tlog\cmTC_92ebb.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_92ebb.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.97
+
+
+Determining size of int passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_f99f7.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:30。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_f99f7.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_f99f7.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_f99f7.dir\Debug\cmTC_f99f7.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_f99f7.dir\Debug\cmTC_f99f7.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f99f7.dir\Debug\\" /Fd"cmTC_f99f7.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\INT.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f99f7.dir\Debug\\" /Fd"cmTC_f99f7.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\INT.c"
+  INT.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_f99f7.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_f99f7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_f99f7.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_f99f7.dir\Debug\INT.obj
+  cmTC_f99f7.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_f99f7.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_f99f7.dir\Debug\cmTC_f99f7.tlog\unsuccessfulbuild”。
+  正在对“cmTC_f99f7.dir\Debug\cmTC_f99f7.tlog\cmTC_f99f7.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_f99f7.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.00
+
+
+Determining size of unsigned long passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_54a63.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:32。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_54a63.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_54a63.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_54a63.dir\Debug\cmTC_54a63.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_54a63.dir\Debug\cmTC_54a63.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_54a63.dir\Debug\\" /Fd"cmTC_54a63.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\UNSIGNED_LONG_INT.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_54a63.dir\Debug\\" /Fd"cmTC_54a63.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\UNSIGNED_LONG_INT.c"
+  UNSIGNED_LONG_INT.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_54a63.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_54a63.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_54a63.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_54a63.dir\Debug\UNSIGNED_LONG_INT.obj
+  cmTC_54a63.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_54a63.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_54a63.dir\Debug\cmTC_54a63.tlog\unsuccessfulbuild”。
+  正在对“cmTC_54a63.dir\Debug\cmTC_54a63.tlog\cmTC_54a63.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_54a63.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.98
+
+
+Determining size of unsigned int passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_c2193.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:33。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_c2193.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_c2193.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_c2193.dir\Debug\cmTC_c2193.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_c2193.dir\Debug\cmTC_c2193.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c2193.dir\Debug\\" /Fd"cmTC_c2193.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\UNSIGNED_INT.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c2193.dir\Debug\\" /Fd"cmTC_c2193.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\UNSIGNED_INT.c"
+  UNSIGNED_INT.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_c2193.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_c2193.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_c2193.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_c2193.dir\Debug\UNSIGNED_INT.obj
+  cmTC_c2193.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_c2193.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_c2193.dir\Debug\cmTC_c2193.tlog\unsuccessfulbuild”。
+  正在对“cmTC_c2193.dir\Debug\cmTC_c2193.tlog\cmTC_c2193.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_c2193.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.09
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_1d387.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:34。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1d387.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_1d387.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_1d387.dir\Debug\cmTC_1d387.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_1d387.dir\Debug\cmTC_1d387.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1d387.dir\Debug\\" /Fd"cmTC_1d387.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\UNSIGNED_SHORT.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1d387.dir\Debug\\" /Fd"cmTC_1d387.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\UNSIGNED_SHORT.c"
+  UNSIGNED_SHORT.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_1d387.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_1d387.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_1d387.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_1d387.dir\Debug\UNSIGNED_SHORT.obj
+  cmTC_1d387.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_1d387.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_1d387.dir\Debug\cmTC_1d387.tlog\unsuccessfulbuild”。
+  正在对“cmTC_1d387.dir\Debug\cmTC_1d387.tlog\cmTC_1d387.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_1d387.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.01
+
+
+Determining size of uint32_t passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_a5df3.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:36。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_a5df3.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_a5df3.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_a5df3.dir\Debug\cmTC_a5df3.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_a5df3.dir\Debug\cmTC_a5df3.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a5df3.dir\Debug\\" /Fd"cmTC_a5df3.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\UINT32_T.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a5df3.dir\Debug\\" /Fd"cmTC_a5df3.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\UINT32_T.c"
+  UINT32_T.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_a5df3.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_a5df3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_a5df3.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_a5df3.dir\Debug\UINT32_T.obj
+  cmTC_a5df3.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_a5df3.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_a5df3.dir\Debug\cmTC_a5df3.tlog\unsuccessfulbuild”。
+  正在对“cmTC_a5df3.dir\Debug\cmTC_a5df3.tlog\cmTC_a5df3.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_a5df3.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.08
+
+
+Determining size of uint16_t passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_b64ff.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:38。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_b64ff.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_b64ff.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_b64ff.dir\Debug\cmTC_b64ff.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_b64ff.dir\Debug\cmTC_b64ff.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b64ff.dir\Debug\\" /Fd"cmTC_b64ff.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\UINT16_T.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b64ff.dir\Debug\\" /Fd"cmTC_b64ff.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\UINT16_T.c"
+  UINT16_T.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_b64ff.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_b64ff.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_b64ff.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_b64ff.dir\Debug\UINT16_T.obj
+  cmTC_b64ff.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_b64ff.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_b64ff.dir\Debug\cmTC_b64ff.tlog\unsuccessfulbuild”。
+  正在对“cmTC_b64ff.dir\Debug\cmTC_b64ff.tlog\cmTC_b64ff.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_b64ff.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.98
+
+
+Determining size of uint8_t passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_22872.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:40。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_22872.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_22872.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_22872.dir\Debug\cmTC_22872.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_22872.dir\Debug\cmTC_22872.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_22872.dir\Debug\\" /Fd"cmTC_22872.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\UINT8_T.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_22872.dir\Debug\\" /Fd"cmTC_22872.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CheckTypeSize\UINT8_T.c"
+  UINT8_T.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_22872.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_22872.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_22872.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_22872.dir\Debug\UINT8_T.obj
+  cmTC_22872.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_22872.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_22872.dir\Debug\cmTC_22872.tlog\unsuccessfulbuild”。
+  正在对“cmTC_22872.dir\Debug\cmTC_22872.tlog\cmTC_22872.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_22872.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.00
+
+
+Determining if the function strtoll exists passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_3e0ce.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:44。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_3e0ce.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_3e0ce.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_3e0ce.dir\Debug\cmTC_3e0ce.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_3e0ce.dir\Debug\cmTC_3e0ce.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=strtoll /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3e0ce.dir\Debug\\" /Fd"cmTC_3e0ce.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=strtoll /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3e0ce.dir\Debug\\" /Fd"cmTC_3e0ce.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_3e0ce.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_3e0ce.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_3e0ce.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_3e0ce.dir\Debug\CheckFunctionExists.obj
+  cmTC_3e0ce.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_3e0ce.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_3e0ce.dir\Debug\cmTC_3e0ce.tlog\unsuccessfulbuild”。
+  正在对“cmTC_3e0ce.dir\Debug\cmTC_3e0ce.tlog\cmTC_3e0ce.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_3e0ce.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.03
+
+
+Determining if the function _strtoi64 exists passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_84982.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:47。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_84982.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_84982.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_84982.dir\Debug\cmTC_84982.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_84982.dir\Debug\cmTC_84982.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=_strtoi64 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_84982.dir\Debug\\" /Fd"cmTC_84982.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=_strtoi64 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_84982.dir\Debug\\" /Fd"cmTC_84982.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_84982.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_84982.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_84982.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_84982.dir\Debug\CheckFunctionExists.obj
+  cmTC_84982.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_84982.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_84982.dir\Debug\cmTC_84982.tlog\unsuccessfulbuild”。
+  正在对“cmTC_84982.dir\Debug\cmTC_84982.tlog\cmTC_84982.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_84982.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.98
+
+
+Determining if files locale.h exist passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_365e7.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:48。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_365e7.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_365e7.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_365e7.dir\Debug\cmTC_365e7.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_365e7.dir\Debug\cmTC_365e7.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_365e7.dir\Debug\\" /Fd"cmTC_365e7.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_365e7.dir\Debug\\" /Fd"cmTC_365e7.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_365e7.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_365e7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_365e7.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_365e7.dir\Debug\CheckIncludeFiles.obj
+  cmTC_365e7.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_365e7.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_365e7.dir\Debug\cmTC_365e7.tlog\unsuccessfulbuild”。
+  正在对“cmTC_365e7.dir\Debug\cmTC_365e7.tlog\cmTC_365e7.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_365e7.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.04
+
+
+Determining if the function localeconv exists passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_c62a6.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:49。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_c62a6.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_c62a6.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_c62a6.dir\Debug\cmTC_c62a6.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_c62a6.dir\Debug\cmTC_c62a6.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=localeconv /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c62a6.dir\Debug\\" /Fd"cmTC_c62a6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=localeconv /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c62a6.dir\Debug\\" /Fd"cmTC_c62a6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_c62a6.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_c62a6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_c62a6.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_c62a6.dir\Debug\CheckFunctionExists.obj
+  cmTC_c62a6.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_c62a6.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_c62a6.dir\Debug\cmTC_c62a6.tlog\unsuccessfulbuild”。
+  正在对“cmTC_c62a6.dir\Debug\cmTC_c62a6.tlog\cmTC_c62a6.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_c62a6.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.98
+
+
+Determining if the function setlocale exists passed with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_266fd.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:51。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_266fd.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_266fd.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_266fd.dir\Debug\cmTC_266fd.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_266fd.dir\Debug\cmTC_266fd.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=setlocale /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_266fd.dir\Debug\\" /Fd"cmTC_266fd.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=setlocale /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_266fd.dir\Debug\\" /Fd"cmTC_266fd.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_266fd.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_266fd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_266fd.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_266fd.dir\Debug\CheckFunctionExists.obj
+  cmTC_266fd.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_266fd.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_266fd.dir\Debug\cmTC_266fd.tlog\unsuccessfulbuild”。
+  正在对“cmTC_266fd.dir\Debug\cmTC_266fd.tlog\cmTC_266fd.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_266fd.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.02
+
+
+Performing C SOURCE FILE Test HAVE_INLINE succeeded with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_fdc58.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:52。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_fdc58.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_fdc58.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_fdc58.dir\Debug\cmTC_fdc58.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_fdc58.dir\Debug\cmTC_fdc58.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_INLINE /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fdc58.dir\Debug\\" /Fd"cmTC_fdc58.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_INLINE /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fdc58.dir\Debug\\" /Fd"cmTC_fdc58.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c"
+  src.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_fdc58.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_fdc58.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_fdc58.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_fdc58.dir\Debug\src.obj
+  cmTC_fdc58.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_fdc58.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_fdc58.dir\Debug\cmTC_fdc58.tlog\unsuccessfulbuild”。
+  正在对“cmTC_fdc58.dir\Debug\cmTC_fdc58.tlog\cmTC_fdc58.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_fdc58.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.98
+
+Source file was:
+inline void func(); void func() { } int main() { func(); return 0; }
+Performing C SOURCE FILE Test HAVE___INLINE succeeded with the following output:
+Change Dir: D:/obs-studio/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"D:/VS2017/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_25537.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.5.180.51428
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2018/1/29 13:15:53。
+节点 1 上的项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_25537.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTC_25537.dir\Debug\”。
+  正在创建目录“D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\”。
+  正在创建目录“cmTC_25537.dir\Debug\cmTC_25537.tlog\”。
+InitializeBuildStatus:
+  正在创建“cmTC_25537.dir\Debug\cmTC_25537.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE___INLINE /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_25537.dir\Debug\\" /Fd"cmTC_25537.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c"
+  用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.12.25830.2 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE___INLINE /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_25537.dir\Debug\\" /Fd"cmTC_25537.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "D:\obs-studio\build\CMakeFiles\CMakeTmp\src.c"
+  src.c
+  
+Link:
+  D:\VS2017\VC\Tools\MSVC\14.12.25827\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_25537.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_25537.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/obs-studio/build/CMakeFiles/CMakeTmp/Debug/cmTC_25537.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_25537.dir\Debug\src.obj
+  cmTC_25537.vcxproj -> D:\obs-studio\build\CMakeFiles\CMakeTmp\Debug\cmTC_25537.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTC_25537.dir\Debug\cmTC_25537.tlog\unsuccessfulbuild”。
+  正在对“cmTC_25537.dir\Debug\cmTC_25537.tlog\cmTC_25537.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\obs-studio\build\CMakeFiles\CMakeTmp\cmTC_25537.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.01
+
+Source file was:
+__inline void func(); void func() { } int main() { func(); return 0; }

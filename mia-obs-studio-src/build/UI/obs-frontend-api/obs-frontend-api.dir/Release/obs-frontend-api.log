@@ -1,0 +1,5 @@
+﻿  Building Custom Rule D:/obs-studio/UI/obs-frontend-api/CMakeLists.txt
+  CMake does not need to re-run because D:/obs-studio/build/UI/obs-frontend-api/CMakeFiles/generate.stamp is up-to-date.
+  obs-frontend-api.cpp
+    正在创建库 D:/obs-studio/build/UI/obs-frontend-api/Release/obs-frontend-api.lib 和对象 D:/obs-studio/build/UI/obs-frontend-api/Release/obs-frontend-api.exp
+  obs-frontend-api.vcxproj -> D:\obs-studio\build\UI\obs-frontend-api\Release\obs-frontend-api.dll
