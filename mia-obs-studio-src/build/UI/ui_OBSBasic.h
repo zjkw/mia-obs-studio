@@ -448,7 +448,7 @@ public:
         OBSBasic->setCentralWidget(centralwidget);
         menubar = new QMenuBar(OBSBasic);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1079, 23));
+        menubar->setGeometry(QRect(0, 0, 1079, 17));
         menu_File = new QMenu(menubar);
         menu_File->setObjectName(QStringLiteral("menu_File"));
         menuBasic_MainMenu_Help = new QMenu(menubar);
@@ -612,7 +612,7 @@ public:
         mixerScrollArea->setWidgetResizable(true);
         volumeWidgets = new QWidget();
         volumeWidgets->setObjectName(QStringLiteral("volumeWidgets"));
-        volumeWidgets->setGeometry(QRect(0, 0, 218, 16));
+        volumeWidgets->setGeometry(QRect(0, 0, 215, 16));
         QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Maximum);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(0);
@@ -628,9 +628,10 @@ public:
 
         mixerDock->setWidget(dockWidgetContents_7);
         OBSBasic->addDockWidget(static_cast<Qt::DockWidgetArea>(8), mixerDock);
-        transitionsDock = new QDockWidget(OBSBasic);
-        transitionsDock->setObjectName(QStringLiteral("transitionsDock"));
-        transitionsDock->setFeatures(QDockWidget::AllDockWidgetFeatures);
+        //xiezl屏蔽场景过渡
+        //transitionsDock = new QDockWidget(OBSBasic);
+        //transitionsDock->setObjectName(QStringLiteral("transitionsDock"));
+        //transitionsDock->setFeatures(QDockWidget::AllDockWidgetFeatures);
         dockWidgetContents_5 = new QWidget();
         dockWidgetContents_5->setObjectName(QStringLiteral("dockWidgetContents_5"));
         verticalLayout_3 = new QVBoxLayout(dockWidgetContents_5);
@@ -730,9 +731,9 @@ public:
 
 
         verticalLayout_3->addWidget(transitionsContainer);
-
-        transitionsDock->setWidget(dockWidgetContents_5);
-        OBSBasic->addDockWidget(static_cast<Qt::DockWidgetArea>(8), transitionsDock);
+        //xiezl 屏蔽场景过渡
+        //transitionsDock->setWidget(dockWidgetContents_5);
+        //OBSBasic->addDockWidget(static_cast<Qt::DockWidgetArea>(8), transitionsDock);
         controlsDock = new QDockWidget(OBSBasic);
         controlsDock->setObjectName(QStringLiteral("controlsDock"));
         controlsDock->setFeatures(QDockWidget::AllDockWidgetFeatures);
@@ -742,6 +743,7 @@ public:
         buttonsVLayout->setSpacing(2);
         buttonsVLayout->setObjectName(QStringLiteral("buttonsVLayout"));
         buttonsVLayout->setContentsMargins(4, 4, 4, 4);
+        buttonsVLayout->addSpacing(25);
         selectButton = new QPushButton(dockWidgetContents_3);
         selectButton->setObjectName(QStringLiteral("selectButton"));
         selectButton->setEnabled(true);
@@ -776,8 +778,9 @@ public:
         modeSwitch = new QPushButton(dockWidgetContents_3);
         modeSwitch->setObjectName(QStringLiteral("modeSwitch"));
         modeSwitch->setCheckable(true);
-
-        buttonsVLayout->addWidget(modeSwitch);
+        //xiezl 屏蔽工作室模式
+        modeSwitch->setVisible(false);
+        //buttonsVLayout->addWidget(modeSwitch);
 
         settingsButton = new QPushButton(dockWidgetContents_3);
         settingsButton->setObjectName(QStringLiteral("settingsButton"));
@@ -822,10 +825,12 @@ public:
         menu_File->addSeparator();
         menu_File->addAction(actionE_xit);
         menuBasic_MainMenu_Help->addAction(actionHelpPortal);
-        menuBasic_MainMenu_Help->addAction(actionWebsite);
+        //by xiezl 屏蔽访问OBS主页入口
+        //menuBasic_MainMenu_Help->addAction(actionWebsite);
         menuBasic_MainMenu_Help->addSeparator();
         menuBasic_MainMenu_Help->addAction(menuLogFiles->menuAction());
-        menuBasic_MainMenu_Help->addAction(actionCheckForUpdates);
+        //by xiezl 屏蔽检查OBS更新功能
+        //menuBasic_MainMenu_Help->addAction(actionCheckForUpdates);
         menuLogFiles->addAction(actionShowLogs);
         menuLogFiles->addAction(actionUploadCurrentLog);
         menuLogFiles->addAction(actionUploadLastLog);
@@ -1034,7 +1039,8 @@ public:
         scenesDock->setWindowTitle(QApplication::translate("OBSBasic", "Basic.Main.Scenes", Q_NULLPTR));
         sourcesDock->setWindowTitle(QApplication::translate("OBSBasic", "Basic.Main.Sources", Q_NULLPTR));
         mixerDock->setWindowTitle(QApplication::translate("OBSBasic", "Mixer", Q_NULLPTR));
-        transitionsDock->setWindowTitle(QApplication::translate("OBSBasic", "Basic.SceneTransitions", Q_NULLPTR));
+        //xiezl 屏蔽场景过渡
+        //transitionsDock->setWindowTitle(QApplication::translate("OBSBasic", "Basic.SceneTransitions", Q_NULLPTR));
 #ifndef QT_NO_ACCESSIBILITY
         transitions->setAccessibleName(QApplication::translate("OBSBasic", "Transition", Q_NULLPTR));
 #endif // QT_NO_ACCESSIBILITY

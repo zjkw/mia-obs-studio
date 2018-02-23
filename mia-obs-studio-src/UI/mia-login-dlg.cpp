@@ -4,7 +4,7 @@
 #include "singleton.h"
 
 // zjg: for debug passby login ui
-#define FAKE_LOGIN 1
+//#define FAKE_LOGIN 1
 
 bridge::bridge()
 {

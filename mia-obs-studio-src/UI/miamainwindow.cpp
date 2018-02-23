@@ -3,6 +3,7 @@
 #include "miamainlistwidget.h"
 #include "miamainlistwidgetitem.h"
 #include "miahttpcenter.h"
+#include "miapixmap.h"
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QPainter>
@@ -204,45 +205,63 @@ void CMainWindow::onConfirm()
     if (!item)
     {
 	    return;
-        //QMessageBox::information(this, "tips", QString("lesson:%1").arg(item->id()));
     }
+
+    MiaCourseItem miaitem;
+    bool bExisted = false;
 
     for (std::vector<MiaCourseItem>::iterator it = m_CourseList.begin(); it != m_CourseList.end(); it++)
     {
 	    if (item->id() == it->coverID.toInt())
 	    {
-		    QString rtmp= it->publishUrl.section('/', 0, -2);
-		    QString key = it->publishUrl.section('/', -1, -1);
-		    
-		    OBSBasic *main = reinterpret_cast<OBSBasic*>(App()->GetMainWindow());
-
-		    main->StopStreaming();
-
-		    obs_service_t *service = main->GetService();
-		    obs_data_t *settings = obs_service_get_settings(service);
-		    obs_data_set_string(settings, "server", rtmp.toStdString().c_str());
-		    obs_data_set_string(settings, "key", key.toStdString().c_str());
-
-		    obs_service_t *oldService = main->GetService();
-		    obs_data_t *hotkeyData = obs_hotkeys_save_service(oldService);
-
-		    obs_service_t *newService = obs_service_create(QT_TO_UTF8(QString("rtmp_custom")),  "default_service", settings,  hotkeyData);
-
-		    obs_data_release(hotkeyData);
-
-		    main->SetService(newService);
-		    main->SaveService();
-		    obs_service_release(newService);
-
-	//	    main->StartStreaming();
-
+            bExisted = true;
+            miaitem = *it;
 		    break;
 	    }
     }
-
     bool ret;
     onClose(ret);
+    if (bExisted)
+    {
+        changeStream(miaitem);
+    }
 }
+
+void CMainWindow::changeStream(MiaCourseItem miaItem)
+{
+    QString rtmp = miaItem.publishUrl.section('/', 0, -2);
+    QString key = miaItem.publishUrl.section('/', -1, -1);
+
+    OBSBasic *main = reinterpret_cast<OBSBasic*>(App()->GetMainWindow());
+
+    obs_service_t *oldService = main->GetService();
+
+    if (oldService)
+    {
+        if (1 != QMessageBox::information(main, Str("Base.Course.ChangeStream.TipsTitle"), Str("Base.Course.ChangeStream.TipsContent"), Str("Base.Course.ChangeStream.TipsCancel"), Str("Base.Course.ChangeStream.TipsConfirm")))
+        {
+            return;
+        }
+    }
+
+    main->StopStreaming();
+
+    obs_service_t *service = main->GetService();
+    obs_data_t *settings = obs_service_get_settings(service);
+    obs_data_set_string(settings, "server", rtmp.toStdString().c_str());
+    obs_data_set_string(settings, "key", key.toStdString().c_str());
+
+    obs_data_t *hotkeyData = obs_hotkeys_save_service(oldService);
+
+    obs_service_t *newService = obs_service_create(QT_TO_UTF8(QString("rtmp_custom")), "default_service", settings, hotkeyData);
+
+    obs_data_release(hotkeyData);
+
+    main->SetService(newService);
+    main->SaveService();
+    obs_service_release(newService);
+}
+
 
 void CMainWindow::onCancel()
 {
@@ -260,11 +279,7 @@ void CMainWindow::onHttpFinish(int key, int code, const QString &extend)
     m_download.remove(key);
     if (200 == code)
     {
-	QPixmap pixmap;
-	if (pixmap.load(extend))
-	{
-	     m_pMainList->course(id)->updateCover(QPixmap(extend));
-	}
+        m_pMainList->course(id)->updateCover(CPixmap(extend));
     }
 }
 
@@ -538,7 +553,16 @@ void CMainWindow::OnMiaQueryCourseRes(MiaWebsocketClient* wc, const QString& jso
 
 	for (std::vector<MiaCourseItem>::iterator it = m_CourseList.begin(); it != m_CourseList.end(); it++)
 	{
-		insertLive(it->coverID.toInt(), it->coverUrl, it->title, QDateTime::fromTime_t(it->startTime.toInt()).toString("yyyy-MM-dd\nhh:mm:ss"), GetTypeName(it->courseType), it->teacherList);
+        QString startTime;
+        if (it->startTime.toInt() > 0)
+        {
+            startTime = QDateTime::fromTime_t(it->startTime.toInt()).toString("yyyy-MM-dd\nhh:mm:ss");
+        }
+        else
+        {
+            startTime = Str("Base.Course.Lesson.AlwayUseful");
+        }
+		insertLive(it->coverID.toInt(), it->coverUrl, it->title, startTime, GetTypeName(it->courseType), it->teacherList);
 	}
 	changeTipType(m_CourseList.empty() ? ettEmpty : ettList);
 }

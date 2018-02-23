@@ -587,6 +587,8 @@ void RegisterWASAPIInput()
 
 void RegisterWASAPIOutput()
 {
+    //xiezl: 屏蔽 音频输出捕获 入口
+    return;
 	obs_source_info info = {};
 	info.id              = "wasapi_output_capture";
 	info.type            = OBS_SOURCE_TYPE_INPUT;

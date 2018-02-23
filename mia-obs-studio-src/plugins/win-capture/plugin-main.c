@@ -34,7 +34,8 @@ static DWORD WINAPI init_hooks(LPVOID unused)
 	    load_cached_graphics_offsets(IS32BIT)) {
 
 		load_cached_graphics_offsets(!IS32BIT);
-		obs_register_source(&game_capture_info);
+        //xiezl:屏蔽 游戏捕获 入口
+		//obs_register_source(&game_capture_info);
 
 	} else if (load_graphics_offsets(IS32BIT)) {
 		load_graphics_offsets(!IS32BIT);
@@ -86,7 +87,8 @@ bool obs_module_load(void)
 	obs_register_source(&window_capture_info);
 
 	init_hooks_thread = CreateThread(NULL, 0, init_hooks, NULL, 0, NULL);
-	obs_register_source(&game_capture_info);
+    //xiezl:屏蔽 游戏捕获 入口
+	//obs_register_source(&game_capture_info);
 
 	return true;
 }

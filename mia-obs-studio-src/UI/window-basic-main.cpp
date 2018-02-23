@@ -271,7 +271,8 @@ OBSBasic::OBSBasic(QWidget *parent)
 	assignDockToggle(ui->scenesDock, ui->toggleScenes);
 	assignDockToggle(ui->sourcesDock, ui->toggleSources);
 	assignDockToggle(ui->mixerDock, ui->toggleMixer);
-	assignDockToggle(ui->transitionsDock, ui->toggleTransitions);
+    //xiezl 屏蔽场景过渡
+	//assignDockToggle(ui->transitionsDock, ui->toggleTransitions);
 	assignDockToggle(ui->controlsDock, ui->toggleControls);
 
 	//hide all docking panes
@@ -4059,7 +4060,8 @@ QMenu *OBSBasic::CreateAddSourcePopupMenu()
 	size_t idx = 0;
 
 	QMenu *popup = new QMenu(QTStr("Add"), this);
-	QMenu *deprecated = new QMenu(QTStr("Deprecated"), popup);
+    //xiezl 屏蔽不推荐使用
+	//QMenu *deprecated = new QMenu(QTStr("Deprecated"), popup);
 
 	auto getActionAfter = [] (QMenu *menu, const QString &name)
 	{
@@ -4096,25 +4098,25 @@ QMenu *OBSBasic::CreateAddSourcePopupMenu()
 		if ((caps & OBS_SOURCE_DEPRECATED) == 0) {
 			addSource(popup, type, name);
 		} else {
-			addSource(deprecated, type, name);
-			foundDeprecated = true;
+			//addSource(deprecated, type, name);
+			//foundDeprecated = true;
 		}
 		foundValues = true;
 	}
 
-	addSource(popup, "scene", Str("Basic.Scene"));
+	//addSource(popup, "scene", Str("Basic.Scene"));
 
-	if (!foundDeprecated) {
-		delete deprecated;
-		deprecated = nullptr;
-	}
+	//if (!foundDeprecated) {
+	//	delete deprecated;
+	//	deprecated = nullptr;
+	//}
 
 	if (!foundValues) {
 		delete popup;
 		popup = nullptr;
 
 	} else if (foundDeprecated) {
-		popup->addMenu(deprecated);
+		//popup->addMenu(deprecated);
 	}
 
 	return popup;
@@ -5084,7 +5086,8 @@ void OBSBasic::on_settingsButton_clicked()
 
 void OBSBasic::on_actionHelpPortal_triggered()
 {
-	QUrl url = QUrl("https://obsproject.com/help", QUrl::TolerantMode);
+    //xiezl 修改主页连接地址
+	QUrl url = QUrl("https://mp.weixin.qq.com/s/eFPQSRWNdRRCBUauR8qbug", QUrl::TolerantMode);
 	QDesktopServices::openUrl(url);
 }
 
@@ -5892,7 +5895,7 @@ void OBSBasic::on_resetUI_triggered()
 		ui->scenesDock,
 		ui->sourcesDock,
 		ui->mixerDock,
-		ui->transitionsDock,
+		//ui->transitionsDock,
 		ui->controlsDock
 	};
 
@@ -5907,7 +5910,7 @@ void OBSBasic::on_resetUI_triggered()
 	ui->scenesDock->setVisible(true);
 	ui->sourcesDock->setVisible(true);
 	ui->mixerDock->setVisible(true);
-	ui->transitionsDock->setVisible(true);
+	//ui->transitionsDock->setVisible(true);
 	ui->controlsDock->setVisible(true);
 
 	resizeDocks(docks, {cy, cy, cy, cy, cy}, Qt::Vertical);
@@ -5924,7 +5927,7 @@ void OBSBasic::on_lockUI_toggled(bool lock)
 	ui->scenesDock->setFeatures(features);
 	ui->sourcesDock->setFeatures(features);
 	ui->mixerDock->setFeatures(features);
-	ui->transitionsDock->setFeatures(features);
+	//ui->transitionsDock->setFeatures(features);
 	ui->controlsDock->setFeatures(features);
 }
 

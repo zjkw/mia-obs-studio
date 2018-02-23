@@ -275,7 +275,8 @@ extern struct obs_source_info color_source_info;
 bool obs_module_load(void)
 {
 	obs_register_source(&image_source_info);
-	obs_register_source(&color_source_info);
+    //xiezl 屏蔽 色源 入口
+	//obs_register_source(&color_source_info);
 	obs_register_source(&slideshow_info);
 	return true;
 }

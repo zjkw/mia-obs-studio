@@ -19,6 +19,16 @@ class CMainWindow : public CBaseWindow
 	ettList    = 3,
 	ettNone    = 10,
     };
+    struct MiaCourseItem
+    {
+        QString coverID;
+        QString coverUrl;
+        QString title;
+        QString startTime;
+        QString courseType;
+        QString publishUrl;
+        QString teacherList;
+    };
     typedef CBaseWindow base;
     Q_OBJECT
 public:
@@ -42,6 +52,7 @@ protected:
     QString getTempPath(int id);
     bool eventFilter(QObject * watched, QEvent * evt) override;
     void onClickUrl();
+    void changeStream(MiaCourseItem miaItem);
 private:
     QWidget *m_pListPage;
     QWidget *m_pTipPage;
@@ -56,16 +67,6 @@ private:
     QMap<int, int> m_download;
     QString m_coverPath;
     TipType m_type;
-    struct MiaCourseItem
-    {
-	    QString coverID;
-	    QString coverUrl;
-	    QString title;
-	    QString startTime;
-	    QString courseType;
-	    QString publishUrl;
-	    QString teacherList;
-    };
 
     bool EncodeMiaWCCommonHead(json_t* root, const QString& guid, const QString& cmd, const QString& stamp);
     bool EncodeMiaWCCourseReq(const QString& guid, const QString& uid, const QString& token, const QString& stamp, QString& out);

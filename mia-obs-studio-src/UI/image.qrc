@@ -1,33 +1,21 @@
 <RCC>
-    <qresource prefix="/image">
-        <file>image/Close_default.png</file>
-        <file>image/Close_Down.png</file>
-        <file>image/Close_Enter.png</file>
-        <file>image/man_Close_default.png</file>
-        <file>image/man_Close_down.png</file>
-        <file>image/man_Close_enter.png</file>
-        <file>image/man_max_default.png</file>
-        <file>image/man_max_down.png</file>
-        <file>image/man_max_enter.png</file>
-        <file>image/man_min_default.png</file>
-        <file>image/man_min_down.png</file>
-        <file>image/man_min_enter.png</file>
-        <file>image/man_restore_default.png</file>
-        <file>image/man_restore_down.png</file>
-        <file>image/man_restore_enter.png</file>
-        <file>cover/1.jpg</file>
-        <file>cover/2.jpg</file>
-        <file>cover/3.jpg</file>
-        <file>cover/4.jpg</file>
-        <file>cover/5.jpg</file>
-        <file>cover/6.jpg</file>
-        <file>cover/7.jpg</file>
-        <file>cover/8.jpg</file>
-        <file>cover/9.jpg</file>
-        <file>cover/10.jpg</file>
-        <file>cover/11.jpg</file>
-        <file>cover/emptystate.png</file>
-        <file>cover/smile.gif</file>
-        <file>image/checked.png</file>
+    <qresource prefix="/chooseLesson">
+        <file>forms/images/chooseLesson/Close_default.png</file>
+        <file>forms/images/chooseLesson/Close_Down.png</file>
+        <file>forms/images/chooseLesson/Close_Enter.png</file>
+        <file>forms/images/chooseLesson/emptystate.png</file>
+        <file>forms/images/chooseLesson/man_Close_default.png</file>
+        <file>forms/images/chooseLesson/man_Close_down.png</file>
+        <file>forms/images/chooseLesson/man_Close_enter.png</file>
+        <file>forms/images/chooseLesson/man_max_default.png</file>
+        <file>forms/images/chooseLesson/man_max_down.png</file>
+        <file>forms/images/chooseLesson/man_max_enter.png</file>
+        <file>forms/images/chooseLesson/man_min_default.png</file>
+        <file>forms/images/chooseLesson/man_min_down.png</file>
+        <file>forms/images/chooseLesson/man_min_enter.png</file>
+        <file>forms/images/chooseLesson/man_restore_default.png</file>
+        <file>forms/images/chooseLesson/man_restore_down.png</file>
+        <file>forms/images/chooseLesson/man_restore_enter.png</file>
+        <file>forms/images/chooseLesson/success.png</file>
     </qresource>
 </RCC>
