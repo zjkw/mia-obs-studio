@@ -549,8 +549,9 @@ public:
 
         enableAutoUpdates = new QCheckBox(groupBox_15);
         enableAutoUpdates->setObjectName(QStringLiteral("enableAutoUpdates"));
-        enableAutoUpdates->setChecked(true);
-
+        //xiezl 临时去掉升级配置和入口
+        enableAutoUpdates->setChecked(false);
+        enableAutoUpdates->setVisible(false);
         formLayout_32->setWidget(2, QFormLayout::FieldRole, enableAutoUpdates);
 
         openStatsOnStartup = new QCheckBox(groupBox_15);

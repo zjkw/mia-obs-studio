@@ -957,7 +957,39 @@ bool OBSApp::OBSInit()
 
 	bool licenseAccepted = config_get_bool(globalConfig, "General",
 			"LicenseAccepted");
-	OBSLicenseAgreement agreement(nullptr);
+
+    if (!licenseAccepted) {
+        config_set_bool(globalConfig, "General",
+            "LicenseAccepted", true);
+        config_save(globalConfig);
+    }
+
+    if (!StartupOBS(locale.c_str(), GetProfilerNameStore()))
+        return false;
+
+    blog(LOG_INFO, "Portable mode: %s",
+        portable_mode ? "true" : "false");
+
+    setQuitOnLastWindowClosed(false);
+
+    mainWindow = new OBSBasic();
+
+    mainWindow->setAttribute(Qt::WA_DeleteOnClose, true);
+    connect(mainWindow, SIGNAL(destroyed()), this, SLOT(quit()));
+
+    mainWindow->OBSInit();
+
+    connect(this, &QGuiApplication::applicationStateChanged,
+        [](Qt::ApplicationState state)
+    {
+        obs_hotkey_enable_background_press(
+            state != Qt::ApplicationActive);
+    });
+    obs_hotkey_enable_background_press(
+        applicationState() != Qt::ApplicationActive);
+    return true;
+
+	/*OBSLicenseAgreement agreement(nullptr);
 
 	if (licenseAccepted || agreement.exec() == QDialog::Accepted) {
 		if (!licenseAccepted) {
@@ -992,7 +1024,7 @@ bool OBSApp::OBSInit()
 		return true;
 	} else {
 		return false;
-	}
+	}*/
 }
 
 string OBSApp::GetVersionString() const

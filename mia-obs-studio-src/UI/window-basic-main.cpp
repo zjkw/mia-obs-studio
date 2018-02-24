@@ -1651,7 +1651,8 @@ void OBSBasic::OBSInit()
 	}
 
 	if (!first_run && !has_last_version && !Active()) {
-		QString msg;
+        //xiezl 去掉第一次安装后的向导入口
+		/*QString msg;
 		msg = QTStr("Basic.FirstStartup.RunWizard");
 		msg += "\n\n";
 		msg += QTStr("Basic.FirstStartup.RunWizard.BetaWarning");
@@ -1666,7 +1667,7 @@ void OBSBasic::OBSInit()
 			msg = QTStr("Basic.FirstStartup.RunWizard.NoClicked");
 			OBSMessageBox::information(this,
 					QTStr("Basic.AutoConfig"), msg);
-		}
+		}*/
 	}
 
 	if (config_get_bool(basicConfig, "General", "OpenStatsOnStartup"))
@@ -4084,11 +4085,33 @@ QMenu *OBSBasic::CreateAddSourcePopupMenu()
 		connect(popupItem, SIGNAL(triggered(bool)),
 				this, SLOT(AddSourceFromAction()));
 
-		QAction *after = getActionAfter(popup, qname);
-		popup->insertAction(after, popupItem);
-	};
+		//QAction *after = getActionAfter(popup, qname);
+		//popup->insertAction(after, popupItem);
 
-	while (obs_enum_input_types(idx++, &type)) {
+        popup->addAction(popupItem);
+	};
+    QStringList types;
+    types << "dshow_input" << "window_capture" << "monitor_capture" << "ffmpeg_source" << "text_gdiplus" << "image_source";
+
+    for (int index = 0; index < types.size(); ++index)
+    {
+        const char *name = obs_source_get_display_name(types.at(index).toStdString().c_str());
+        uint32_t caps = obs_get_source_output_flags(types.at(index).toStdString().c_str());
+
+        if ((caps & OBS_SOURCE_CAP_DISABLED) != 0)
+            continue;
+
+        if ((caps & OBS_SOURCE_DEPRECATED) == 0) {
+            addSource(popup, types.at(index).toStdString().c_str(), name);
+        }
+        else {
+            //addSource(deprecated, type, name);
+            //foundDeprecated = true;
+        }
+        foundValues = true;
+    }
+
+	/*while (obs_enum_input_types(idx++, &type)) {
 		const char *name = obs_source_get_display_name(type);
 		uint32_t caps = obs_get_source_output_flags(type);
 
@@ -4102,7 +4125,7 @@ QMenu *OBSBasic::CreateAddSourcePopupMenu()
 			//foundDeprecated = true;
 		}
 		foundValues = true;
-	}
+	}*/
 
 	//addSource(popup, "scene", Str("Basic.Scene"));
 

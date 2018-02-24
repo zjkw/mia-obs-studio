@@ -743,7 +743,8 @@ public:
         buttonsVLayout->setSpacing(2);
         buttonsVLayout->setObjectName(QStringLiteral("buttonsVLayout"));
         buttonsVLayout->setContentsMargins(4, 4, 4, 4);
-        buttonsVLayout->addSpacing(25);
+        //xiezl 右边按钮（直播课选择，开始推流...这列）仿照obs原版顶对齐
+        //buttonsVLayout->addSpacing(25);
         selectButton = new QPushButton(dockWidgetContents_3);
         selectButton->setObjectName(QStringLiteral("selectButton"));
         selectButton->setEnabled(true);

@@ -238,9 +238,19 @@ void CMainWindow::changeStream(MiaCourseItem miaItem)
 
     if (oldService)
     {
-        if (1 != QMessageBox::information(main, Str("Base.Course.ChangeStream.TipsTitle"), Str("Base.Course.ChangeStream.TipsContent"), Str("Base.Course.ChangeStream.TipsCancel"), Str("Base.Course.ChangeStream.TipsConfirm")))
-        {
+        obs_data_t *settings = obs_service_get_settings(oldService);
+        QString s = obs_data_get_string(settings, "server");
+        QString k = obs_data_get_string(settings, "key");
+        if (rtmp == s && key == k)
+        {//课程未发生变更
             return;
+        }
+        if (!s.isEmpty() && !k.isEmpty() && (rtmp != s || key != k) && main->StreamingActive())
+        {//当前正在直播
+            if (1 != QMessageBox::information(main, Str("Base.Course.ChangeStream.TipsTitle"), Str("Base.Course.ChangeStream.TipsContent"), Str("Base.Course.ChangeStream.TipsCancel"), Str("Base.Course.ChangeStream.TipsConfirm")))
+            {
+                return;
+            }
         }
     }
 
