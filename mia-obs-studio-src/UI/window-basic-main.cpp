@@ -1022,8 +1022,25 @@ bool OBSBasic::LoadService()
 
 	obs_data_set_default_string(data, "type", "rtmp_common");
 	type = obs_data_get_string(data, "type");
-
+    
 	obs_data_t *settings = obs_data_get_obj(data, "settings");
+
+    //zjg
+    MiaObsServerConf* mia_conf = App()->GetMiaObsServerConf();
+    const char *profile = config_get_string(App()->GlobalConfig(), "Basic", "Profile");
+    if (!QString("Mia").compare(profile, Qt::CaseInsensitive))
+    {
+        if (!config_get_bool(Config(), "General", "UserModify"))
+        {
+            if (!settings)
+            {
+                settings = obs_data_create();
+            }
+            obs_data_set_string(settings, "server", mia_conf->s.url.toStdString().c_str());
+            obs_data_set_string(settings, "key", mia_conf->s.key.toStdString().c_str());
+        }
+    }
+
 	obs_data_t *hotkey_data = obs_data_get_obj(data, "hotkeys");
 
 	service = obs_service_create(type, "default_service", settings,
@@ -1044,10 +1061,26 @@ bool OBSBasic::InitService()
 	if (LoadService())
 		return true;
 
-	service = obs_service_create("rtmp_common", "default_service", nullptr,
-			nullptr);
-	if (!service)
-		return false;
+    //zjg
+    obs_data_t *settings = nullptr;
+    MiaObsServerConf* mia_conf = App()->GetMiaObsServerConf();
+    const char *profile = config_get_string(App()->GlobalConfig(), "Basic", "Profile");
+    if (!QString("Mia").compare(profile, Qt::CaseInsensitive))
+    {
+        if (!config_get_bool(Config(), "General", "UserModify"))
+        {
+            settings = obs_data_create();
+            obs_data_set_string(settings, "server", mia_conf->s.url.toStdString().c_str());
+            obs_data_set_string(settings, "key", mia_conf->s.key.toStdString().c_str());
+        }
+    }
+
+    service = obs_service_create("rtmp_common", "default_service", settings,
+        nullptr);
+    if (!service)
+        return false;
+
+    obs_data_release(settings);
 	obs_service_release(service);
 
 	return true;

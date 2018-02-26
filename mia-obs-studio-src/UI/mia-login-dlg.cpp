@@ -2,12 +2,14 @@
 #include <QDebug>
 #include <QtWebChannel/QWebChannel>
 #include "singleton.h"
+#include "obs-app.hpp"
 
 // zjg: for debug passby login ui
 //#define FAKE_LOGIN 1
 
 bridge::bridge()
 {
+    qDebug() << "version:" << App()->GetVersionString().c_str();
 }
 
 bridge* bridge::instance()
@@ -301,6 +303,24 @@ bool MiaLoginDialog::DecodeMiaWCQueryObsRes(const QString& json, bool& bSuc, Mia
 			break;
 		}
 		conf->g.name = json_string_value(jName);
+
+		json_t* jStream = json_object_get(jData, "Stream");
+		if (!json_is_object(jStream))
+		{
+			break;
+		}
+		json_t* jUrl = json_object_get(jStream, "URL");
+		if (!json_is_string(jUrl))
+		{
+			break;
+		}
+		conf->s.url = json_string_value(jUrl);
+		json_t* jKey = json_object_get(jStream, "Key");
+		if (!json_is_string(jKey))
+		{
+			break;
+		}
+		conf->s.key= json_string_value(jKey);
 
 		json_t* jOutput = json_object_get(jData, "Output");
 		if (!json_is_object(jOutput))

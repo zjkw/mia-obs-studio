@@ -9,6 +9,11 @@ struct MiaObsServerConf
 	{
 		QString name;
 	}g;
+    struct Stream
+    {
+        QString key;
+        QString url;
+    }s;
 	struct Output
 	{
 		QString Mode;

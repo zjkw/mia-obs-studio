@@ -28,7 +28,10 @@ protected slots:
 private:
 	QWebSocket m_webSocket;
 	quint64  m_stamp;
+    QString m_url;
+    int     m_retry_connet;
 
-	int m_nTimerID;
+	int m_nTimerID_Pingpong;
+    int m_nTimerID_RetryConnect;
 };
 

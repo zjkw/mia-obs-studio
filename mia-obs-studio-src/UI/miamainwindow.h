@@ -4,12 +4,14 @@
 #include "miabasewindow.h"
 #include <QMap>
 #include <jansson.h>
+#include <QMainWindow>
 #include "mia-websocket-client.hpp"
 
 class QLabel;
 class QPushButton;
 class CMainListWidget;
-class CMainWindow : public CBaseWindow
+//class CMainWindow : public CBaseWindow
+class CMainWindow : public QMainWindow
 {
     enum TipType
     {
@@ -29,7 +31,7 @@ class CMainWindow : public CBaseWindow
         QString publishUrl;
         QString teacherList;
     };
-    typedef CBaseWindow base;
+    typedef QMainWindow base;
     Q_OBJECT
 public:
     CMainWindow(const QString &coverPath, QWidget *parent = 0);
@@ -38,7 +40,7 @@ protected:
     void initView();
     void initLayout();
     void initSlot();
-    void paintBackground(QPainter &p, QRect &rect) override;
+    //void paintBackground(QPainter &p, QRect &rect) override;
     void insertLive(int id, const QString &cover_url, const QString &name, const QString &time, const QString &type, const QString &teacher);
 protected slots:
     void onConfirm();
@@ -58,6 +60,7 @@ private:
     QWidget *m_pTipPage;
     QLabel *m_pTipIcon;
     QLabel *m_pTipTitle;
+    QLabel *m_pTipSubTitle;
     QLabel *m_pTipSubTitleLeft;
     QLabel *m_pTipSubTitleCenter;
     QLabel *m_pTipSubTitleRight;

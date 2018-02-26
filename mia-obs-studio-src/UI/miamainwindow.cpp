@@ -22,7 +22,7 @@
 #pragma execution_character_set("utf-8")
 
 CMainWindow::CMainWindow(const QString &coverPath, QWidget *parent)
-    : CBaseWindow(parent)
+    : base(parent)
     , m_coverPath(coverPath)
     , m_type(ettNone)
 {
@@ -32,16 +32,16 @@ CMainWindow::CMainWindow(const QString &coverPath, QWidget *parent)
     changeTipType(ettLoading);
 
     MiaWebsocketClient*	wc = &singleton<MiaWebsocketClient>::instance();
-    connect(wc, SIGNAL(SignConnect()), this, SLOT(OnWebSocketConnect()));
-    connect(wc, SIGNAL(SignClose()), this, SLOT(OnWebSocketClose()));
+    connect(wc, SIGNAL(SignConnect(MiaWebsocketClient*)), this, SLOT(OnWebSocketConnect(MiaWebsocketClient*)));
+    connect(wc, SIGNAL(SignClose(MiaWebsocketClient*)), this, SLOT(OnWebSocketClose(MiaWebsocketClient*)));
     connect(wc, SIGNAL(SignRecvMsg(MiaWebsocketClient*, const QString&)), this, SLOT(OnMiaQueryCourseRes(MiaWebsocketClient*, const QString&)));
 }
 
 CMainWindow::~CMainWindow()
 {
 	MiaWebsocketClient*	wc = &singleton<MiaWebsocketClient>::instance();
-	disconnect(wc, SIGNAL(SignConnect()), this, SLOT(OnWebSocketConnect()));
-	disconnect(wc, SIGNAL(SignClose()), this, SLOT(OnWebSocketClose()));
+	disconnect(wc, SIGNAL(SignConnect(MiaWebsocketClient*)), this, SLOT(OnWebSocketConnect(MiaWebsocketClient*)));
+	disconnect(wc, SIGNAL(SignClose(MiaWebsocketClient*)), this, SLOT(OnWebSocketClose(MiaWebsocketClient*)));
 	disconnect(wc, SIGNAL(SignRecvMsg(MiaWebsocketClient*, const QString&)), this, SLOT(OnMiaQueryCourseRes(MiaWebsocketClient*, const QString&)));
 }
 
@@ -57,16 +57,19 @@ void CMainWindow::insertLive(int id, const QString &cover_url, const QString &na
 void CMainWindow::initView()
 {
     setFixedSize(778, 653);
+    setWindowFlags(windowFlags() & ~Qt::WindowMinMaxButtonsHint);
     //setFixedSize(670, 800);
-    setMinimumVisible(false);
-    setMaximumVisible(false);
+    //setMinimumVisible(false);
+    //setMaximumVisible(false);
 
     m_pListPage = new QWidget(this);
     m_pListPage->setVisible(false);
     m_pListPage->setStyleSheet("QWidget{background: transparent;}");
+    m_pListPage->setFixedSize(778, 643);
 
     m_pTipPage = new QWidget(this);
     m_pTipPage->setVisible(true);
+    m_pTipPage->setFixedSize(778, 643);
     m_pTipPage->setStyleSheet("QWidget{background: transparent;}");
 
     m_pMainList = new CMainListWidget(m_pListPage);
@@ -94,14 +97,21 @@ void CMainWindow::initView()
     m_pCancel->setText(Str("Base.Course.EndPoint.Cancel"));
 
     m_pTipIcon = new QLabel(m_pTipPage);
-    m_pTipIcon->setFixedSize(121,105);
-    m_pTipIcon->setPixmap(QPixmap(":/chooseLesson/images/chooseLesson/emptystate.png"));
+    //m_pTipIcon->setFixedSize(98,87);
+    m_pTipIcon->setAlignment(Qt::AlignCenter);
+    m_pTipIcon->setPixmap(QPixmap(":/chooseLesson/images/chooseLesson/loading.png"));
 
     m_pTipTitle = new QLabel(m_pTipPage);
     m_pTipTitle->setAlignment(Qt::AlignCenter);
     m_pTipTitle->setStyleSheet("QLabel{font-size:14px; font-family: 微软雅黑; border: none; color: #696969; background: transparent; }");
     m_pTipTitle->setFixedHeight(25);
 
+    m_pTipSubTitle = new QLabel(m_pTipPage);
+    m_pTipSubTitle->setAlignment(Qt::AlignCenter);
+    m_pTipSubTitle->setStyleSheet("QLabel{font-size:14px; font-family: 微软雅黑; border: none; color: #2661e7; background: transparent; }");
+    m_pTipSubTitle->setFixedHeight(25);
+    m_pTipSubTitle->installEventFilter(this);
+#if 0
     m_pTipSubTitleLeft = new QLabel(m_pTipPage);
     m_pTipSubTitleLeft->setAlignment(Qt::AlignVCenter | Qt::AlignRight);
     m_pTipSubTitleLeft->setStyleSheet("QLabel{font-size:14px; font-family: 微软雅黑; border: none; color: #696969; background: transparent; }");
@@ -117,9 +127,12 @@ void CMainWindow::initView()
     m_pTipSubTitleCenter->setStyleSheet("QLabel{font-size:14px; font-family: 微软雅黑; border: none; color: #2661e7; background: transparent; }");
     m_pTipSubTitleCenter->setFixedHeight(25);
     m_pTipSubTitleCenter->installEventFilter(this);
+#endif
 
-    setTitleText(Str("Base.Course.UITitle"));
-    setTitleIcon(windowIcon().pixmap(QSize(20, 20)));
+    setWindowTitle(Str("Base.Course.UITitle"));
+
+    //setTitleText(Str("Base.Course.UITitle"));
+    //setTitleIcon(windowIcon().pixmap(QSize(20, 20)));
 
     setStyleSheet("QWidget{background-color:#ffffff;}");
 }
@@ -127,7 +140,17 @@ void CMainWindow::initView()
 void CMainWindow::initLayout()
 {
     QVBoxLayout *vTipLayout = new QVBoxLayout;
+    vTipLayout->addSpacing(150);
+    vTipLayout->setAlignment(Qt::AlignHCenter);
+    vTipLayout->setContentsMargins(0, 0, 0, 0);
+    vTipLayout->setSpacing(0);
+    vTipLayout->addWidget(m_pTipIcon);
+    vTipLayout->setSpacing(10);
+    vTipLayout->addWidget(m_pTipTitle);
+    vTipLayout->setSpacing(10);
+    vTipLayout->addWidget(m_pTipSubTitle);
 
+    /*
     vTipLayout->addSpacing(150);
     vTipLayout->setAlignment(Qt::AlignHCenter);
     vTipLayout->setContentsMargins(0, 0, 0, 0);
@@ -153,7 +176,8 @@ void CMainWindow::initLayout()
     hTipLayout->addWidget(m_pTipSubTitleRight);
     hTipLayout->addStretch();
 
-    vTipLayout->addLayout(hTipLayout);
+    vTipLayout->addLayout(hTipLayout);*/
+
     vTipLayout->addStretch(999);
 
     m_pTipPage->setLayout(vTipLayout);
@@ -172,16 +196,29 @@ void CMainWindow::initLayout()
     vListLayout->addLayout(hLayout);
     m_pListPage->setLayout(vListLayout);
 
-    mainLayout()->setSpacing(0);
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+
+    mainLayout->setSpacing(0);
+    mainLayout->setContentsMargins(15, 0, 15, 0);
+    mainLayout->addSpacing(10);
+    mainLayout->addWidget(m_pListPage);
+    mainLayout->addWidget(m_pTipPage);
+
+    setLayout(mainLayout);
+
+    /*mainLayout()->setSpacing(0);
     mainLayout()->setContentsMargins(15, 0, 15, 0);
     mainLayout()->addSpacing(10);
     mainLayout()->addWidget(m_pListPage);
-    mainLayout()->addWidget(m_pTipPage);
+    mainLayout()->addWidget(m_pTipPage);*/
 
     MiaWebsocketClient*	wc = &singleton<MiaWebsocketClient>::instance();
     QString out;
     EncodeMiaWCCourseReq(App()->GetMiaLoginGuid(), App()->GetMiaLoginUid(), App()->GetMiaLoginToken(), wc->UniqueTimeStamp(), out);
-    wc->SendJsonReq(out);
+    if (!wc->SendJsonReq(out))
+    {
+        changeTipType(ettError);
+    }
 }
 
 void CMainWindow::initSlot()
@@ -190,12 +227,12 @@ void CMainWindow::initSlot()
     connect(m_pCancel, SIGNAL(released()), this, SLOT(onCancel()));
 }
 
-void CMainWindow::paintBackground(QPainter &p, QRect &rect)
-{
-    p.fillRect(rect, QBrush(QColor("#0b65ae")));
-    rect.adjust(0, 40, 0, 0);
-    p.fillRect(rect, QBrush(QColor("#f0f0f0")));
-}
+//void CMainWindow::paintBackground(QPainter &p, QRect &rect)
+//{
+//    p.fillRect(rect, QBrush(QColor("#0b65ae")));
+//    rect.adjust(0, 40, 0, 0);
+//    p.fillRect(rect, QBrush(QColor("#f0f0f0")));
+//}
 
 #include "window-basic-main.hpp"
 #include "qt-wrappers.hpp"
@@ -220,7 +257,8 @@ void CMainWindow::onConfirm()
 	    }
     }
     bool ret;
-    onClose(ret);
+    //onClose(ret);
+    close();
     if (bExisted)
     {
         changeStream(miaitem);
@@ -275,8 +313,9 @@ void CMainWindow::changeStream(MiaCourseItem miaItem)
 
 void CMainWindow::onCancel()
 {
-    bool ret;
-    onClose(ret);
+    close();
+    /*bool ret;
+    onClose(ret);*/
 }
 
 void CMainWindow::onHttpFinish(int key, int code, const QString &extend)
@@ -312,24 +351,31 @@ void CMainWindow::changeTipType(TipType type)
     }
     if (ettLoading == m_type)
     {
-	m_pTipTitle->setText(Str("Base.Course.Note.FetchingList"));
+        m_pTipTitle->setText(Str("Base.Course.Note.Loading"));
+        m_pTipSubTitle->setText("");
+        m_pTipIcon->setPixmap(QPixmap(":/chooseLesson/images/chooseLesson/loading.png"));
+
+	/*m_pTipTitle->setText(Str("Base.Course.Note.FetchingList"));
 	m_pTipSubTitleLeft->setText(Str("Base.Course.Note.ClickUrl"));
 	m_pTipSubTitleCenter->setText(Str("Base.Course.Note.MiaLesson"));
-	m_pTipSubTitleRight->setText(Str("Base.Course.Note.CreateLesson"));
+	m_pTipSubTitleRight->setText(Str("Base.Course.Note.CreateLesson"));*/
     }
     else if (ettError == m_type)
     {
-	m_pTipTitle->setText(Str("Base.Course.Note.FetchingFail"));
+        m_pTipTitle->setText(Str("Base.Course.Note.NetError"));
+        m_pTipSubTitle->setText(Str("Base.Course.Note.FetchPage"));
+        m_pTipIcon->setPixmap(QPixmap(":/chooseLesson/images/chooseLesson/refresh.png"));
+	/*m_pTipTitle->setText(Str("Base.Course.Note.FetchingFail"));
 	m_pTipSubTitleLeft->setText(Str("Base.Course.Note.CheckNetwork"));
 	m_pTipSubTitleCenter->setText(Str("Base.Course.Note.ClickRetry"));
-	m_pTipSubTitleRight->setText(Str("Base.Course.Note.FetchLesso"));
+	m_pTipSubTitleRight->setText(Str("Base.Course.Note.FetchLesson"));*/
     }
     else if (ettEmpty == m_type)
     {
-	m_pTipTitle->setText(Str("Base.Course.Note.NoLesson"));
+	/*m_pTipTitle->setText(Str("Base.Course.Note.NoLesson"));
 	m_pTipSubTitleLeft->setText(Str("Base.Course.Note.ClickUrl"));
 	m_pTipSubTitleCenter->setText(Str("Base.Course.Note.MiaLesson"));
-	m_pTipSubTitleRight->setText(Str("Base.Course.Note.CreateLesson"));
+	m_pTipSubTitleRight->setText(Str("Base.Course.Note.CreateLesson"));*/
     }
 }
 
@@ -340,7 +386,7 @@ QString CMainWindow::getTempPath(int id)
 
 bool CMainWindow::eventFilter(QObject * watched, QEvent * evt)
 {
-	if (m_pTipSubTitleCenter == watched)
+	if (m_pTipSubTitle == watched)
 	{
 		if (evt->type() == QEvent::Enter)
 		{
@@ -368,13 +414,25 @@ void CMainWindow::onClickUrl()
 	else if (ettError == m_type)
 	{
 		//获取课程列表失败
+        MiaWebsocketClient*	wc = &singleton<MiaWebsocketClient>::instance();
+        QString out;
+        EncodeMiaWCCourseReq(App()->GetMiaLoginGuid(), App()->GetMiaLoginUid(), App()->GetMiaLoginToken(), wc->UniqueTimeStamp(), out);
+        if (!wc->SendJsonReq(out))
+        {
+            changeTipType(ettError);
+        }
+        else
+        {
+            changeTipType(ettLoading);
+        }
+        return;
 	}
 	else if (ettLoading == m_type)
 	{
 		//正在获取课程列表
 	}
-	const QUrl url("https://pc.miamusic.com/backend/#/");
-	QDesktopServices::openUrl(url);
+	//const QUrl url("https://pc.miamusic.com/backend/#/");
+	//QDesktopServices::openUrl(url);
 }
 
 bool CMainWindow::EncodeMiaWCCommonHead(json_t* root, const QString& guid, const QString& cmd, const QString& stamp)
@@ -527,7 +585,8 @@ void CMainWindow::OnWebSocketConnect(MiaWebsocketClient* wc)
 
 void CMainWindow::OnWebSocketClose(MiaWebsocketClient* wc)
 {
-	QMessageBox::information(this, "warning", QString("net broken, please reopen app"));
+	//QMessageBox::information(this, "warning", QString("net broken, please reopen app"));
+    changeTipType(ettError);
 }
 
 static QString GetTypeName(const QString& type)
@@ -536,10 +595,10 @@ static QString GetTypeName(const QString& type)
 	{
 		return Str("Base.Course.Lesson.VideoLive");
 	}
-	else if (!type.compare("2"))
-	{
-		return Str("Base.Course.Lesson.VideoRecord");
-	}
+//	else if (!type.compare("2"))
+//	{
+//		return Str("Base.Course.Lesson.VideoRecord");
+//	}
 	else if (!type.compare("3"))
 	{
 		return Str("Base.Course.Lesson.AudioLive");
