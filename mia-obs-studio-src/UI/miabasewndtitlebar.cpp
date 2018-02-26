@@ -144,9 +144,9 @@ void CBaseWndTitleBar::initView()
                                  .arg(":/chooseLesson/images/chooseLesson/man_max_enter.png")
                                  .arg(":/chooseLesson/images/chooseLesson/man_max_down.png"));
 
-    d->m_pClose->setStyleSheet(QString(styleSheetFmt).arg(":/chooseLesson/images/chooseLesson/Close_default.png")
-                                 .arg(":/chooseLesson/images/chooseLesson/Close_enter.png")
-                                 .arg(":/chooseLesson/images/chooseLesson/Close_down.png"));
+    d->m_pClose->setStyleSheet(QString(styleSheetFmt).arg(":/chooseLesson/images/chooseLesson/man_Close_default.png")
+                                 .arg(":/chooseLesson/images/chooseLesson/man_Close_enter.png")
+                                 .arg(":/chooseLesson/images/chooseLesson/man_Close_down.png"));
 				 
     d->m_pTitle->installEventFilter(this);
     this->installEventFilter(this);

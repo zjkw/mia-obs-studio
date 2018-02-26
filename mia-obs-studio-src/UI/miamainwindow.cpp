@@ -56,8 +56,8 @@ void CMainWindow::insertLive(int id, const QString &cover_url, const QString &na
 
 void CMainWindow::initView()
 {
-    //setFixedSize(778, 653);
-    setFixedSize(670, 800);
+    setFixedSize(778, 653);
+    //setFixedSize(670, 800);
     setMinimumVisible(false);
     setMaximumVisible(false);
 

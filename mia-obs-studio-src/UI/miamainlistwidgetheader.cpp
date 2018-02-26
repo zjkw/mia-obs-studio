@@ -34,10 +34,13 @@ void CMainListWidgetHeader::initView()
     m_pCover->setAlignment(Qt::AlignCenter);
     m_pName = new QLabel(this);
     m_pName->setAlignment(Qt::AlignVCenter | Qt::AlignLeft);
+    m_pName->setContentsMargins(35, 0, 0, 0);
     m_pTime = new QLabel(this);
     m_pTime->setAlignment(Qt::AlignVCenter | Qt::AlignLeft);
+    m_pTime->setContentsMargins(20, 0, 0, 0);
     m_pType = new QLabel(this);
     m_pType->setAlignment(Qt::AlignVCenter | Qt::AlignLeft);
+    m_pType->setContentsMargins(10, 0, 0, 0);
     m_pTeacher = new QLabel(this);
     m_pTeacher->setAlignment(Qt::AlignVCenter | Qt::AlignLeft);
     setFixedHeight(42);

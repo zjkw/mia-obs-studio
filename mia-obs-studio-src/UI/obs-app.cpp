@@ -415,8 +415,10 @@ bool OBSApp::InitGlobalConfigDefaults()
 			"ShowStatusBar", true);
 
 	if (!config_get_bool(globalConfig, "General", "Pre21Defaults")) {
-		config_set_default_string(globalConfig, "General",
-				"CurrentTheme", "Dark");
+		//config_set_default_string(globalConfig, "General",
+			//	"CurrentTheme", "Dark");
+        config_set_default_string(globalConfig, "General",
+            "CurrentTheme", "Default");
 	}
 
 #ifdef _WIN32
