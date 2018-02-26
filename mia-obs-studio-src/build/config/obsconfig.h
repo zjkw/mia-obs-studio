@@ -1,6 +1,6 @@
 
 #pragma once
-
+#include "miaversion.h"
 #ifndef ON
 #define ON 1
 #endif
@@ -9,7 +9,7 @@
 #define OFF 0
 #endif
 
-#define OBS_VERSION "0.0.1"
+#define OBS_VERSION MIA_VERSION
 #define OBS_DATA_PATH "../../data"
 #define OBS_INSTALL_PREFIX ""
 #define OBS_PLUGIN_DESTINATION "obs-plugins/32bit"
