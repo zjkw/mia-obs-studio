@@ -405,6 +405,11 @@ bool CMainWindow::eventFilter(QObject * watched, QEvent * evt)
 	return base::eventFilter(watched, evt);
 }
 
+void CMainWindow::closeEvent(QCloseEvent * event)
+{
+    emit closed();
+}
+
 void CMainWindow::onClickUrl()
 {
 	if (ettEmpty == m_type)
@@ -556,12 +561,12 @@ bool CMainWindow::DecodeMiaWCCourseRes(const QString& json, bool& bSuc, std::vec
 			}
 			item.startTime = json_string_value(jstartTime);
 			 
-			json_t* jcourseType = json_object_get(jCourseItem, "courseType");
-			if (!json_is_string(jcourseType))
+			json_t* jliveType = json_object_get(jCourseItem, "liveType");
+			if (!json_is_string(jliveType))
 			{
 				continue;
 			}
-			item.courseType = json_string_value(jcourseType);
+			item.liveType = json_string_value(jliveType);
 
 			json_t* jteacher = json_object_get(jCourseItem, "teacher");
 			if (json_is_string(jteacher))
@@ -591,6 +596,7 @@ void CMainWindow::OnWebSocketClose(MiaWebsocketClient* wc)
 
 static QString GetTypeName(const QString& type)
 {
+  //  return type;//
 	if (!type.compare("1"))
 	{
 		return Str("Base.Course.Lesson.VideoLive");
@@ -631,7 +637,7 @@ void CMainWindow::OnMiaQueryCourseRes(MiaWebsocketClient* wc, const QString& jso
         {
             startTime = Str("Base.Course.Lesson.AlwayUseful");
         }
-		insertLive(it->coverID.toInt(), it->coverUrl, it->title, startTime, GetTypeName(it->courseType), it->teacherList);
+		insertLive(it->coverID.toInt(), it->coverUrl, it->title, startTime, GetTypeName(it->liveType), it->teacherList);
 	}
 	changeTipType(m_CourseList.empty() ? ettEmpty : ettList);
 }

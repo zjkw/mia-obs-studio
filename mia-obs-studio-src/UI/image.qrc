@@ -17,5 +17,7 @@
         <file>forms/images/chooseLesson/man_restore_down.png</file>
         <file>forms/images/chooseLesson/man_restore_enter.png</file>
         <file>forms/images/chooseLesson/success.png</file>
+        <file>forms/images/chooseLesson/loading.png</file>
+        <file>forms/images/chooseLesson/refresh.png</file>
     </qresource>
 </RCC>

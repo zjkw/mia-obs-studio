@@ -27,7 +27,7 @@ MiaLoginDialog::MiaLoginDialog(QWidget *parent) :
 	QDialog(parent), _suc(false), _view(nullptr)
 {
 	setWindowTitle(App()->GetMiaAppName());
-	resize(310, 450);
+	resize(320, 450);
 	QIcon icon;
 	icon.addFile(QStringLiteral(":/res/images/obs.png"), QSize(), QIcon::Normal, QIcon::Off);
 	setWindowIcon(icon);

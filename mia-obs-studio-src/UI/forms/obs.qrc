@@ -46,5 +46,7 @@
         <file>images/chooseLesson/man_restore_down.png</file>
         <file>images/chooseLesson/man_restore_enter.png</file>
         <file>images/chooseLesson/success.png</file>
+        <file>images/chooseLesson/loading.png</file>
+        <file>images/chooseLesson/refresh.png</file>
     </qresource>
 </RCC>

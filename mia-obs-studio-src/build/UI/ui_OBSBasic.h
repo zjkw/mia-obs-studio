@@ -753,7 +753,7 @@ public:
         sizePolicy6.setVerticalStretch(0);
         sizePolicy6.setHeightForWidth(selectButton->sizePolicy().hasHeightForWidth());
         selectButton->setSizePolicy(sizePolicy6);
-        selectButton->setCheckable(true);
+        //selectButton->setCheckable(true);
 
         buttonsVLayout->addWidget(selectButton);
 

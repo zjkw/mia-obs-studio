@@ -300,7 +300,7 @@ OBSBasic::OBSBasic(QWidget *parent)
 		}
 	}
 
-	connect(ui->selectButton, SIGNAL(clicked()), this, SLOT(SelectCourse()));
+	connect(ui->selectButton, SIGNAL(released()), this, SLOT(SelectCourse()));
 }
 
 static void SaveAudioDevice(const char *name, int channel, obs_data_t *parent,

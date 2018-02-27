@@ -27,7 +27,7 @@ class CMainWindow : public QMainWindow
         QString coverUrl;
         QString title;
         QString startTime;
-        QString courseType;
+        QString liveType;
         QString publishUrl;
         QString teacherList;
     };
@@ -36,6 +36,8 @@ class CMainWindow : public QMainWindow
 public:
     CMainWindow(const QString &coverPath, QWidget *parent = 0);
     ~CMainWindow();
+signals:
+    void closed();
 protected:
     void initView();
     void initLayout();
@@ -53,6 +55,7 @@ protected:
     void changeTipType(TipType type);
     QString getTempPath(int id);
     bool eventFilter(QObject * watched, QEvent * evt) override;
+    void closeEvent(QCloseEvent * event) override;
     void onClickUrl();
     void changeStream(MiaCourseItem miaItem);
 private:
