@@ -392,36 +392,9 @@ static bool nvenc_encode(void *data, struct encoder_frame *frame,
 
 static void nvenc_defaults(obs_data_t *settings)
 {
-	//zjg 12
-	int64_t keyint_sec_out = obs_data_get_int(settings, "keyint_sec_out");
-	if (!keyint_sec_out)
-	{
-		obs_data_set_default_int(settings, "keyint_sec", keyint_sec_out);
-	}
-	else
-	{
-		obs_data_set_default_int(settings, "keyint_sec", 0);
-	}
-
-	const char *preset_out = obs_data_get_string(settings, "preset_out");
-	if (preset_out)
-	{
-		obs_data_set_default_string(settings, "preset", preset_out);
-	}
-	else
-	{
-		obs_data_set_default_string(settings, "preset", "default");
-	}
-
-	const char *profile_out = obs_data_get_string(settings, "profile_out");
-	if (profile_out)
-	{
-		obs_data_set_default_string(settings, "profile", profile_out);
-	}
-	else
-	{
-		obs_data_set_default_string(settings, "profile", "main");
-	}	
+	obs_data_set_default_int(settings, "keyint_sec", 0);
+	obs_data_set_default_string(settings, "preset", "default");
+	obs_data_set_default_string(settings, "profile", "main");
 
 	obs_data_set_default_int(settings, "bitrate", 2500);
 	obs_data_set_default_int(settings, "cqp", 23);

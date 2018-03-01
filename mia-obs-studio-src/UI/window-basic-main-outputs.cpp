@@ -259,23 +259,7 @@ void SimpleOutput::LoadStreamingPreset_h264(const char *encoderId)
 {
 	//zjg 9
 	obs_data_t * default_data = nullptr;
-/*
-	MiaObsServerConf* mia_conf = nullptr;
-	const char *profile = config_get_string(App()->GlobalConfig(), "Basic", "Profile");
-	if (!QString("Mia").compare(profile, Qt::CaseInsensitive))
-	{
-		if (!config_get_bool(main->Config(), "General", "UserModify"))
-		{
-			mia_conf = App()->GetMiaObsServerConf();
 
-			default_data = obs_data_create();
-			obs_data_set_default_int(default_data, "keyint_sec_out", mia_conf->o.a.Keyframe.toInt());//zjg
-			obs_data_set_default_string(default_data, "preset_out", mia_conf->o.a.CPU.toStdString().c_str());
-			obs_data_set_default_string(default_data, "profile_out", mia_conf->o.a.Profile.toStdString().c_str());
-			obs_data_set_default_string(default_data, "tune_out", mia_conf->o.a.Tune.toStdString().c_str());
-		}
-	}
-*/	
 	h264Streaming = obs_video_encoder_create(encoderId,
 			"simple_h264_stream", default_data, nullptr);
 	if (!h264Streaming)

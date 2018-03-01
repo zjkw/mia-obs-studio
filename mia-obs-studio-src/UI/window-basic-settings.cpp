@@ -1569,18 +1569,30 @@ OBSPropertiesView *OBSBasicSettings::CreateEncoderPropertyView(
 
 	//zjg 15
 	MiaObsServerConf* mia_conf = nullptr;
-	const char *profile = config_get_string(App()->GlobalConfig(), "Basic", "Profile");
-	if (!QString("Mia").compare(profile, Qt::CaseInsensitive))
-	{
-		if (!config_get_bool(main->Config(), "General", "UserModify"))
-		{
-			mia_conf = App()->GetMiaObsServerConf();
-			obs_data_set_default_int(settings, "bitrate", mia_conf->o.a.Bitrate.toInt());
-			obs_data_set_default_int(settings, "keyint_sec", mia_conf->o.a.Keyframe.toInt());
-			obs_data_set_default_string(settings, "preset", mia_conf->o.a.CPU.toStdString().c_str());
-			obs_data_set_default_string(settings, "profile", mia_conf->o.a.Profile.toStdString().c_str());
-			obs_data_set_default_string(settings, "tune", mia_conf->o.a.Tune.toStdString().c_str());
-		}
+	const char *profile = config_get_string(App()->UserConfig(), "Basic", "Profile");
+    if (!QString("Mia").compare(profile, Qt::CaseInsensitive))
+    {
+        mia_conf = App()->GetMiaObsServerConf();
+        if (mia_conf->o.a.Bitrate.toInt() != obs_data_get_int(settings, "bitrate"))
+        {
+            obs_data_set_default_int(settings, "bitrate", mia_conf->o.a.Bitrate.toInt());
+        }
+        if (mia_conf->o.a.Keyframe.toInt() != obs_data_get_int(settings, "keyint_sec"))
+        {
+            obs_data_set_default_int(settings, "keyint_sec", mia_conf->o.a.Keyframe.toInt());
+        }
+        if (mia_conf->o.a.CPU.compare(obs_data_get_string(settings, "preset"), Qt::CaseInsensitive))
+        {
+            obs_data_set_default_string(settings, "preset", mia_conf->o.a.CPU.toStdString().c_str());
+        }
+        if (mia_conf->o.a.Profile.compare(obs_data_get_string(settings, "profile"), Qt::CaseInsensitive))
+        {
+            obs_data_set_default_string(settings, "profile", mia_conf->o.a.Profile.toStdString().c_str());
+        }
+        if (mia_conf->o.a.Tune.compare(obs_data_get_string(settings, "tune"), Qt::CaseInsensitive))
+        {
+            obs_data_set_default_string(settings, "tune", mia_conf->o.a.Tune.toStdString().c_str());
+        }
 	}
 
 	OBSPropertiesView *view;
@@ -2779,40 +2791,6 @@ void OBSBasicSettings::SaveVideoSettings()
 		aeroWasDisabled = toggleAero->isChecked();
 	}
 #endif
-
-	//zjg 13 
-	MiaObsServerConf* mia_conf = nullptr;
-	const char *profile = config_get_string(App()->GlobalConfig(), "Basic", "Profile");
-
-	if (!QString("Mia").compare(profile, Qt::CaseInsensitive))
-	{
-		if (!config_get_bool(main->Config(), "General", "UserModify"))
-		{
-			mia_conf = App()->GetMiaObsServerConf();
-		}
-	}
-
-	//zjg 20
-	if (mia_conf && mia_conf->o.v.OutputCX.toInt() != config_get_uint(main->Config(), "Video", "OutputCX"))
-	{
-		config_set_bool(main->Config(), "General", "UserModify", true);
-	}
-	if (mia_conf && mia_conf->o.v.OutputCY.toInt() != config_get_uint(main->Config(), "Video", "OutputCY"))
-	{
-		config_set_bool(main->Config(), "General", "UserModify", true);
-	}
-	if (mia_conf && mia_conf->o.v.FPSInt.toInt() != config_get_int(main->Config(), "Video", "FPSInt"))
-	{
-		config_set_bool(main->Config(), "General", "UserModify", true);
-	}
-	if (mia_conf && mia_conf->o.v.FPSType.toInt() != config_get_int(main->Config(), "Video", "FPSType"))
-	{
-		config_set_bool(main->Config(), "General", "UserModify", true);
-	}
-	if (mia_conf && mia_conf->o.v.ScaleType.compare(config_get_string(main->Config(), "Video", "ScaleType"), Qt::CaseInsensitive))
-	{
-		config_set_bool(main->Config(), "General", "UserModify", true);
-	}
 }
 
 void OBSBasicSettings::SaveAdvancedSettings()
@@ -2989,24 +2967,7 @@ void OBSBasicSettings::SaveEncoder(QComboBox *combo, const char *section,
 
 void OBSBasicSettings::SaveOutputSettings()
 {
-	//zjg 12
-	MiaObsServerConf* mia_conf = nullptr;
-	const char *profile = config_get_string(App()->GlobalConfig(),	"Basic", "Profile");
-	if (!QString("Mia").compare(profile, Qt::CaseInsensitive))
-	{
-		if (!config_get_bool(main->Config(), "General", "UserModify"))
-		{
-			mia_conf = App()->GetMiaObsServerConf();
-		}
-	}
-
 	config_set_string(main->Config(), "Output", "Mode", OutputModeFromIdx(ui->outputMode->currentIndex()));
-
-	// zjg 30
-	if (mia_conf && mia_conf->o.Mode.compare(OutputModeFromIdx(ui->outputMode->currentIndex()), Qt::CaseInsensitive))
-	{
-		config_set_bool(main->Config(), "General", "UserModify", true);
-	}
 
 	QString encoder = ui->simpleOutStrEncoder->currentData().toString();
 	const char *presetType;
@@ -3047,16 +3008,9 @@ void OBSBasicSettings::SaveOutputSettings()
 			ui->advOutTrack1, ui->advOutTrack2,
 			ui->advOutTrack3, ui->advOutTrack4,
 			ui->advOutTrack5, ui->advOutTrack6);
-	if (mia_conf && mia_conf->o.a.TrackIndex != config_get_int(main->Config(), "AdvOut", "TrackIndex"))
-	{
-		config_set_bool(main->Config(), "General", "UserModify", true);
-	}
+
 
 	config_set_string(main->Config(), "AdvOut", "RecType", RecTypeFromIdx(ui->advOutRecType->currentIndex()));
-	if (mia_conf && mia_conf->o.a.RecType.compare(config_get_string(main->Config(), "AdvOut", "RecType"), Qt::CaseInsensitive))
-	{
-		config_set_bool(main->Config(), "General", "UserModify", true);
-	}
 
 	curAdvRecordEncoder = GetComboData(ui->advOutRecEncoder);
 
@@ -3075,17 +3029,10 @@ void OBSBasicSettings::SaveOutputSettings()
 			(ui->advOutRecTrack4->isChecked() ? (1<<3) : 0) |
 			(ui->advOutRecTrack5->isChecked() ? (1<<4) : 0) |
 			(ui->advOutRecTrack6->isChecked() ? (1<<5) : 0));
-	if (mia_conf && mia_conf->o.a.RecTracks != config_get_int(main->Config(), "AdvOut", "RecTracks"))
-	{
-		config_set_bool(main->Config(), "General", "UserModify", true);
-	}
+
 
 	config_set_bool(main->Config(), "AdvOut", "FFOutputToFile", ui->advOutFFType->currentIndex() == 0 ? true : false);
-	if (mia_conf && mia_conf->o.a.FFOutputToFile != config_get_bool(main->Config(), "AdvOut", "FFOutputToFile"))
-	{
-		config_set_bool(main->Config(), "General", "UserModify", true);
-	}
-	
+
 
 	SaveEdit(ui->advOutFFRecPath, "AdvOut", "FFFilePath");
 	SaveCheckBox(ui->advOutFFNoSpace, "AdvOut", "FFFileNameWithoutSpace");
@@ -3126,29 +3073,6 @@ void OBSBasicSettings::SaveOutputSettings()
 	SaveSpinBox(ui->advRBMegsMax, "AdvOut", "RecRBSize");
 
 	WriteJsonData(streamEncoderProps, "streamEncoder.json");
-
-	//
-	OBSData settings = streamEncoderProps->GetSettings();
-	if (mia_conf && mia_conf->o.a.Bitrate.toInt() != (int)obs_data_get_int(settings, "bitrate"))
-	{
-		config_set_bool(main->Config(), "General", "UserModify", true);
-	}
-	if (mia_conf && mia_conf->o.a.Keyframe.toInt() != obs_data_get_int(settings, "keyint_sec"))
-	{
-		config_set_bool(main->Config(), "General", "UserModify", true);
-	}
-	if (mia_conf && mia_conf->o.a.CPU.compare(obs_data_get_string(settings, "preset"), Qt::CaseInsensitive))
-	{
-		config_set_bool(main->Config(), "General", "UserModify", true);
-	}
-	if (mia_conf && mia_conf->o.a.Profile.compare(obs_data_get_string(settings, "profile"), Qt::CaseInsensitive))
-	{
-		config_set_bool(main->Config(), "General", "UserModify", true);
-	}
-	if (mia_conf && mia_conf->o.a.Tune.compare(obs_data_get_string(settings, "tune"), Qt::CaseInsensitive))
-	{
-		config_set_bool(main->Config(), "General", "UserModify", true);
-	}
 	
 	WriteJsonData(recordEncoderProps, "recordEncoder.json");
 	main->ResetOutputs();

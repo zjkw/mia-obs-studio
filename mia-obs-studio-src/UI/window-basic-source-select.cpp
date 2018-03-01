@@ -207,12 +207,12 @@ void OBSBasicSourceSelect::on_buttonBox_accepted()
 			return;
 
         //xiezl 多媒体源创建后默认关闭麦克风
-        QStringList filterList;
+        /*QStringList filterList;
         filterList << "ffmpeg_source";
         if (filterList.contains(QString(id)))
         {
             obs_source_set_muted(newSource, true);
-        }
+        }*/
         
 	}
 

@@ -448,11 +448,6 @@ static bool MakeUserDirs()
 {
 	char path[512];
 
-	if (GetConfigPath(path, sizeof(path), "mia-obs-studio/basic") <= 0)
-		return false;
-	if (!do_mkdir(path))
-		return false;
-
 	if (GetConfigPath(path, sizeof(path), "mia-obs-studio/logs") <= 0)
 		return false;
 	if (!do_mkdir(path))
@@ -484,7 +479,7 @@ static bool MakeUserDirs()
 		return false;
 	if (!do_mkdir(path))
 		return false;
-
+    
 	return true;
 }
 
@@ -492,12 +487,17 @@ static bool MakeUserProfileDirs()
 {
 	char path[512];
 
-	if (GetConfigPath(path, sizeof(path), "mia-obs-studio/basic/profiles") <= 0)
+    if (GetUserConfigPath(path, sizeof(path), "") <= 0)
+        return false;
+    if (!do_mkdir(path))
+        return false;
+
+	if (GetUserConfigPath(path, sizeof(path), "profiles") <= 0)
 		return false;
 	if (!do_mkdir(path))
 		return false;
 
-	if (GetConfigPath(path, sizeof(path), "mia-obs-studio/basic/scenes") <= 0)
+	if (GetUserConfigPath(path, sizeof(path), "scenes") <= 0)
 		return false;
 	if (!do_mkdir(path))
 		return false;
@@ -511,7 +511,7 @@ static string GetProfileDirFromName(const char *name)
 	os_glob_t *glob;
 	char path[512];
 
-	if (GetConfigPath(path, sizeof(path), "mia-obs-studio/basic/profiles") <= 0)
+	if (GetUserConfigPath(path, sizeof(path), "profiles") <= 0)
 		return outputPath;
 
 	strcat(path, "/*");
@@ -557,7 +557,7 @@ static string GetSceneCollectionFileFromName(const char *name)
 	os_glob_t *glob;
 	char path[512];
 
-	if (GetConfigPath(path, sizeof(path), "mia-obs-studio/basic/scenes") <= 0)
+	if (GetUserConfigPath(path, sizeof(path), "scenes") <= 0)
 		return outputPath;
 
 	strcat(path, "/*.json");
@@ -612,33 +612,7 @@ bool OBSApp::InitGlobalConfig()
 		OBSErrorBox(NULL, "Failed to open global.ini: %d", errorcode);
 		return false;
 	}
-
-	if (!opt_starting_collection.empty()) {
-		string path = GetSceneCollectionFileFromName(
-				opt_starting_collection.c_str());
-		if (!path.empty()) {
-			config_set_string(globalConfig,
-					"Basic", "SceneCollection",
-					opt_starting_collection.c_str());
-			config_set_string(globalConfig,
-					"Basic", "SceneCollectionFile",
-					path.c_str());
-			changed = true;
-		}
-	}
-
-	if (!opt_starting_profile.empty()) {
-		string path = GetProfileDirFromName(
-				opt_starting_profile.c_str());
-		if (!path.empty()) {
-			config_set_string(globalConfig, "Basic", "Profile",
-					opt_starting_profile.c_str());
-			config_set_string(globalConfig, "Basic", "ProfileDir",
-					path.c_str());
-			changed = true;
-		}
-	}
-
+    
 	if (!config_has_user_value(globalConfig, "General", "Pre19Defaults")) {
 		uint32_t lastVersion = config_get_int(globalConfig, "General",
 				"LastVersion");
@@ -665,6 +639,66 @@ bool OBSApp::InitGlobalConfig()
 		config_save_safe(globalConfig, "tmp", nullptr);
 
 	return InitGlobalConfigDefaults();
+}
+
+bool OBSApp::InitUserConfig()
+{
+    char path[512];
+    bool changed = false;
+
+    int len = GetUserConfigPath(path, sizeof(path),
+        "user.ini");
+    if (len <= 0) {
+        return false;
+    }
+
+    int errorcode = userConfig.Open(path, CONFIG_OPEN_ALWAYS);
+    if (errorcode != CONFIG_SUCCESS) {
+        OBSErrorBox(NULL, "Failed to open user.ini: %d", errorcode);
+        return false;
+    }
+
+    //zjg 7
+    config_set_default_string(userConfig, "Basic", "Profile", "Mia");
+    //	Str("Untitled"));
+    config_set_default_string(userConfig, "Basic", "ProfileDir", "Mia");
+    //	Str("Untitled"));
+    config_set_default_string(userConfig, "Basic", "SceneCollection",
+        Str("Untitled"));
+    config_set_default_string(userConfig, "Basic", "SceneCollectionFile",
+        Str("Untitled"));
+
+    if (!opt_starting_collection.empty()) {
+        string path = GetSceneCollectionFileFromName(
+            opt_starting_collection.c_str());
+        if (!path.empty()) {
+            config_set_string(userConfig,
+                "Basic", "SceneCollection",
+                opt_starting_collection.c_str());
+            config_set_string(userConfig,
+                "Basic", "SceneCollectionFile",
+                path.c_str());
+            changed = true;
+        }
+    }
+
+    if (!opt_starting_profile.empty()) {
+        string path = GetProfileDirFromName(
+            opt_starting_profile.c_str());
+        if (!path.empty()) {
+            config_set_string(userConfig, "Basic", "Profile",
+                opt_starting_profile.c_str());
+            config_set_string(userConfig, "Basic", "ProfileDir",
+                path.c_str());
+            changed = true;
+        }
+    }
+
+   
+ //   if (changed)
+        config_save_safe(userConfig, "tmp", nullptr);
+
+        return true;
 }
 
 bool OBSApp::InitLocale()
@@ -816,13 +850,13 @@ static void move_basic_to_profiles(void)
 	os_glob_t *glob;
 
 	/* if not first time use */
-	if (GetConfigPath(path, 512, "mia-obs-studio/basic") <= 0)
+	if (GetUserConfigPath(path, 512, "") <= 0)
 		return;
 	if (!os_file_exists(path))
 		return;
 
 	/* if the profiles directory doesn't already exist */
-	if (GetConfigPath(new_path, 512, "mia-obs-studio/basic/profiles") <= 0)
+	if (GetUserConfigPath(new_path, 512, "profiles") <= 0)
 		return;
 	if (os_file_exists(new_path))
 		return;
@@ -869,12 +903,12 @@ static void move_basic_to_scene_collections(void)
 	char path[512];
 	char new_path[512];
 
-	if (GetConfigPath(path, 512, "mia-obs-studio/basic") <= 0)
+	if (GetUserConfigPath(path, 512, "") <= 0)
 		return;
 	if (!os_file_exists(path))
 		return;
 
-	if (GetConfigPath(new_path, 512, "mia-obs-studio/basic/scenes") <= 0)
+	if (GetUserConfigPath(new_path, 512, "scenes") <= 0)
 		return;
 	if (os_file_exists(new_path))
 		return;
@@ -890,31 +924,21 @@ static void move_basic_to_scene_collections(void)
 	os_rename(path, new_path);
 }
 
-void OBSApp::AppInit()
+void OBSApp::AppInit_global()
 {
-	ProfileScope("OBSApp::AppInit");
-
+	ProfileScope("OBSApp::AppInit_global");
+    
 	if (!InitApplicationBundle())
 		throw "Failed to initialize application bundle";
-	if (!MakeUserDirs())
-		throw "Failed to create required user directories";
+    if (!MakeUserDirs())
+        throw "Failed to create required user directories";
 	if (!InitGlobalConfig())
 		throw "Failed to initialize global config";
 	if (!InitLocale())
 		throw "Failed to load locale";
 	if (!InitTheme())
 		throw "Failed to load theme";
-
-	//zjg 7
-	config_set_default_string(globalConfig, "Basic", "Profile", "Mia");
-		//	Str("Untitled"));
-	config_set_default_string(globalConfig, "Basic", "ProfileDir", "Mia");
-		//	Str("Untitled"));
-	config_set_default_string(globalConfig, "Basic", "SceneCollection",
-			Str("Untitled"));
-	config_set_default_string(globalConfig, "Basic", "SceneCollectionFile",
-			Str("Untitled"));
-
+    
 #ifdef _WIN32
 	bool disableAudioDucking = config_get_bool(globalConfig, "Audio",
 			"DisableAudioDucking");
@@ -926,12 +950,19 @@ void OBSApp::AppInit()
 	if (config_get_bool(globalConfig, "Video", "DisableOSXVSync"))
 		EnableOSXVSync(false);
 #endif
+}
 
-	move_basic_to_profiles();
-	move_basic_to_scene_collections();
+void OBSApp::AppInit_user()
+{
+ //   ProfileScope("OBSApp::AppInit_user");
+    if (!MakeUserProfileDirs())
+        throw "Failed to create profile directories";
 
-	if (!MakeUserProfileDirs())
-		throw "Failed to create profile directories";
+    if (!InitUserConfig())
+        throw "Failed to initialize user config";
+
+    move_basic_to_profiles();
+    move_basic_to_scene_collections();
 }
 
 const char *OBSApp::GetRenderModule() const
@@ -1416,6 +1447,8 @@ static auto ProfilerFree = [](void *)
 	profiler_free();
 };
 
+static void upgrade_settings(void);
+
 static const char *run_program_init = "run_program_init";
 static int run_program(fstream &logFile, int argc, char *argv[])
 {
@@ -1428,7 +1461,7 @@ static int run_program(fstream &logFile, int argc, char *argv[])
 				ProfilerFree);
 
 	profiler_start();
-	profile_register_root(run_program_init, 0);
+	profile_register_root(run_program_init, 0); 
 
 	ScopeProfiler prof{run_program_init};
 
@@ -1436,7 +1469,7 @@ static int run_program(fstream &logFile, int argc, char *argv[])
 
 	OBSApp program(argc, argv, profilerNameStore.get());
 	try {
-		program.AppInit();
+		program.AppInit_global();
 
 		OBSTranslator translator;
 
@@ -1505,7 +1538,8 @@ static int run_program(fstream &logFile, int argc, char *argv[])
 		{
 			return 0;
 		}
-		
+        upgrade_settings();
+        program.AppInit_user();
 		
 		if (!program.OBSInit())
 			return 0;
@@ -1642,6 +1676,30 @@ char *GetConfigPathPtr(const char *name)
 	} else {
 		return os_get_config_path_ptr(name);
 	}
+}
+
+int GetUserConfigPath(char *path, size_t size, const char *name)
+{
+    if (!OBS_UNIX_STRUCTURE && portable_mode) 
+    {
+        if (name && *name) {
+            return snprintf(path, size, CONFIG_PATH "/mia-obs-studio/user/%s/%s", App()->GetMiaLoginUid().toStdString().c_str(), name);
+        }
+        else {
+            return snprintf(path, size, CONFIG_PATH "/mia-obs-studio/user/%s", App()->GetMiaLoginUid().toStdString().c_str());
+        }
+    }
+    else 
+    {
+        char tmp[512];
+        if (name && *name) {
+            snprintf(tmp, sizeof(tmp), "mia-obs-studio/user/%s/%s", App()->GetMiaLoginUid().toStdString().c_str(), name);
+        }
+        else {
+            snprintf(tmp, sizeof(tmp), "mia-obs-studio/user/%s", App()->GetMiaLoginUid().toStdString().c_str());
+        }
+        return os_get_config_path(path, size, tmp);
+    }
 }
 
 int GetProgramDataPath(char *path, size_t size, const char *name)
@@ -1897,7 +1955,7 @@ static void convert_14_2_encoder_setting(const char *encoder, const char *file)
 static void upgrade_settings(void)
 {
 	char path[512];
-	int pathlen = GetConfigPath(path, 512, "mia-obs-studio/basic/profiles");
+	int pathlen = GetUserConfigPath(path, 512, "profiles");
 
 	if (pathlen <= 0)
 		return;
@@ -2059,8 +2117,6 @@ int main(int argc, char *argv[])
 			os_file_exists(BASE_PATH "/obs_portable_mode.txt");
 	}
 #endif
-
-	upgrade_settings();
 
 	fstream logFile;
 

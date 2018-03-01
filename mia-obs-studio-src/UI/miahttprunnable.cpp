@@ -59,6 +59,12 @@ void CHttpDownloadRunnable::run()
 		delete m_pFile;
 		m_pFile = nullptr;
 	}
+
+    QFile file(m_path);
+    if (file.exists())
+    {
+        file.remove();
+    }
 	m_pFile = new QFile(m_path);
 	m_pFile->open(QIODevice::Append);
 	m_reply = manager.get(request);

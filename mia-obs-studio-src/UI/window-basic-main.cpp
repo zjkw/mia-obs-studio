@@ -55,6 +55,7 @@
 #include "volume-control.hpp"
 #include "remote-text.hpp"
 
+#define ENABLE_WIN_UPDATER 1
 #if defined(_WIN32) && defined(ENABLE_WIN_UPDATER)
 #include "win-update/win-update.hpp"
 #endif
@@ -358,7 +359,7 @@ static obs_data_t *GenerateSaveData(obs_data_array_t *sceneOrder,
 	const char   *sceneName   = obs_source_get_name(currentScene);
 	const char   *programName = obs_source_get_name(curProgramScene);
 
-	const char *sceneCollection = config_get_string(App()->GlobalConfig(),
+	const char *sceneCollection = config_get_string(App()->UserConfig(),
 			"Basic", "SceneCollection");
 
 	obs_data_set_string(saveData, "current_scene", sceneName);
@@ -805,7 +806,7 @@ void OBSBasic::Load(const char *file)
 		transitionName = obs_source_get_name(fadeTransition);
 
 	const char *curSceneCollection = config_get_string(
-			App()->GlobalConfig(), "Basic", "SceneCollection");
+			App()->UserConfig(), "Basic", "SceneCollection");
 
 	obs_data_set_default_string(data, "name", curSceneCollection);
 
@@ -913,9 +914,9 @@ retryScene:
 	std::string file_base = strrchr(file, '/') + 1;
 	file_base.erase(file_base.size() - 5, 5);
 
-	config_set_string(App()->GlobalConfig(), "Basic", "SceneCollection",
+	config_set_string(App()->UserConfig(), "Basic", "SceneCollection",
 			name);
-	config_set_string(App()->GlobalConfig(), "Basic", "SceneCollectionFile",
+	config_set_string(App()->UserConfig(), "Basic", "SceneCollectionFile",
 			file_base.c_str());
 
 	obs_data_array_t *quickTransitionData = obs_data_get_array(data,
@@ -1026,16 +1027,21 @@ bool OBSBasic::LoadService()
 	obs_data_t *settings = obs_data_get_obj(data, "settings");
 
     //zjg
+    char type_s[] = "rtmp_custom";
     MiaObsServerConf* mia_conf = App()->GetMiaObsServerConf();
-    const char *profile = config_get_string(App()->GlobalConfig(), "Basic", "Profile");
+    const char *profile = config_get_string(App()->UserConfig(), "Basic", "Profile");
     if (!QString("Mia").compare(profile, Qt::CaseInsensitive))
     {
-        if (!config_get_bool(Config(), "General", "UserModify"))
+        if (!settings)
         {
-            if (!settings)
-            {
-                settings = obs_data_create();
-            }
+            settings = obs_data_create();
+        }
+
+        const char* server = obs_data_get_string(settings, "server");
+        const char* key = obs_data_get_string(settings, "key");
+        if (!(server && *server) && !(key && *key))
+        {
+            type = type_s;
             obs_data_set_string(settings, "server", mia_conf->s.url.toStdString().c_str());
             obs_data_set_string(settings, "key", mia_conf->s.key.toStdString().c_str());
         }
@@ -1064,19 +1070,20 @@ bool OBSBasic::InitService()
     //zjg
     obs_data_t *settings = nullptr;
     MiaObsServerConf* mia_conf = App()->GetMiaObsServerConf();
-    const char *profile = config_get_string(App()->GlobalConfig(), "Basic", "Profile");
+    const char *profile = config_get_string(App()->UserConfig(), "Basic", "Profile");
     if (!QString("Mia").compare(profile, Qt::CaseInsensitive))
     {
-        if (!config_get_bool(Config(), "General", "UserModify"))
-        {
-            settings = obs_data_create();
-            obs_data_set_string(settings, "server", mia_conf->s.url.toStdString().c_str());
-            obs_data_set_string(settings, "key", mia_conf->s.key.toStdString().c_str());
-        }
-    }
+           settings = obs_data_create();
+           obs_data_set_string(settings, "server", mia_conf->s.url.toStdString().c_str());
+           obs_data_set_string(settings, "key", mia_conf->s.key.toStdString().c_str());
 
-    service = obs_service_create("rtmp_common", "default_service", settings,
-        nullptr);
+           service = obs_service_create("rtmp_custom", "default_service", settings, nullptr);
+    }
+    else
+    {
+           service = obs_service_create("rtmp_common", "default_service", settings, nullptr);
+    }
+    
     if (!service)
         return false;
 
@@ -1102,7 +1109,7 @@ static const double scaled_vals[] =
 	0.0
 };
 
-bool OBSBasic::InitBasicConfigDefaults(bool miaConf/* = false*/)
+bool OBSBasic::InitBasicConfigDefaults()
 {
 	QList<QScreen*> screens = QGuiApplication::screens();
 
@@ -1128,13 +1135,8 @@ bool OBSBasic::InitBasicConfigDefaults(bool miaConf/* = false*/)
 		cy = 1080;
 	}
 
-	MiaObsServerConf* mc = App()->GetMiaObsServerConf();
 	/* ----------------------------------------------------- */
 	/* move over mixer values in advanced if older config */
-	if (miaConf)
-	{
-		config_set_uint(basicConfig, "AdvOut", "RecTracks", mc->o.a.RecTracks);
-	}
 
 	if (config_has_user_value(basicConfig, "AdvOut", "RecTrackIndex") &&
 	    !config_has_user_value(basicConfig, "AdvOut", "RecTracks"))
@@ -1150,14 +1152,7 @@ bool OBSBasic::InitBasicConfigDefaults(bool miaConf/* = false*/)
 
 	/* ----------------------------------------------------- */
 
-	if (miaConf)
-	{
-		config_set_default_string(basicConfig, "Output", "Mode", mc->o.Mode.toStdString().c_str());
-	}
-	else
-	{
-		config_set_default_string(basicConfig, "Output", "Mode", "Simple");	
-	}
+	config_set_default_string(basicConfig, "Output", "Mode", "Simple");	
 
 	config_set_default_uint(basicConfig, "SimpleOutput", "VBitrate", 2500);
 	config_set_default_string(basicConfig, "SimpleOutput", "FilePath",
@@ -1260,38 +1255,24 @@ bool OBSBasic::InitBasicConfigDefaults(bool miaConf/* = false*/)
 		scale_cy = uint32_t(double(cy) / scale);
 	}
 
-	if (miaConf)
-	{
-		config_set_default_string(basicConfig, "AdvOut", "RecType", mc->o.a.RecType.toStdString().c_str());
-		config_set_default_uint(basicConfig, "AdvOut", "TrackIndex", mc->o.a.TrackIndex);
-		config_set_default_bool(basicConfig, "AdvOut", "FFOutputToFile", mc->o.a.FFOutputToFile);
+	config_set_default_string(basicConfig, "AdvOut", "RecType", "Standard");
+	config_set_default_uint(basicConfig, "AdvOut", "TrackIndex", 1);
+	config_set_default_bool(basicConfig, "AdvOut", "FFOutputToFile", true);
 
-		config_set_default_uint(basicConfig, "Video", "OutputCX", mc->o.v.OutputCX.toInt());
-		config_set_default_uint(basicConfig, "Video", "OutputCY", mc->o.v.OutputCY.toInt());
-		config_set_default_uint(basicConfig, "Video", "FPSType", mc->o.v.FPSType.toInt());
-		config_set_default_uint(basicConfig, "Video", "FPSInt", mc->o.v.FPSInt.toInt());
-		config_set_default_string(basicConfig, "Video", "ScaleType", mc->o.v.ScaleType.toStdString().c_str());
-	}
-	else
-	{
-		config_set_default_string(basicConfig, "AdvOut", "RecType", "Standard");
-		config_set_default_uint(basicConfig, "AdvOut", "TrackIndex", 1);
-		config_set_default_bool(basicConfig, "AdvOut", "FFOutputToFile", true);
-
-		config_set_default_uint(basicConfig, "Video", "OutputCX", scale_cx);
-		config_set_default_uint(basicConfig, "Video", "OutputCY", scale_cy);
-		config_set_default_uint  (basicConfig, "Video", "FPSType", 0);
-		config_set_default_uint(basicConfig, "Video", "FPSInt", 30);
-		config_set_default_string(basicConfig, "Video", "ScaleType", "bicubic");
-	}
+	config_set_default_uint(basicConfig, "Video", "OutputCX", scale_cx);
+	config_set_default_uint(basicConfig, "Video", "OutputCY", scale_cy);
+	config_set_default_uint  (basicConfig, "Video", "FPSType", 0);
+	config_set_default_uint(basicConfig, "Video", "FPSInt", 30);
+	config_set_default_string(basicConfig, "Video", "ScaleType", "bicubic");
 
 	/* don't allow OutputCX/OutputCY to be susceptible to defaults
 	 * changing */
 	if (!config_has_user_value(basicConfig, "Video", "OutputCX") ||
 	    !config_has_user_value(basicConfig, "Video", "OutputCY")) {
-		config_set_uint(basicConfig, "Video", "OutputCX", scale_cx);
-		config_set_uint(basicConfig, "Video", "OutputCY", scale_cy);
-		config_save_safe(basicConfig, "tmp", nullptr);
+        //zjg 18
+//		config_set_uint(basicConfig, "Video", "OutputCX", scale_cx);
+//		config_set_uint(basicConfig, "Video", "OutputCY", scale_cy);
+//		config_save_safe(basicConfig, "tmp", nullptr);
 	}
 	
 	config_set_default_string(basicConfig, "Video", "FPSCommon", "30");
@@ -1321,7 +1302,6 @@ bool OBSBasic::InitBasicConfig()
 	ProfileScope("OBSBasic::InitBasicConfig");
 
 	char configPath[512];
-
 	int ret = GetProfilePath(configPath, sizeof(configPath), "");
 	if (ret <= 0) {
 		OBSErrorBox(nullptr, "Failed to get profile path");
@@ -1346,14 +1326,19 @@ bool OBSBasic::InitBasicConfig()
 	}
 
 	if (config_get_string(basicConfig, "General", "Name") == nullptr) {
-		const char *curName = config_get_string(App()->GlobalConfig(),
+		const char *curName = config_get_string(App()->UserConfig(),
 				"Basic", "Profile");
 
 		config_set_string(basicConfig, "General", "Name", curName);
 		basicConfig.SaveSafe("tmp");
 	}
 
-	return InitBasicConfigDefaults(true);
+    if (!InitBasicConfigDefaults())
+    {
+        return false;
+    }
+
+     return true;
 }
 
 void OBSBasic::InitOBSCallbacks()
@@ -1413,6 +1398,75 @@ void OBSBasic::InitPrimitives()
 	circle = gs_render_save();
 
 	obs_leave_graphics();
+}
+
+//zjg 32
+void OBSBasic::InitMiaCourse()
+{
+    //相当于登陆后进行一些数据调整
+    //如果server认为当前用户已经非老师，则本地
+    MiaObsServerConf* mc = App()->GetMiaObsServerConf();
+    const char *course_name = config_get_string(basicConfig, "Course", "Name");
+    if (course_name)
+    {
+        App()->SetMiaCourseName(course_name);
+    }
+    else
+    {
+        if (mc->s.valid)
+        {
+            App()->SetMiaCourseName(mc->s.title);
+            config_set_string(basicConfig, "Course", "Name", mc->s.title.toStdString().c_str());
+        }
+    }
+    UpdateTitleBar();
+
+    const char *profile = config_get_string(App()->UserConfig(), "Basic", "Profile");
+    if (QString("Mia").compare(profile, Qt::CaseInsensitive))
+    {
+        return;
+    }
+    if (!config_has_user_value(basicConfig, "AdvOut", "RecTracks"))
+    {
+        config_set_uint(basicConfig, "AdvOut", "RecTracks", mc->o.a.RecTracks);
+    }
+
+    if (!config_has_user_value(basicConfig, "Output", "Mode"))
+    {
+        config_set_string(basicConfig, "Output", "Mode", mc->o.Mode.toStdString().c_str());
+    }
+    if (!config_has_user_value(basicConfig, "AdvOut", "RecType"))
+    {
+        config_set_string(basicConfig, "AdvOut", "RecType", mc->o.a.RecType.toStdString().c_str());
+    }
+    if (!config_has_user_value(basicConfig, "AdvOut", "TrackIndex"))
+    {
+        config_set_uint(basicConfig, "AdvOut", "TrackIndex", mc->o.a.TrackIndex);
+    }
+    if (!config_has_user_value(basicConfig, "AdvOut", "FFOutputToFile"))
+    {
+        config_set_bool(basicConfig, "AdvOut", "FFOutputToFile", mc->o.a.FFOutputToFile);
+    }
+    if (!config_has_user_value(basicConfig, "Video", "OutputCX"))
+    {
+        config_set_uint(basicConfig, "Video", "OutputCX", mc->o.v.OutputCX.toInt());
+    }
+    if (!config_has_user_value(basicConfig, "Video", "OutputCY"))
+    {
+        config_set_uint(basicConfig, "Video", "OutputCY", mc->o.v.OutputCY.toInt());
+    }
+    if (!config_has_user_value(basicConfig, "Video", "FPSType"))
+    {
+        config_set_uint(basicConfig, "Video", "FPSType", mc->o.v.FPSType.toInt());
+    }
+    if (!config_has_user_value(basicConfig, "Video", "FPSInt"))
+    {
+        config_set_uint(basicConfig, "Video", "FPSInt", mc->o.v.FPSInt.toInt());
+    }
+    if (!config_has_user_value(basicConfig, "Video", "ScaleType"))
+    {
+        config_set_string(basicConfig, "Video", "ScaleType", mc->o.v.ScaleType.toStdString().c_str());
+    }
 }
 
 void OBSBasic::ReplayBufferClicked()
@@ -1481,8 +1535,7 @@ void OBSBasic::OBSInit()
 {
 	ProfileScope("OBSBasic::OBSInit");
 
-	const char *sceneCollection = config_get_string(App()->GlobalConfig(),
-			"Basic", "SceneCollectionFile");
+	const char *sceneCollection = config_get_string(App()->UserConfig(),	"Basic", "SceneCollectionFile");
 	char savePath[512];
 	char fileName[512];
 	int ret;
@@ -1490,12 +1543,12 @@ void OBSBasic::OBSInit()
 	if (!sceneCollection)
 		throw "Failed to get scene collection name";
 
-	ret = snprintf(fileName, 512, "mia-obs-studio/basic/scenes/%s.json",
+	ret = snprintf(fileName, 512, "scenes/%s.json",
 			sceneCollection);
 	if (ret <= 0)
 		throw "Failed to create scene collection file name";
 
-	ret = GetConfigPath(savePath, sizeof(savePath), fileName);
+	ret = GetUserConfigPath(savePath, sizeof(savePath), fileName);
 	if (ret <= 0)
 		throw "Failed to get scene collection json file path";
 
@@ -1555,6 +1608,8 @@ void OBSBasic::OBSInit()
 		throw "Failed to initialize service";
 
 	InitPrimitives();
+
+    InitMiaCourse();
 
 	sceneDuplicationMode = config_get_bool(App()->GlobalConfig(),
 				"BasicWindow", "SceneDuplicationMode");
@@ -2017,7 +2072,7 @@ OBSBasic::~OBSBasic()
 	config_set_bool(App()->GlobalConfig(), "BasicWindow",
 			"DocksLocked", ui->lockUI->isChecked());
 	config_save_safe(App()->GlobalConfig(), "tmp", nullptr);
-
+	config_save_safe(App()->UserConfig(), "tmp", nullptr);
 #ifdef _WIN32
 	uint32_t winVer = GetWindowsVersion();
 	if (winVer > 0 && winVer < 0x602) {
@@ -2059,7 +2114,7 @@ void OBSBasic::SaveProjectDeferred()
 
 	projectChanged = false;
 
-	const char *sceneCollection = config_get_string(App()->GlobalConfig(),
+	const char *sceneCollection = config_get_string(App()->UserConfig(),
 			"Basic", "SceneCollectionFile");
 	char savePath[512];
 	char fileName[512];
@@ -2068,12 +2123,12 @@ void OBSBasic::SaveProjectDeferred()
 	if (!sceneCollection)
 		return;
 
-	ret = snprintf(fileName, 512, "mia-obs-studio/basic/scenes/%s.json",
+	ret = snprintf(fileName, 512, "scenes/%s.json",
 			sceneCollection);
 	if (ret <= 0)
 		return;
 
-	ret = GetConfigPath(savePath, sizeof(savePath), fileName);
+	ret = GetUserConfigPath(savePath, sizeof(savePath), fileName);
 	if (ret <= 0)
 		return;
 
@@ -2641,6 +2696,17 @@ void OBSBasic::ActivateAudioSource(OBSSource source)
 
 	volumes.push_back(vol);
 	ui->volumeWidgets->layout()->addWidget(vol);
+}
+
+void OBSBasic::muteAux(bool mute)
+{
+    for (size_t i = 0; i < volumes.size(); i++) {
+        if (strcmp(obs_source_get_id(volumes[i]->GetSource()), "wasapi_input_capture") == 0)
+        {
+            obs_source_set_muted(volumes[i]->GetSource(), mute);
+            break;
+        }
+    }
 }
 
 void OBSBasic::DeactivateAudioSource(OBSSource source)
@@ -4081,8 +4147,24 @@ void OBSBasic::AddSource(const char *id)
 	if (id && *id) {
 		OBSBasicSourceSelect sourceSelect(this, id);
 		sourceSelect.exec();
-		if (sourceSelect.newSource)
-			CreatePropertiesWindow(sourceSelect.newSource);
+        if (sourceSelect.newSource)
+        {
+            CreatePropertiesWindow(sourceSelect.newSource);
+            //xiezl 创建多媒体流时默认关闭麦克风
+            QStringList filterList;
+            filterList << "ffmpeg_source";
+            QStringList noFilterList;
+            noFilterList << "dshow_input";
+            if (filterList.contains(QString(id)))
+            {
+                muteAux(true);
+            }
+            else if (noFilterList.contains(QString(id)))
+            {
+                muteAux(false);
+            }
+
+        }
 	}
 }
 
@@ -5883,9 +5965,9 @@ void OBSBasic::UpdateTitleBar()
 /*
 	stringstream name;
 
-	const char *profile = config_get_string(App()->GlobalConfig(),
+	const char *profile = config_get_string(App()->UserConfig(),
 			"Basic", "Profile");
-	const char *sceneCollection = config_get_string(App()->GlobalConfig(),
+	const char *sceneCollection = config_get_string(App()->UserConfig(),
 			"Basic", "SceneCollection");
 
 	name << "OBS ";
@@ -5905,13 +5987,13 @@ void OBSBasic::UpdateTitleBar()
 	QString appNme = App()->GetMiaAppName();
 	QString courseName = App()->GetMiaCourseName();
 
-	setWindowTitle(appNme + " " + courseName);
+	setWindowTitle(appNme + "--" + courseName);
 }
 
 int OBSBasic::GetProfilePath(char *path, size_t size, const char *file) const
 {
 	char profiles_path[512];
-	const char *profile = config_get_string(App()->GlobalConfig(),
+	const char *profile = config_get_string(App()->UserConfig(),
 			"Basic", "ProfileDir");
 	int ret;
 
@@ -5922,7 +6004,7 @@ int OBSBasic::GetProfilePath(char *path, size_t size, const char *file) const
 	if (!file)
 		file = "";
 
-	ret = GetConfigPath(profiles_path, 512, "mia-obs-studio/basic/profiles");
+	ret = GetUserConfigPath(profiles_path, 512, "profiles");
 	if (ret <= 0)
 		return ret;
 

@@ -142,7 +142,7 @@ struct OBSStudioAPI : obs_frontend_callbacks {
 
 	char *obs_frontend_get_current_scene_collection(void) override
 	{
-		const char *cur_name = config_get_string(App()->GlobalConfig(),
+		const char *cur_name = config_get_string(App()->UserConfig(),
 				"Basic", "SceneCollection");
 		return bstrdup(cur_name);
 	}
@@ -181,7 +181,7 @@ struct OBSStudioAPI : obs_frontend_callbacks {
 
 	char *obs_frontend_get_current_profile(void) override
 	{
-		const char *name = config_get_string(App()->GlobalConfig(),
+		const char *name = config_get_string(App()->UserConfig(),
 				"Basic", "Profile");
 		return bstrdup(name);
 	}

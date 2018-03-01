@@ -830,8 +830,8 @@ public:
         //menuBasic_MainMenu_Help->addAction(actionWebsite);
         menuBasic_MainMenu_Help->addSeparator();
         menuBasic_MainMenu_Help->addAction(menuLogFiles->menuAction());
-        //by xiezl 屏蔽检查OBS更新功能
-        //menuBasic_MainMenu_Help->addAction(actionCheckForUpdates);
+        //by xiezl 屏蔽检查OBS更新功能   2018-3-1开放此功能
+        menuBasic_MainMenu_Help->addAction(actionCheckForUpdates);
         menuLogFiles->addAction(actionShowLogs);
         menuLogFiles->addAction(actionUploadCurrentLog);
         menuLogFiles->addAction(actionUploadLastLog);

@@ -307,20 +307,39 @@ bool MiaLoginDialog::DecodeMiaWCQueryObsRes(const QString& json, bool& bSuc, Mia
 		json_t* jStream = json_object_get(jData, "Stream");
 		if (!json_is_object(jStream))
 		{
-			break;
+            conf->s.valid = false;
 		}
-		json_t* jUrl = json_object_get(jStream, "URL");
-		if (!json_is_string(jUrl))
-		{
-			break;
-		}
-		conf->s.url = json_string_value(jUrl);
-		json_t* jKey = json_object_get(jStream, "Key");
-		if (!json_is_string(jKey))
-		{
-			break;
-		}
-		conf->s.key= json_string_value(jKey);
+        else
+        {
+            json_t* jUrl = json_object_get(jStream, "URL");
+            if (!json_is_string(jUrl))
+            {
+                break;
+            }
+            conf->s.url = json_string_value(jUrl);
+            json_t* jKey = json_object_get(jStream, "Key");
+            if (!json_is_string(jKey))
+            {
+                break;
+            }
+            conf->s.key = json_string_value(jKey);
+
+            json_t* jroomID = json_object_get(jStream, "roomID");
+            if (!json_is_string(jroomID))
+            {
+                break;
+            }
+            conf->s.roomID = json_string_value(jroomID);
+
+            json_t* jTitle = json_object_get(jStream, "Title");
+            if (!json_is_string(jTitle))
+            {
+                break;
+            }
+            conf->s.title = json_string_value(jTitle);
+
+            conf->s.valid = true;
+        }
 
 		json_t* jOutput = json_object_get(jData, "Output");
 		if (!json_is_object(jOutput))

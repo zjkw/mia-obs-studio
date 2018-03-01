@@ -30,8 +30,7 @@ void EnumProfiles(std::function<bool (const char *, const char *)> &&cb)
 	char path[512];
 	os_glob_t *glob;
 
-	int ret = GetConfigPath(path, sizeof(path),
-			"mia-obs-studio/basic/profiles/*");
+	int ret = GetUserConfigPath(path, sizeof(path),	"profiles/*");
 	if (ret <= 0) {
 		blog(LOG_WARNING, "Failed to get profiles config path");
 		return;
@@ -122,7 +121,7 @@ static bool GetProfileName(QWidget *parent, std::string &name,
 		return false;
 	}
 
-	ret = GetConfigPath(path, sizeof(path), "mia-obs-studio/basic/profiles/");
+	ret = GetUserConfigPath(path, sizeof(path), "profiles/");
 	if (ret <= 0) {
 		blog(LOG_WARNING, "Failed to get profiles config path");
 		return false;
@@ -147,7 +146,7 @@ static bool CopyProfile(const char *fromPartial, const char *to)
 	char dir[512];
 	int ret;
 
-	ret = GetConfigPath(dir, sizeof(dir), "mia-obs-studio/basic/profiles/");
+	ret = GetUserConfigPath(dir, sizeof(dir), "profiles/");
 	if (ret <= 0) {
 		blog(LOG_WARNING, "Failed to get profiles config path");
 		return false;
@@ -192,12 +191,12 @@ bool OBSBasic::AddProfile(bool create_new, const char *title, const char *text,
 	if (!GetProfileName(this, newName, newDir, title, text, init_text))
 		return false;
 
-	std::string curDir = config_get_string(App()->GlobalConfig(),
+	std::string curDir = config_get_string(App()->UserConfig(),
 			"Basic", "ProfileDir");
 
 	char baseDir[512];
-	int ret = GetConfigPath(baseDir, sizeof(baseDir),
-			"mia-obs-studio/basic/profiles/");
+	int ret = GetUserConfigPath(baseDir, sizeof(baseDir),
+			"profiles/");
 	if (ret <= 0) {
 		blog(LOG_WARNING, "Failed to get profiles config path");
 		return false;
@@ -223,25 +222,28 @@ bool OBSBasic::AddProfile(bool create_new, const char *title, const char *text,
 		return false;
 	}
 
-	config_set_string(App()->GlobalConfig(), "Basic", "Profile",
+	config_set_string(App()->UserConfig(), "Basic", "Profile",
 			newName.c_str());
-	config_set_string(App()->GlobalConfig(), "Basic", "ProfileDir",
+	config_set_string(App()->UserConfig(), "Basic", "ProfileDir",
 			newDir.c_str());
 
 	config_set_string(config, "General", "Name", newName.c_str());
 	config.SaveSafe("tmp");
 	config.Swap(basicConfig);
-	InitBasicConfigDefaults(false);
+	InitBasicConfigDefaults();
 	RefreshProfiles();
 
 	if (create_new)
 		ResetProfileData();
+
+    InitMiaCourse();
 
 	blog(LOG_INFO, "Created profile '%s' (%s, %s)", newName.c_str(),
 			create_new ? "clean" : "duplicate", newDir.c_str());
 	blog(LOG_INFO, "------------------------------------------------");
 
 	config_save_safe(App()->GlobalConfig(), "tmp", nullptr);
+	config_save_safe(App()->UserConfig(), "tmp", nullptr);
 	UpdateTitleBar();
 
 	if (api) {
@@ -256,7 +258,7 @@ void OBSBasic::DeleteProfile(const char *profileName, const char *profileDir)
 	char profilePath[512];
 	char basePath[512];
 
-	int ret = GetConfigPath(basePath, 512, "mia-obs-studio/basic/profiles");
+	int ret = GetUserConfigPath(basePath, 512, "profiles");
 	if (ret <= 0) {
 		blog(LOG_WARNING, "Failed to get profiles config path");
 		return;
@@ -313,7 +315,7 @@ void OBSBasic::RefreshProfiles()
 			delete menuActions[i];
 	}
 
-	const char *curName = config_get_string(App()->GlobalConfig(),
+	const char *curName = config_get_string(App()->UserConfig(),
 			"Basic", "Profile");
 
 	auto addProfile = [&](const char *name, const char *path)
@@ -360,9 +362,9 @@ void OBSBasic::on_actionDupProfile_triggered()
 
 void OBSBasic::on_actionRenameProfile_triggered()
 {
-	std::string curDir = config_get_string(App()->GlobalConfig(),
+	std::string curDir = config_get_string(App()->UserConfig(),
 			"Basic", "ProfileDir");
-	std::string curName = config_get_string(App()->GlobalConfig(),
+	std::string curName = config_get_string(App()->UserConfig(),
 			"Basic", "Profile");
 
 	/* Duplicate and delete in case there are any issues in the process */
@@ -385,9 +387,9 @@ void OBSBasic::on_actionRemoveProfile_triggered()
 	std::string newPath;
 	ConfigFile config;
 
-	std::string oldDir = config_get_string(App()->GlobalConfig(),
+	std::string oldDir = config_get_string(App()->UserConfig(),
 			"Basic", "ProfileDir");
-	std::string oldName = config_get_string(App()->GlobalConfig(),
+	std::string oldName = config_get_string(App()->UserConfig(),
 			"Basic", "Profile");
 
 	auto cb = [&](const char *name, const char *filePath)
@@ -428,17 +430,18 @@ void OBSBasic::on_actionRemoveProfile_triggered()
 
 	const char *newDir = strrchr(newPath.c_str(), '/') + 1;
 
-	config_set_string(App()->GlobalConfig(), "Basic", "Profile",
+	config_set_string(App()->UserConfig(), "Basic", "Profile",
 			newName.c_str());
-	config_set_string(App()->GlobalConfig(), "Basic", "ProfileDir",
+	config_set_string(App()->UserConfig(), "Basic", "ProfileDir",
 			newDir);
 
 	config.Swap(basicConfig);
-	InitBasicConfigDefaults(false);
+	InitBasicConfigDefaults();
 	ResetProfileData();
 	DeleteProfile(oldName.c_str(), oldDir.c_str());
 	RefreshProfiles();
-	config_save_safe(App()->GlobalConfig(), "tmp", nullptr);
+    InitMiaCourse();
+	config_save_safe(App()->UserConfig(), "tmp", nullptr);
 
 	blog(LOG_INFO, "Switched to profile '%s' (%s)",
 			newName.c_str(), newDir);
@@ -458,7 +461,7 @@ void OBSBasic::on_actionImportProfile_triggered()
 
 	QString home = QDir::homePath();
 
-	int ret = GetConfigPath(path, 512, "mia-obs-studio/basic/profiles/");
+	int ret = GetUserConfigPath(path, 512, "profiles/");
 	if (ret <= 0) {
 		blog(LOG_WARNING, "Failed to get profile config path");
 		return;
@@ -504,10 +507,10 @@ void OBSBasic::on_actionExportProfile_triggered()
 	QString home = QDir::homePath();
 
 	QString currentProfile =
-		QString::fromUtf8(config_get_string(App()->GlobalConfig(),
+		QString::fromUtf8(config_get_string(App()->UserConfig(),
 		"Basic", "ProfileDir"));
 
-	int ret = GetConfigPath(path, 512, "mia-obs-studio/basic/profiles/");
+	int ret = GetUserConfigPath(path, 512, "profiles/");
 	if (ret <= 0) {
 		blog(LOG_WARNING, "Failed to get profile config path");
 		return;
@@ -565,7 +568,7 @@ void OBSBasic::ChangeProfile()
 	if (path.empty())
 		return;
 
-	const char *oldName = config_get_string(App()->GlobalConfig(),
+	const char *oldName = config_get_string(App()->UserConfig(),
 			"Basic", "Profile");
 	if (action->text().compare(QT_UTF8(oldName)) == 0) {
 		action->setChecked(true);
@@ -586,15 +589,16 @@ void OBSBasic::ChangeProfile()
 	const char *newName = config_get_string(config, "General", "Name");
 	const char *newDir = strrchr(path.c_str(), '/') + 1;
 
-	config_set_string(App()->GlobalConfig(), "Basic", "Profile", newName);
-	config_set_string(App()->GlobalConfig(), "Basic", "ProfileDir",
+	config_set_string(App()->UserConfig(), "Basic", "Profile", newName);
+	config_set_string(App()->UserConfig(), "Basic", "ProfileDir",
 			newDir);
 
 	config.Swap(basicConfig);
-	InitBasicConfigDefaults(false);
+	InitBasicConfigDefaults();
 	ResetProfileData();
 	RefreshProfiles();
-	config_save_safe(App()->GlobalConfig(), "tmp", nullptr);
+    InitMiaCourse();
+	config_save_safe(App()->UserConfig(), "tmp", nullptr);
 	UpdateTitleBar();
 
 	CheckForSimpleModeX264Fallback();

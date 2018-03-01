@@ -65,15 +65,15 @@ void CMainWindow::initView()
     m_pListPage = new QWidget(this);
     m_pListPage->setVisible(false);
     m_pListPage->setStyleSheet("QWidget{background: transparent;}");
-    m_pListPage->setFixedSize(778, 643);
+    m_pListPage->setFixedSize(778, 653);
 
     m_pTipPage = new QWidget(this);
     m_pTipPage->setVisible(true);
-    m_pTipPage->setFixedSize(778, 643);
+    m_pTipPage->setFixedSize(748, 643);
     m_pTipPage->setStyleSheet("QWidget{background: transparent;}");
 
     m_pMainList = new CMainListWidget(m_pListPage);
-
+    //m_pMainList->setFixedWidth(736);
     m_pConfirm = new QPushButton(this);
     m_pConfirm->setFixedSize(73, 21);
     m_pConfirm->setStyleSheet("QPushButton{font-size:12px;"
@@ -194,12 +194,14 @@ void CMainWindow::initLayout()
     hLayout->setContentsMargins(0, 10, 10, 15);
     vListLayout->addWidget(m_pMainList);
     vListLayout->addLayout(hLayout);
+    vListLayout->setContentsMargins(25, 15, 25, 0);
+    vListLayout->setAlignment(Qt::AlignHCenter);
     m_pListPage->setLayout(vListLayout);
 
     QVBoxLayout *mainLayout = new QVBoxLayout;
 
     mainLayout->setSpacing(0);
-    mainLayout->setContentsMargins(15, 0, 15, 0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->addSpacing(10);
     mainLayout->addWidget(m_pListPage);
     mainLayout->addWidget(m_pTipPage);
@@ -291,6 +293,12 @@ void CMainWindow::changeStream(MiaCourseItem miaItem)
             }
         }
     }
+
+    App()->SetMiaCourseName(miaItem.title);
+    main->UpdateTitleBar();
+    config_set_string(main->Config(), "Course", "Name", miaItem.title.toStdString().c_str());
+    config_save_safe(main->Config(), "tmp", nullptr);
+    main->SaveProject();
 
     main->StopStreaming();
 

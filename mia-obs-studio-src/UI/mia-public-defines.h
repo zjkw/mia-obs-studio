@@ -9,10 +9,14 @@ struct MiaObsServerConf
 	{
 		QString name;
 	}g;
+
     struct Stream
     {
+        bool    valid;
         QString key;
         QString url;
+        QString roomID;
+        QString title;
     }s;
 	struct Output
 	{

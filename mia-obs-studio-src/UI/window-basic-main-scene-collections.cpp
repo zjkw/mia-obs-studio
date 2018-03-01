@@ -33,8 +33,8 @@ void EnumSceneCollections(std::function<bool (const char *, const char *)> &&cb)
 	char path[512];
 	os_glob_t *glob;
 
-	int ret = GetConfigPath(path, sizeof(path),
-			"mia-obs-studio/basic/scenes/*.json");
+	int ret = GetUserConfigPath(path, sizeof(path),
+			"scenes/*.json");
 	if (ret <= 0) {
 		blog(LOG_WARNING, "Failed to get config path for scene "
 		                  "collections");
@@ -134,7 +134,7 @@ static bool GetSceneCollectionName(QWidget *parent, std::string &name,
 		return false;
 	}
 
-	ret = GetConfigPath(path, sizeof(path), "mia-obs-studio/basic/scenes/");
+	ret = GetUserConfigPath(path, sizeof(path), "scenes/");
 	if (ret <= 0) {
 		blog(LOG_WARNING, "Failed to get scene collection config path");
 		return false;
@@ -164,9 +164,9 @@ void OBSBasic::AddSceneCollection(bool create_new)
 
 	SaveProjectNow();
 
-	config_set_string(App()->GlobalConfig(), "Basic", "SceneCollection",
+	config_set_string(App()->UserConfig(), "Basic", "SceneCollection",
 			name.c_str());
-	config_set_string(App()->GlobalConfig(), "Basic", "SceneCollectionFile",
+	config_set_string(App()->UserConfig(), "Basic", "SceneCollectionFile",
 			file.c_str());
 	if (create_new) {
 		CreateDefaultScene(false);
@@ -198,7 +198,7 @@ void OBSBasic::RefreshSceneCollections()
 			delete menuActions[i];
 	}
 
-	const char *cur_name = config_get_string(App()->GlobalConfig(),
+	const char *cur_name = config_get_string(App()->UserConfig(),
 			"Basic", "SceneCollection");
 
 	auto addCollection = [&](const char *name, const char *path)
@@ -258,23 +258,23 @@ void OBSBasic::on_actionRenameSceneCollection_triggered()
 	std::string name;
 	std::string file;
 
-	std::string oldFile = config_get_string(App()->GlobalConfig(),
+	std::string oldFile = config_get_string(App()->UserConfig(),
 			"Basic", "SceneCollectionFile");
-	const char *oldName = config_get_string(App()->GlobalConfig(),
+	const char *oldName = config_get_string(App()->UserConfig(),
 			"Basic", "SceneCollection");
 
 	bool success = GetSceneCollectionName(this, name, file, oldName);
 	if (!success)
 		return;
 
-	config_set_string(App()->GlobalConfig(), "Basic", "SceneCollection",
+	config_set_string(App()->UserConfig(), "Basic", "SceneCollection",
 			name.c_str());
-	config_set_string(App()->GlobalConfig(), "Basic", "SceneCollectionFile",
+	config_set_string(App()->UserConfig(), "Basic", "SceneCollectionFile",
 			file.c_str());
 	SaveProjectNow();
 
 	char path[512];
-	int ret = GetConfigPath(path, 512, "mia-obs-studio/basic/scenes/");
+	int ret = GetUserConfigPath(path, 512, "scenes/");
 	if (ret <= 0) {
 		blog(LOG_WARNING, "Failed to get scene collection config path");
 		return;
@@ -305,9 +305,9 @@ void OBSBasic::on_actionRemoveSceneCollection_triggered()
 	std::string newName;
 	std::string newPath;
 
-	std::string oldFile = config_get_string(App()->GlobalConfig(),
+	std::string oldFile = config_get_string(App()->UserConfig(),
 			"Basic", "SceneCollectionFile");
-	std::string oldName = config_get_string(App()->GlobalConfig(),
+	std::string oldName = config_get_string(App()->UserConfig(),
 			"Basic", "SceneCollection");
 
 	auto cb = [&](const char *name, const char *filePath)
@@ -336,7 +336,7 @@ void OBSBasic::on_actionRemoveSceneCollection_triggered()
 		return;
 
 	char path[512];
-	int ret = GetConfigPath(path, 512, "mia-obs-studio/basic/scenes/");
+	int ret = GetUserConfigPath(path, 512, "scenes/");
 	if (ret <= 0) {
 		blog(LOG_WARNING, "Failed to get scene collection config path");
 		return;
@@ -351,7 +351,7 @@ void OBSBasic::on_actionRemoveSceneCollection_triggered()
 	Load(newPath.c_str());
 	RefreshSceneCollections();
 
-	const char *newFile = config_get_string(App()->GlobalConfig(),
+	const char *newFile = config_get_string(App()->UserConfig(),
 			"Basic", "SceneCollectionFile");
 
 	blog(LOG_INFO, "Removed scene collection '%s' (%s.json), "
@@ -374,7 +374,7 @@ void OBSBasic::on_actionImportSceneCollection_triggered()
 
 	QString home = QDir::homePath();
 
-	int ret = GetConfigPath(path, 512, "mia-obs-studio/basic/scenes/");
+	int ret = GetUserConfigPath(path, 512, "scenes/");
 	if (ret <= 0) {
 		blog(LOG_WARNING, "Failed to get scene collection config path");
 		return;
@@ -408,10 +408,10 @@ void OBSBasic::on_actionExportSceneCollection_triggered()
 
 	QString home = QDir::homePath();
 
-	QString currentFile = QT_UTF8(config_get_string(App()->GlobalConfig(),
+	QString currentFile = QT_UTF8(config_get_string(App()->UserConfig(),
 				"Basic", "SceneCollectionFile"));
 
-	int ret = GetConfigPath(path, 512, "mia-obs-studio/basic/scenes/");
+	int ret = GetUserConfigPath(path, 512, "scenes/");
 	if (ret <= 0) {
 		blog(LOG_WARNING, "Failed to get scene collection config path");
 		return;
@@ -445,7 +445,7 @@ void OBSBasic::ChangeSceneCollection()
 	if (fileName.empty())
 		return;
 
-	const char *oldName = config_get_string(App()->GlobalConfig(),
+	const char *oldName = config_get_string(App()->UserConfig(),
 			"Basic", "SceneCollection");
 	if (action->text().compare(QT_UTF8(oldName)) == 0) {
 		action->setChecked(true);
@@ -457,9 +457,9 @@ void OBSBasic::ChangeSceneCollection()
 	Load(fileName.c_str());
 	RefreshSceneCollections();
 
-	const char *newName = config_get_string(App()->GlobalConfig(),
+	const char *newName = config_get_string(App()->UserConfig(),
 			"Basic", "SceneCollection");
-	const char *newFile = config_get_string(App()->GlobalConfig(),
+	const char *newFile = config_get_string(App()->UserConfig(),
 			"Basic", "SceneCollectionFile");
 
 	blog(LOG_INFO, "Switched to scene collection '%s' (%s.json)",

@@ -23,10 +23,31 @@ void CMainListWidgetItem::init(int id, const QPixmap &pixmap, const QString &nam
     Q_D(CMainListWidgetItem);
     d->m_id = id;
     d->m_pCover->setPixmap(pixmap.scaled(d->m_pCover->size(), Qt::KeepAspectRatio));
-    d->m_pName->setText(name);
+    if (name.length() > 17)
+    {
+        d->m_pName->setText(name.left(17) + "...");
+    }
+    else
+    {
+        d->m_pName->setText(name);
+    }
     d->m_pTime->setText(time);
-    d->m_pType->setText(type);
-    d->m_pTeacher->setText(teacher);
+    if (type.length() > 15)
+    {
+        d->m_pType->setText(type.left(15) + "...");
+    }
+    else
+    {
+        d->m_pType->setText(type);
+    }
+    if (teacher.length() > 13)
+    {
+        d->m_pTeacher->setText(teacher.left(13) + "...");
+    }
+    else
+    {
+        d->m_pTeacher->setText(teacher);
+    }
     d->m_live = false;
     d->m_selected = false;
 }
@@ -103,30 +124,31 @@ void CMainListWidgetItem::initView()
     d->m_pLive->setText("Live");
 
     d->m_pName = new QLabel(this);
-    d->m_pName->setFixedSize(130, 50);
+    d->m_pName->setFixedSize(102, 40);
     d->m_pName->setAlignment(Qt::AlignCenter);
     d->m_pName->setWordWrap(true);
     d->m_pName->setFont(font);
     d->m_pName->setStyleSheet("QLabel{background: transparent;color:#333000; font-size:14px; font-family:'微软雅黑';}");
 
     d->m_pTime = new QLabel(this);
-    d->m_pTime->setFixedSize(130, 50);
+    d->m_pTime->setFixedSize(77, 40);
     d->m_pTime->setAlignment(Qt::AlignCenter);
     d->m_pTime->setWordWrap(true);
     d->m_pTime->setFont(font);
     d->m_pTime->setStyleSheet("QLabel{background: transparent;color:#333000; font-size:14px; font-family:'微软雅黑';}");
 
     d->m_pType = new QLabel(this);
-    d->m_pType->setFixedSize(130, 50);
+    d->m_pType->setFixedSize(97, 40);
     d->m_pType->setAlignment(Qt::AlignCenter);
     d->m_pType->setWordWrap(true);
     d->m_pType->setFont(font);
     d->m_pType->setStyleSheet("QLabel{background: transparent;color:#333000; font-size:14px; font-family:'微软雅黑';}");
 
     d->m_pTeacher = new QLabel(this);
-    d->m_pTeacher->setFixedSize(130, 50);
+    d->m_pTeacher->setFixedSize(82, 40);
     d->m_pTeacher->setAlignment(Qt::AlignCenter);
     d->m_pTeacher->setFont(font);
+    d->m_pTeacher->setWordWrap(true);
     d->m_pTeacher->setStyleSheet("QLabel{background: transparent;color:#333000; font-size:14px; font-family:'微软雅黑';}");
 
     d->m_pStatus = new QLabel(this);
@@ -150,19 +172,24 @@ void CMainListWidgetItem::initLayout()
     Q_D(CMainListWidgetItem);
     QHBoxLayout *hLayout = new QHBoxLayout;
     QHBoxLayout *temp = new QHBoxLayout;
+    hLayout->addSpacing(36);
     hLayout->addWidget(d->m_pCover);
     temp->setAlignment(Qt::AlignRight | Qt::AlignBottom);
     temp->setContentsMargins(0, 0, 0, 0);
     temp->addWidget(d->m_pLive);
     d->m_pCover->setLayout(temp);
+    hLayout->addSpacing(44);
     hLayout->addWidget(d->m_pName);
+    hLayout->addSpacing(44);
     hLayout->addWidget(d->m_pTime);
+    hLayout->addSpacing(44);
     hLayout->addWidget(d->m_pType);
+    hLayout->addSpacing(34);
     hLayout->addWidget(d->m_pTeacher);
-    hLayout->addSpacing(10);
+    hLayout->addSpacing(22);
     hLayout->addWidget(d->m_pStatus);
     hLayout->addSpacing(10);
-    hLayout->setContentsMargins(32, 0, 0, 0);
+    hLayout->setContentsMargins(0, 0, 0, 0);
     hLayout->setSpacing(0);
     QVBoxLayout *vLayout = new QVBoxLayout;
     vLayout->setContentsMargins(0, 0, 0, 0);

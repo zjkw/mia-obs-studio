@@ -154,16 +154,7 @@ static void obs_qsv_defaults(obs_data_t *settings)
 	obs_data_set_default_int(settings, "icq_quality", 23);
 	obs_data_set_default_int(settings, "la_depth", 40);
 
-	//zjg 11
-	int64_t keyint_sec_out = obs_data_get_int(settings, "keyint_sec_out");
-	if (!keyint_sec_out)
-	{
-		obs_data_set_default_int(settings, "keyint_sec", keyint_sec_out);
-	}
-	else
-	{
-		obs_data_set_default_int(settings, "keyint_sec", 3);
-	}
+	obs_data_set_default_int(settings, "keyint_sec", 3);
 }
 
 static inline void add_strings(obs_property_t *list, const char *const *strings)

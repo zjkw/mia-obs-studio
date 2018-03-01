@@ -212,12 +212,13 @@ private:
 	bool          InitService();
 
 	//zjg 8
-	bool          InitBasicConfigDefaults(bool miaConf = false);
+	bool          InitBasicConfigDefaults();
 	bool          InitBasicConfig();
 
 	void          InitOBSCallbacks();
 
 	void          InitPrimitives();
+    void          InitMiaCourse();
 
 	OBSSceneItem  GetSceneItem(QListWidgetItem *item);
 	OBSSceneItem  GetCurrentSceneItem();
@@ -420,7 +421,8 @@ public slots:
 			bool direct = false, bool quickTransition = false);
 	void SetCurrentScene(OBSSource scene, bool force = false,
 			bool direct = false);
-
+    //xiezl 关闭和打开麦克风
+    void muteAux(bool mute);
 private slots:
 	void AddSceneItem(OBSSceneItem item);
 	void RemoveSceneItem(OBSSceneItem item);
@@ -734,9 +736,8 @@ public:
 
 	virtual config_t *Config() const override;
 
-	virtual int GetProfilePath(char *path, size_t size, const char *file)
-		const override;
-
+	virtual int GetProfilePath(char *path, size_t size, const char *file)	const override;
+    
 private:
 	std::unique_ptr<Ui::OBSBasic> ui;
 };

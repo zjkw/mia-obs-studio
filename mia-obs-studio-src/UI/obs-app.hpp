@@ -66,6 +66,7 @@ private:
 	std::string                    locale;
 	std::string		       theme;
 	ConfigFile                     globalConfig;
+    ConfigFile                     userConfig;
 	TextLookup                     textLookup;
 	OBSContext                     obsContext;
 	QPointer<OBSMainWindow>        mainWindow;
@@ -81,6 +82,7 @@ private:
 	std::deque<obs_frontend_translate_ui_cb> translatorHooks;
 
 	bool InitGlobalConfig();
+    bool InitUserConfig();
 	bool InitGlobalConfigDefaults();
 	bool InitLocale();
 	bool InitTheme();
@@ -89,13 +91,14 @@ public:
 	OBSApp(int &argc, char **argv, profiler_name_store_t *store);
 	~OBSApp();
 
-	void AppInit();
+    void AppInit_global();
+    void AppInit_user();
 	bool OBSInit();
 
 	inline QMainWindow *GetMainWindow() const {return mainWindow.data();}
 
 	inline config_t *GlobalConfig() const {return globalConfig;}
-
+	inline config_t *UserConfig() const {return userConfig;}
 	inline const char *GetLocale() const
 	{
 		return locale.c_str();
@@ -166,6 +169,8 @@ public:
 
 int GetConfigPath(char *path, size_t size, const char *name);
 char *GetConfigPathPtr(const char *name);
+
+int GetUserConfigPath(char *path, size_t size, const char *name);
 
 int GetProgramDataPath(char *path, size_t size, const char *name);
 char *GetProgramDataPathPtr(const char *name);

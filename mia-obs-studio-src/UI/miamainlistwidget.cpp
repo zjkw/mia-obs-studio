@@ -110,6 +110,7 @@ void CMainListWidget::initLayout()
     vLayout->addWidget(d->m_pHeader);
     vLayout->addWidget(d->m_pList);
     vLayout->setSpacing(0);
+    vLayout->setContentsMargins(0, 0, 0, 0);
     setLayout(vLayout);
 }
 

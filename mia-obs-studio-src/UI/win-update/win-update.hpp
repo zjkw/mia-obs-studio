@@ -12,11 +12,11 @@ class AutoUpdateThread : public QThread {
 	virtual void run() override;
 
 	void info(const QString &title, const QString &text);
-	int queryUpdate(bool manualUpdate, const char *text_utf8);
+	int queryUpdate();
 
 private slots:
 	void infoMsg(const QString &title, const QString &text);
-	int queryUpdateSlot(bool manualUpdate, const QString &text);
+	int queryUpdateSlot();
 
 public:
 	AutoUpdateThread(bool manualUpdate_) : manualUpdate(manualUpdate_) {}
