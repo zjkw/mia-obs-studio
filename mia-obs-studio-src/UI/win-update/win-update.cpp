@@ -293,17 +293,19 @@ void AutoUpdateThread::run()
             if (manualUpdate)
             {
                 ///xzl tbd 提示: 你已经是最新版本!
-                QMessageBox::information(nullptr, Str("Base.Course.Update.TipsTitle"), Str("Base.Course.Update.TipsContentUpdated"), Str("Base.Course.Update.TipsConfirm"));
+                emit showUpdateTips(Str("Base.Course.Update.TipsTitle"), Str("Base.Course.Update.TipsContentUpdated"), Str("Base.Course.Update.TipsConfirm"));
+                //QMessageBox::information(nullptr, Str("Base.Course.Update.TipsTitle"), Str("Base.Course.Update.TipsContentUpdated"), Str("Base.Course.Update.TipsConfirm"));
             }
 
             return;
         }
-        if (ver < config_get_int(GetGlobalConfig(), "General", "TargetVersion"))
+        if (ver == config_get_int(GetGlobalConfig(), "General", "TargetVersion"))
         {
             if (manualUpdate)
             {
                 ///xzl tbd 提示: 正在升级，请稍候
-                QMessageBox::information(nullptr, Str("Base.Course.Update.TipsTitle"), Str("Base.Course.Update.TipsContentUpdating"), Str("Base.Course.Update.TipsConfirm"));
+                emit showUpdateTips(Str("Base.Course.Update.TipsTitle"), Str("Base.Course.Update.TipsContentUpdating"), Str("Base.Course.Update.TipsConfirm"));
+                //QMessageBox::information(nullptr, Str("Base.Course.Update.TipsTitle"), Str("Base.Course.Update.TipsContentUpdating"), Str("Base.Course.Update.TipsConfirm"));
             }
             return;
         }
@@ -330,19 +332,26 @@ void AutoUpdateThread::run()
             success = GetRemoteFile(url.c_str(), text, error, &responseCode,
                 nullptr, nullptr, extraHeaders, &signature);
 
-            if (!success || responseCode != 200) {
+            if (!success || responseCode != 200) 
+            {
+                config_set_int(GetGlobalConfig(), "General", "TargetVersion", 0);
                 if (responseCode == 404)
+                {
                     return;
-
+                }
                 throw strprintf("Failed to fetch update file: %s", error.c_str());
             }
 
             if (!QuickWriteFile(updateFilePath, text.data(), text.size()))
+            {
+                config_set_int(GetGlobalConfig(), "General", "TargetVersion", 0);
                 throw strprintf("QuickWriteFile failed");
+            }
         }
  
         if (getFileMD5(QString(updateFilePath.Get())).compare(md5.c_str(), Qt::CaseInsensitive))
         {
+            config_set_int(GetGlobalConfig(), "General", "TargetVersion", 0);
               throw strprintf("getFileMD5 failed");
         }
 
@@ -400,7 +409,7 @@ void AutoUpdateThread::run()
         /* force OBS to perform another update check immediately after updating
          * in case of issues with the new version */
 
-
+        config_set_int(GetGlobalConfig(), "General", "TargetVersion", 0);
         QMetaObject::invokeMethod(App()->GetMainWindow(), "close");
 
     }

@@ -423,6 +423,8 @@ public slots:
 			bool direct = false);
     //xiezl 关闭和打开麦克风
     void muteAux(bool mute);
+
+    void showUpdateTips(const QString &title, const QString &content, const QString &button);
 private slots:
 	void AddSceneItem(OBSSceneItem item);
 	void RemoveSceneItem(OBSSceneItem item);

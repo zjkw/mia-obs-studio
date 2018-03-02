@@ -2797,10 +2797,16 @@ void OBSBasic::CheckForUpdates(bool manualUpdate)
 		return;
 
 	updateCheckThread = new AutoUpdateThread(manualUpdate);
+    connect(updateCheckThread, SIGNAL(showUpdateTips(const QString &, const QString &, const QString &)), this, SLOT(showUpdateTips(const QString &, const QString &, const QString &)));
 	updateCheckThread->start();
 #endif
 
 	UNUSED_PARAMETER(manualUpdate);
+}
+
+void OBSBasic::showUpdateTips(const QString &title, const QString &content, const QString &button)
+{
+    QMessageBox::information(this, title, content, button);
 }
 
 void OBSBasic::updateCheckFinished()
