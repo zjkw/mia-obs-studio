@@ -495,6 +495,8 @@ public:
         scenesDock = new QDockWidget(OBSBasic);
         scenesDock->setObjectName(QStringLiteral("scenesDock"));
         scenesDock->setFeatures(QDockWidget::AllDockWidgetFeatures);
+        
+        scenesDock->setStyleSheet("QDockWidget::title {background: transparent; border:none;}");
         dockWidgetContents_2 = new QWidget();
         dockWidgetContents_2->setObjectName(QStringLiteral("dockWidgetContents_2"));
         verticalLayout_6 = new QVBoxLayout(dockWidgetContents_2);
@@ -545,8 +547,10 @@ public:
         scenesDock->setWidget(dockWidgetContents_2);
         OBSBasic->addDockWidget(static_cast<Qt::DockWidgetArea>(8), scenesDock);
         sourcesDock = new QDockWidget(OBSBasic);
+        
         sourcesDock->setObjectName(QStringLiteral("sourcesDock"));
         sourcesDock->setFeatures(QDockWidget::AllDockWidgetFeatures);
+        sourcesDock->setStyleSheet("QDockWidget::title {background: transparent; border:none;}");
         dockWidgetContents_6 = new QWidget();
         dockWidgetContents_6->setObjectName(QStringLiteral("dockWidgetContents_6"));
         verticalLayout_5 = new QVBoxLayout(dockWidgetContents_6);
@@ -594,8 +598,10 @@ public:
         sourcesDock->setWidget(dockWidgetContents_6);
         OBSBasic->addDockWidget(static_cast<Qt::DockWidgetArea>(8), sourcesDock);
         mixerDock = new QDockWidget(OBSBasic);
+        
         mixerDock->setObjectName(QStringLiteral("mixerDock"));
         mixerDock->setFeatures(QDockWidget::AllDockWidgetFeatures);
+        mixerDock->setStyleSheet("QDockWidget::title {background: transparent; border:none;}");
         dockWidgetContents_7 = new QWidget();
         dockWidgetContents_7->setObjectName(QStringLiteral("dockWidgetContents_7"));
         verticalLayout_4 = new QVBoxLayout(dockWidgetContents_7);
@@ -735,8 +741,10 @@ public:
         //transitionsDock->setWidget(dockWidgetContents_5);
         //OBSBasic->addDockWidget(static_cast<Qt::DockWidgetArea>(8), transitionsDock);
         controlsDock = new QDockWidget(OBSBasic);
+        
         controlsDock->setObjectName(QStringLiteral("controlsDock"));
         controlsDock->setFeatures(QDockWidget::AllDockWidgetFeatures);
+        controlsDock->setStyleSheet("QDockWidget::title {background: transparent; border:none;}");
         dockWidgetContents_3 = new QWidget();
         dockWidgetContents_3->setObjectName(QStringLiteral("dockWidgetContents_3"));
         buttonsVLayout = new QVBoxLayout(dockWidgetContents_3);
